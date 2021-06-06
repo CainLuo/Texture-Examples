@@ -6,6 +6,7 @@
 //
 
 import AsyncDisplayKit
+import TextureSwiftSupport
 
 class PhotoCollectionNodeCell: ASCellNode {
     
@@ -51,36 +52,51 @@ class PhotoCollectionNodeCell: ASCellNode {
 //    }
     
     // 布局样式二
+//    override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
+//        var leftChildren: [ASLayoutElement] = []
+//
+//        let leftStack = ASStackLayoutSpec.vertical()
+//        leftStack.alignItems = .center
+//
+//        textNode.style.flexShrink = 1.0
+//        leftChildren.append(textNode)
+//        leftChildren.append(contentNode)
+//
+//        leftStack.children = leftChildren
+//
+//        let nodeStack = ASStackLayoutSpec.horizontal()
+//        nodeStack.alignItems = .center
+//
+//        otherNode.style.flexShrink = 1.0
+//
+//        nodeStack.children = [
+//            ASInsetLayoutSpec(insets: Constants.CellLayout.InsetForHeader,
+//                              child: leftStack),
+//            ASInsetLayoutSpec(insets: Constants.CellLayout.InsetForFooter,
+//                              child: otherNode)
+//        ]
+//
+//        return nodeStack
+//    }
+    
+    // TextureSwiftSupport布局样式
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
-        var leftChildren: [ASLayoutElement] = []
-        
-        let leftStack = ASStackLayoutSpec.vertical()
-        leftStack.alignItems = .center
-        
-        textNode.style.flexShrink = 1.0
-        leftChildren.append(textNode)
-        leftChildren.append(contentNode)
-        
-        leftStack.children = leftChildren
-        
-        let nodeStack = ASStackLayoutSpec.horizontal()
-        nodeStack.alignItems = .center
-        
-        otherNode.style.flexShrink = 1.0
-        
-        nodeStack.children = [
-            ASInsetLayoutSpec(insets: Constants.CellLayout.InsetForHeader,
-                              child: leftStack),
-            ASInsetLayoutSpec(insets: Constants.CellLayout.InsetForFooter,
-                              child: otherNode)
-        ]
-        
-        return nodeStack
+      LayoutSpec {
+        HStackLayout {
+            VStackLayout {
+              self.textNode
+              self.contentNode
+            }.padding(5)
+
+            self.otherNode//.padding(.all, 5)
+        }
+        .padding(.all, 5)
+      }
     }
     
     private func attributes() -> [NSAttributedString.Key: Any] {
         [
-            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18),
+            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 10),
             NSAttributedString.Key.foregroundColor: UIColor.white
         ]
     }
