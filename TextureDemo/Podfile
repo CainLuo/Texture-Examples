@@ -8,6 +8,7 @@ target 'TextureDemo' do
   # Pods for TextureDemo
   
   pod 'Texture'
+  pod 'TextureSwiftSupport'
   pod 'Texture/PINRemoteImage'
   
   # UI Test Tools
