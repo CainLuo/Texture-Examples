@@ -1,0 +1,6 @@
+framework module GlossButtonNode {
+  umbrella header "GlossButtonNode-umbrella.h"
+
+  export *
+  module * { export * }
+}

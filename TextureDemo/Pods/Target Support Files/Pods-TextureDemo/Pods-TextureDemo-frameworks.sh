@@ -175,19 +175,35 @@ code_sign_if_enabled() {
 }
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/EasyPeasy/EasyPeasy.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/GlossButtonNode/GlossButtonNode.framework"
   install_framework "${PODS_ROOT}/LookinServer/LookinServer.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/PINOperation/PINOperation.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/PINRemoteImage/PINRemoteImage.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/StorybookKit/StorybookKit.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/StorybookKitTextureSupport/StorybookKitTextureSupport.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/StorybookUI/StorybookUI.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Texture/AsyncDisplayKit.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/TextureBridging/TextureBridging.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/TextureSwiftSupport/TextureSwiftSupport.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/TypedTextAttributes/TypedTextAttributes.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/RevealServer/RevealServer.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/EasyPeasy/EasyPeasy.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/GlossButtonNode/GlossButtonNode.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/PINOperation/PINOperation.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/PINRemoteImage/PINRemoteImage.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/StorybookKit/StorybookKit.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/StorybookKitTextureSupport/StorybookKitTextureSupport.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/StorybookUI/StorybookUI.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Texture/AsyncDisplayKit.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/TextureBridging/TextureBridging.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/TextureSwiftSupport/TextureSwiftSupport.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/TypedTextAttributes/TypedTextAttributes.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/RevealServer/RevealServer.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

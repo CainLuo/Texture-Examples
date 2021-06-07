@@ -10,7 +10,15 @@ target 'TextureDemo' do
   pod 'Texture'
   pod 'TextureSwiftSupport'
   pod 'Texture/PINRemoteImage'
-  
+    
+  pod "TypedTextAttributes"
+  pod "GlossButtonNode"
+  pod "Reveal-SDK"
+  pod "StorybookKit"
+  pod "StorybookUI"
+  pod "StorybookKitTextureSupport"
+  pod "EasyPeasy"
+
   # UI Test Tools
   pod 'LookinServer', :configurations => ['Debug']
 
