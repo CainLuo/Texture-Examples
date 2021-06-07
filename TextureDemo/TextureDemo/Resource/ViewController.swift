@@ -23,5 +23,14 @@ class ViewController: UIViewController {
         let vc = PhotoCollectionController()
         navigationController?.pushViewController(vc, animated: true)
     }
+    
+    @IBAction private func pushSupportController(_ sender: Any) {
+        guard let window = UIApplication.shared.keyWindow else {
+            return
+        }
+        
+        window.rootViewController = RootContainerViewController()
+        window.makeKeyAndVisible()
+    }
 }
 
