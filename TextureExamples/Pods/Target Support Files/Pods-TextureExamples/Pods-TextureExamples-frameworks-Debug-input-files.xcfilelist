@@ -2,9 +2,13 @@ ${PODS_ROOT}/Target Support Files/Pods-TextureExamples/Pods-TextureExamples-fram
 ${BUILT_PRODUCTS_DIR}/EasyPeasy/EasyPeasy.framework
 ${BUILT_PRODUCTS_DIR}/GlossButtonNode/GlossButtonNode.framework
 ${BUILT_PRODUCTS_DIR}/LookinServer/LookinServer.framework
+${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework
 ${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework
 ${BUILT_PRODUCTS_DIR}/PINOperation/PINOperation.framework
 ${BUILT_PRODUCTS_DIR}/PINRemoteImage/PINRemoteImage.framework
+${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework
+${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework
+${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework
 ${BUILT_PRODUCTS_DIR}/StorybookKit/StorybookKit.framework
 ${BUILT_PRODUCTS_DIR}/StorybookKitTextureSupport/StorybookKitTextureSupport.framework
 ${BUILT_PRODUCTS_DIR}/StorybookUI/StorybookUI.framework

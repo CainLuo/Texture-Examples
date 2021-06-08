@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -45,6 +45,11 @@
 		4D0B20B0266F5A7F005037E1 /* Book.TiledLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0B2090266F5A7F005037E1 /* Book.TiledLayer.swift */; };
 		4D0B20B1266F5A7F005037E1 /* ZStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0B2091266F5A7F005037E1 /* ZStackView.swift */; };
 		4D0B20B2266F5A7F005037E1 /* Book.InteractiveNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0B2092266F5A7F005037E1 /* Book.InteractiveNode.swift */; };
+		BFAF3BEA266FC352008DFED8 /* NormalListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAF3BE9266FC352008DFED8 /* NormalListController.swift */; };
+		BFAF3BEC266FC406008DFED8 /* NormalNodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAF3BEB266FC406008DFED8 /* NormalNodeCell.swift */; };
+		BFAF3BEE266FC504008DFED8 /* NormalListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAF3BED266FC504008DFED8 /* NormalListViewModel.swift */; };
+		BFAF3BF0266FC67B008DFED8 /* NormalListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAF3BEF266FC67B008DFED8 /* NormalListModel.swift */; };
+		BFAF3BF2266FC7F3008DFED8 /* Rx+Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAF3BF1266FC7F3008DFED8 /* Rx+Observable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +95,11 @@
 		4D0B2091266F5A7F005037E1 /* ZStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZStackView.swift; sourceTree = "<group>"; };
 		4D0B2092266F5A7F005037E1 /* Book.InteractiveNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.InteractiveNode.swift; sourceTree = "<group>"; };
 		6CFB62A3112E0806C8A7ED6A /* Pods_TextureExamples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextureExamples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFAF3BE9266FC352008DFED8 /* NormalListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalListController.swift; sourceTree = "<group>"; };
+		BFAF3BEB266FC406008DFED8 /* NormalNodeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalNodeCell.swift; sourceTree = "<group>"; };
+		BFAF3BED266FC504008DFED8 /* NormalListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalListViewModel.swift; sourceTree = "<group>"; };
+		BFAF3BEF266FC67B008DFED8 /* NormalListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalListModel.swift; sourceTree = "<group>"; };
+		BFAF3BF1266FC7F3008DFED8 /* Rx+Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rx+Observable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +190,7 @@
 		4D0B206D266F5A7F005037E1 /* TableNode */ = {
 			isa = PBXGroup;
 			children = (
+				BFAF3BE8266FC332008DFED8 /* NormalList */,
 				4D0B206E266F5A7F005037E1 /* PhotoList */,
 			);
 			path = TableNode;
@@ -211,6 +222,7 @@
 				4D0B2077266F5A7F005037E1 /* NumberFormatter.swift */,
 				4D0B2078266F5A7F005037E1 /* UIColor.swift */,
 				4D0B2079266F5A7F005037E1 /* URL.swift */,
+				BFAF3BF1266FC7F3008DFED8 /* Rx+Observable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -270,6 +282,17 @@
 				4D0B208D266F5A7F005037E1 /* TransitionLayoutViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BFAF3BE8266FC332008DFED8 /* NormalList */ = {
+			isa = PBXGroup;
+			children = (
+				BFAF3BE9266FC352008DFED8 /* NormalListController.swift */,
+				BFAF3BED266FC504008DFED8 /* NormalListViewModel.swift */,
+				BFAF3BEF266FC67B008DFED8 /* NormalListModel.swift */,
+				BFAF3BEB266FC406008DFED8 /* NormalNodeCell.swift */,
+			);
+			path = NormalList;
 			sourceTree = "<group>";
 		};
 		E9D7BEF27D601D41271BE549 /* Frameworks */ = {
@@ -399,6 +422,7 @@
 				4D0B20AD266F5A7F005037E1 /* TransitionLayoutViewController.swift in Sources */,
 				4D0B209F266F5A7F005037E1 /* PhotoCollectionNodeCell.swift in Sources */,
 				4D0B2058266F59C9005037E1 /* ViewController.swift in Sources */,
+				BFAF3BEA266FC352008DFED8 /* NormalListController.swift in Sources */,
 				4D0B20AC266F5A7F005037E1 /* AdaptiveLayoutViewController.swift in Sources */,
 				4D0B209C266F5A7F005037E1 /* NumberFormatter.swift in Sources */,
 				4D0B20AE266F5A7F005037E1 /* Util.swift in Sources */,
@@ -409,6 +433,7 @@
 				4D0B209E266F5A7F005037E1 /* URL.swift in Sources */,
 				4D0B20A9266F5A7F005037E1 /* RecursiveLayoutViewController.swift in Sources */,
 				4D0B20AA266F5A7F005037E1 /* InstagramPostCellViewController.swift in Sources */,
+				BFAF3BF0266FC67B008DFED8 /* NormalListModel.swift in Sources */,
 				4D0B2098266F5A7F005037E1 /* PopularPageModel.swift in Sources */,
 				4D0B20A3266F5A7F005037E1 /* OrderedDictionary+Description.swift in Sources */,
 				4D0B2054266F59C9005037E1 /* AppDelegate.swift in Sources */,
@@ -419,14 +444,17 @@
 				4D0B2099266F5A7F005037E1 /* PhotoFeedModel.swift in Sources */,
 				4D0B20A1266F5A7F005037E1 /* OrderedDictionary+Codable.swift in Sources */,
 				4D0B20B2266F5A7F005037E1 /* Book.InteractiveNode.swift in Sources */,
+				BFAF3BEC266FC406008DFED8 /* NormalNodeCell.swift in Sources */,
 				4D0B20B0266F5A7F005037E1 /* Book.TiledLayer.swift in Sources */,
 				4D0B2094266F5A7F005037E1 /* WebService.swift in Sources */,
 				4D0B20A5266F5A7F005037E1 /* RootContainerViewController.swift in Sources */,
 				4D0B209D266F5A7F005037E1 /* UIColor.swift in Sources */,
 				4D0B209B266F5A7F005037E1 /* Date.swift in Sources */,
 				4D0B20A6266F5A7F005037E1 /* Book.ImageNode.swift in Sources */,
+				BFAF3BF2266FC7F3008DFED8 /* Rx+Observable.swift in Sources */,
 				4D0B2093266F5A7F005037E1 /* Constants.swift in Sources */,
 				4D0B2095266F5A7F005037E1 /* ParseResponse.swift in Sources */,
+				BFAF3BEE266FC504008DFED8 /* NormalListViewModel.swift in Sources */,
 				4D0B20B1266F5A7F005037E1 /* ZStackView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
