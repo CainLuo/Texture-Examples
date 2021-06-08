@@ -1,0 +1,15 @@
+${PODS_ROOT}/Target Support Files/Pods-TextureExamples/Pods-TextureExamples-frameworks.sh
+${BUILT_PRODUCTS_DIR}/EasyPeasy/EasyPeasy.framework
+${BUILT_PRODUCTS_DIR}/GlossButtonNode/GlossButtonNode.framework
+${BUILT_PRODUCTS_DIR}/LookinServer/LookinServer.framework
+${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework
+${BUILT_PRODUCTS_DIR}/PINOperation/PINOperation.framework
+${BUILT_PRODUCTS_DIR}/PINRemoteImage/PINRemoteImage.framework
+${BUILT_PRODUCTS_DIR}/StorybookKit/StorybookKit.framework
+${BUILT_PRODUCTS_DIR}/StorybookKitTextureSupport/StorybookKitTextureSupport.framework
+${BUILT_PRODUCTS_DIR}/StorybookUI/StorybookUI.framework
+${BUILT_PRODUCTS_DIR}/Texture/AsyncDisplayKit.framework
+${BUILT_PRODUCTS_DIR}/TextureBridging/TextureBridging.framework
+${BUILT_PRODUCTS_DIR}/TextureSwiftSupport/TextureSwiftSupport.framework
+${BUILT_PRODUCTS_DIR}/TypedTextAttributes/TypedTextAttributes.framework
+${PODS_XCFRAMEWORKS_BUILD_DIR}/RevealServer/RevealServer.framework/RevealServer

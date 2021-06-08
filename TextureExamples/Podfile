@@ -1,0 +1,23 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'TextureExamples' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  pod 'Texture'
+  pod 'TextureSwiftSupport'
+  pod 'Texture/PINRemoteImage'
+    
+  pod "TypedTextAttributes"
+  pod "GlossButtonNode"
+  pod "Reveal-SDK"
+  pod "StorybookKit"
+  pod "StorybookUI"
+  pod "StorybookKitTextureSupport"
+  pod "EasyPeasy"
+
+  # UI Test Tools
+  pod 'LookinServer', :configurations => ['Debug']
+
+end
