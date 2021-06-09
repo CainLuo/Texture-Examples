@@ -34,6 +34,9 @@ class NormalListController: ASDKViewController<ASTableNode> {
         node.allowsSelection = true
         node.dataSource = self
         node.delegate = self
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 1))
+        view.backgroundColor = .clear
+        node.view.tableFooterView = view
 
         viewModel.inputs.viewDidLoad()
     }
@@ -85,5 +88,13 @@ extension NormalListController: ASTableDelegate {
     func tableNode(_ tableNode: ASTableNode, constrainedSizeForRowAt indexPath: IndexPath) -> ASSizeRange {
         ASSizeRange(min: CGSize(width: tableNode.frame.size.width, height: 60),
                     max: CGSize(width: tableNode.frame.size.width, height: 60))
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        ["section1", "section2"][section]
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        40
     }
 }
