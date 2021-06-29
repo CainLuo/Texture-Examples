@@ -12,8 +12,11 @@ class ExampleListCellNode: ASCellNode {
     
     private let titleNode = ASTextNode()
     
-    init(_ item: ExampleListModel) {
+    init(_ item: ExampleListItemModel?) {
         super.init()
+        guard let item = item else {
+            return
+        }
         automaticallyManagesSubnodes = true
         titleNode.attributedText = NSAttributedString.attributed(item.title ?? "")
     }

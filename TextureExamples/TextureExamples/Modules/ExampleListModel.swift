@@ -8,11 +8,33 @@
 import Foundation
 import ObjectMapper
 
-struct ExampleListModel {
+enum ExampleListSectionType: Int {
+    case justifyContent = 0
+    case alignItems
+}
+
+struct ExampleListSectionModel {
+    var title: String?
+    var type: ExampleListSectionType?
+    var items: [ExampleListItemModel]?
+}
+
+extension ExampleListSectionModel: Mappable {
+    init?(map: Map) {
+    }
+
+    mutating func mapping(map: Map) {
+        title <- map["title"]
+        type <- map["type"]
+        items <- map["items"]
+    }
+}
+
+struct ExampleListItemModel {
     var title: String?
 }
 
-extension ExampleListModel: Mappable {
+extension ExampleListItemModel: Mappable {
     init?(map: Map) {
     }
 

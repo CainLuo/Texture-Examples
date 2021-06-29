@@ -14,7 +14,7 @@ protocol ExampleListViewModelInputs {
 }
 
 protocol ExampleListViewModelOutputs {
-    var items: Driver<[ExampleListModel]> { get }
+    var sections: Driver<[ExampleListSectionModel]> { get }
 }
 
 protocol ExampleListViewModelTypes {
@@ -25,12 +25,12 @@ protocol ExampleListViewModelTypes {
 class ExampleListViewModel: ExampleListViewModelInputs, ExampleListViewModelOutputs, ExampleListViewModelTypes {
     
     init() {
-        let items = viewDidLoadSubject.map(filterItems)
+        let sections = viewDidLoadSubject.map(filterSections)
         
         // inputs
         
         // outputs
-        self.items = items.asDriverOnErrorJustComplete()
+        self.sections = sections.asDriverOnErrorJustComplete()
     }
     
     // MARK: subjects
@@ -42,14 +42,37 @@ class ExampleListViewModel: ExampleListViewModelInputs, ExampleListViewModelOutp
     }
 
     // MARK: outputs
-    let items: Driver<[ExampleListModel]>
+    let sections: Driver<[ExampleListSectionModel]>
 
     var inputs: ExampleListViewModelInputs { return self }
     var outputs: ExampleListViewModelOutputs { return self }
 }
 
-private func filterItems() -> [ExampleListModel] {
+private func filterSections() -> [ExampleListSectionModel] {
     [
-        ExampleListModel(title: "aaaaa")
+        ExampleListSectionModel(title: "JustifyContent", type: .justifyContent, items: justifyContentItems()),
+        ExampleListSectionModel(title: "AlignItems", type: .alignItems, items: justifyContentItems())
+    ]
+}
+
+private func justifyContentItems() -> [ExampleListItemModel] {
+    [
+        ExampleListItemModel(title: "ASStackLayoutJustifyContentStart"),
+        ExampleListItemModel(title: "ASStackLayoutJustifyContentCenter"),
+        ExampleListItemModel(title: "ASStackLayoutJustifyContentEnd"),
+        ExampleListItemModel(title: "ASStackLayoutJustifyContentSpaceBetween"),
+        ExampleListItemModel(title: "ASStackLayoutJustifyContentSpaceAround")
+    ]
+}
+
+private func alignItemsItems() -> [ExampleListItemModel] {
+    [
+        ExampleListItemModel(title: "ASStackLayoutAlignItemsStart"),
+        ExampleListItemModel(title: "ASStackLayoutAlignItemsEnd"),
+        ExampleListItemModel(title: "ASStackLayoutAlignItemsCenter"),
+        ExampleListItemModel(title: "ASStackLayoutAlignItemsStretch"),
+        ExampleListItemModel(title: "ASStackLayoutAlignItemsBaselineFirst"),
+        ExampleListItemModel(title: "ASStackLayoutAlignItemsBaselineLast"),
+        ExampleListItemModel(title: "ASStackLayoutAlignItemsNotSet")
     ]
 }

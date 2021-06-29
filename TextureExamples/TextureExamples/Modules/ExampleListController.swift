@@ -12,7 +12,7 @@ import AsyncDisplayKit
 class ExampleListController: BaseTableNodeController {
     
     private let viewModel: ExampleListViewModelTypes = ExampleListViewModel()
-    private var dataSource: [ExampleListModel] = []
+    private var dataSource: [ExampleListSectionModel] = []
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,15 +21,15 @@ class ExampleListController: BaseTableNodeController {
         node.allowsSelection = true
         node.dataSource = self
         node.delegate = self
-        node.view.separatorStyle = .singleLine
+        node.leadingScreensForBatching = 2.5
         bindViewModel()
         viewModel.inputs.viewDidLoad()
     }
     
     private func bindViewModel() {
-        viewModel.outputs.items
-            .drive(onNext: { [weak self] items in
-                self?.dataSource = items
+        viewModel.outputs.sections
+            .drive(onNext: { [weak self] sections in
+                self?.dataSource = sections
                 self?.node.reloadData()
             })
             .disposed(by: disposeBag)
@@ -39,15 +39,15 @@ class ExampleListController: BaseTableNodeController {
 // MARK: - ASTableDataSource
 extension ExampleListController: ASTableDataSource {
     func numberOfSections(in tableNode: ASTableNode) -> Int {
-        1
-    }
-    
-    func tableNode(_ tableNode: ASTableNode, numberOfRowsInSection section: Int) -> Int {
         dataSource.count
     }
     
+    func tableNode(_ tableNode: ASTableNode, numberOfRowsInSection section: Int) -> Int {
+        dataSource[section].items?.count ?? 0
+    }
+    
     func tableNode(_ tableNode: ASTableNode, nodeBlockForRowAt indexPath: IndexPath) -> ASCellNodeBlock {
-        let item = dataSource[indexPath.row]
+        let item = dataSource[indexPath.section].items?[indexPath.row]
         let cellBlock: ASCellNodeBlock = {
             ExampleListCellNode(item)
         }
@@ -59,5 +59,13 @@ extension ExampleListController: ASTableDataSource {
 extension ExampleListController: ASTableDelegate {
     func tableNode(_ tableNode: ASTableNode, didSelectRowAt indexPath: IndexPath) {
         tableNode.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        dataSource[section].title
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        40
     }
 }
