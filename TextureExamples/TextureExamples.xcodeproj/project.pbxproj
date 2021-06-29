@@ -50,6 +50,16 @@
 		BFAF3BEE266FC504008DFED8 /* NormalListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAF3BED266FC504008DFED8 /* NormalListViewModel.swift */; };
 		BFAF3BF0266FC67B008DFED8 /* NormalListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAF3BEF266FC67B008DFED8 /* NormalListModel.swift */; };
 		BFAF3BF2266FC7F3008DFED8 /* Rx+Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAF3BF1266FC7F3008DFED8 /* Rx+Observable.swift */; };
+		BFFF2E72268A065A00005591 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFF2E71268A065A00005591 /* TabBarController.swift */; };
+		BFFF2E74268A078000005591 /* ExampleListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFF2E73268A078000005591 /* ExampleListController.swift */; };
+		BFFF2E77268A082E00005591 /* BaseTableNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFF2E76268A082E00005591 /* BaseTableNodeController.swift */; };
+		BFFF2E79268A09AE00005591 /* ExampleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFF2E78268A09AE00005591 /* ExampleListViewModel.swift */; };
+		BFFF2E7B268A09F500005591 /* ExampleListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFF2E7A268A09F500005591 /* ExampleListModel.swift */; };
+		BFFF2E7D268A0AA700005591 /* ExampleListCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFF2E7C268A0AA700005591 /* ExampleListCellNode.swift */; };
+		BFFF2E7F268A28F500005591 /* NSAttributeString+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFF2E7E268A28F500005591 /* NSAttributeString+Extensions.swift */; };
+		BFFF2E81268A299500005591 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFF2E80268A299500005591 /* UIColor+Extensions.swift */; };
+		BFFF2E83268A9B1800005591 /* TabBarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFF2E82268A9B1800005591 /* TabBarModel.swift */; };
+		BFFF2E88268A9C9F00005591 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BFFF2E8A268A9C9F00005591 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +110,19 @@
 		BFAF3BED266FC504008DFED8 /* NormalListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalListViewModel.swift; sourceTree = "<group>"; };
 		BFAF3BEF266FC67B008DFED8 /* NormalListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalListModel.swift; sourceTree = "<group>"; };
 		BFAF3BF1266FC7F3008DFED8 /* Rx+Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rx+Observable.swift"; sourceTree = "<group>"; };
+		BFFF2E71268A065A00005591 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		BFFF2E73268A078000005591 /* ExampleListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleListController.swift; sourceTree = "<group>"; };
+		BFFF2E76268A082E00005591 /* BaseTableNodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableNodeController.swift; sourceTree = "<group>"; };
+		BFFF2E78268A09AE00005591 /* ExampleListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleListViewModel.swift; sourceTree = "<group>"; };
+		BFFF2E7A268A09F500005591 /* ExampleListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleListModel.swift; sourceTree = "<group>"; };
+		BFFF2E7C268A0AA700005591 /* ExampleListCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleListCellNode.swift; sourceTree = "<group>"; };
+		BFFF2E7E268A28F500005591 /* NSAttributeString+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributeString+Extensions.swift"; sourceTree = "<group>"; };
+		BFFF2E80268A299500005591 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		BFFF2E82268A9B1800005591 /* TabBarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarModel.swift; sourceTree = "<group>"; };
+		BFFF2E84268A9C6300005591 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		BFFF2E85268A9C6400005591 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		BFFF2E89268A9C9F00005591 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BFFF2E8B268A9CA400005591 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +168,8 @@
 			isa = PBXGroup;
 			children = (
 				4D0B2053266F59C9005037E1 /* AppDelegate.swift */,
+				BFFF2E75268A081D00005591 /* Base */,
+				BFFF2E70268A063400005591 /* Modules */,
 				4D0B207A266F5A7F005037E1 /* CollectionNode */,
 				4D0B2075266F5A7F005037E1 /* Extensions */,
 				4D0B2071266F5A7F005037E1 /* Models */,
@@ -166,6 +191,7 @@
 				4D0B205C266F59CB005037E1 /* Assets.xcassets */,
 				4D0B205E266F59CB005037E1 /* LaunchScreen.storyboard */,
 				4D0B2061266F59CB005037E1 /* Info.plist */,
+				BFFF2E8A268A9C9F00005591 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -295,6 +321,29 @@
 			path = NormalList;
 			sourceTree = "<group>";
 		};
+		BFFF2E70268A063400005591 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				BFFF2E71268A065A00005591 /* TabBarController.swift */,
+				BFFF2E82268A9B1800005591 /* TabBarModel.swift */,
+				BFFF2E73268A078000005591 /* ExampleListController.swift */,
+				BFFF2E7A268A09F500005591 /* ExampleListModel.swift */,
+				BFFF2E7C268A0AA700005591 /* ExampleListCellNode.swift */,
+				BFFF2E78268A09AE00005591 /* ExampleListViewModel.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		BFFF2E75268A081D00005591 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				BFFF2E76268A082E00005591 /* BaseTableNodeController.swift */,
+				BFFF2E80268A299500005591 /* UIColor+Extensions.swift */,
+				BFFF2E7E268A28F500005591 /* NSAttributeString+Extensions.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		E9D7BEF27D601D41271BE549 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -346,6 +395,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 4D0B2047266F59C9005037E1;
 			productRefGroup = 4D0B2051266F59C9005037E1 /* Products */;
@@ -363,6 +413,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D0B2060266F59CB005037E1 /* LaunchScreen.storyboard in Resources */,
+				BFFF2E88268A9C9F00005591 /* Localizable.strings in Resources */,
 				4D0B205D266F59CB005037E1 /* Assets.xcassets in Resources */,
 				4D0B205B266F59C9005037E1 /* Main.storyboard in Resources */,
 			);
@@ -419,14 +470,17 @@
 			files = (
 				4D0B20A7266F5A7F005037E1 /* Mocks.swift in Sources */,
 				4D0B20A8266F5A7F005037E1 /* Components.swift in Sources */,
+				BFFF2E7B268A09F500005591 /* ExampleListModel.swift in Sources */,
 				4D0B20AD266F5A7F005037E1 /* TransitionLayoutViewController.swift in Sources */,
 				4D0B209F266F5A7F005037E1 /* PhotoCollectionNodeCell.swift in Sources */,
 				4D0B2058266F59C9005037E1 /* ViewController.swift in Sources */,
 				BFAF3BEA266FC352008DFED8 /* NormalListController.swift in Sources */,
 				4D0B20AC266F5A7F005037E1 /* AdaptiveLayoutViewController.swift in Sources */,
 				4D0B209C266F5A7F005037E1 /* NumberFormatter.swift in Sources */,
+				BFFF2E83268A9B1800005591 /* TabBarModel.swift in Sources */,
 				4D0B20AE266F5A7F005037E1 /* Util.swift in Sources */,
 				4D0B20AB266F5A7F005037E1 /* CompositionCatalogViewController.swift in Sources */,
+				BFFF2E74268A078000005591 /* ExampleListController.swift in Sources */,
 				4D0B2097266F5A7F005037E1 /* PhotoListController.swift in Sources */,
 				4D0B20A0266F5A7F005037E1 /* PhotoCollectionController.swift in Sources */,
 				4D0B20AF266F5A7F005037E1 /* Book.swift in Sources */,
@@ -434,22 +488,28 @@
 				4D0B20A9266F5A7F005037E1 /* RecursiveLayoutViewController.swift in Sources */,
 				4D0B20AA266F5A7F005037E1 /* InstagramPostCellViewController.swift in Sources */,
 				BFAF3BF0266FC67B008DFED8 /* NormalListModel.swift in Sources */,
+				BFFF2E79268A09AE00005591 /* ExampleListViewModel.swift in Sources */,
 				4D0B2098266F5A7F005037E1 /* PopularPageModel.swift in Sources */,
 				4D0B20A3266F5A7F005037E1 /* OrderedDictionary+Description.swift in Sources */,
 				4D0B2054266F59C9005037E1 /* AppDelegate.swift in Sources */,
 				4D0B20A4266F5A7F005037E1 /* Book.StyledEdgeNode.swift in Sources */,
+				BFFF2E7F268A28F500005591 /* NSAttributeString+Extensions.swift in Sources */,
 				4D0B209A266F5A7F005037E1 /* PhotoListModel.swift in Sources */,
 				4D0B20A2266F5A7F005037E1 /* OrderedDictionary.swift in Sources */,
 				4D0B2096266F5A7F005037E1 /* PhotoListNodeCell.swift in Sources */,
+				BFFF2E77268A082E00005591 /* BaseTableNodeController.swift in Sources */,
 				4D0B2099266F5A7F005037E1 /* PhotoFeedModel.swift in Sources */,
 				4D0B20A1266F5A7F005037E1 /* OrderedDictionary+Codable.swift in Sources */,
 				4D0B20B2266F5A7F005037E1 /* Book.InteractiveNode.swift in Sources */,
 				BFAF3BEC266FC406008DFED8 /* NormalNodeCell.swift in Sources */,
 				4D0B20B0266F5A7F005037E1 /* Book.TiledLayer.swift in Sources */,
+				BFFF2E81268A299500005591 /* UIColor+Extensions.swift in Sources */,
 				4D0B2094266F5A7F005037E1 /* WebService.swift in Sources */,
 				4D0B20A5266F5A7F005037E1 /* RootContainerViewController.swift in Sources */,
 				4D0B209D266F5A7F005037E1 /* UIColor.swift in Sources */,
 				4D0B209B266F5A7F005037E1 /* Date.swift in Sources */,
+				BFFF2E72268A065A00005591 /* TabBarController.swift in Sources */,
+				BFFF2E7D268A0AA700005591 /* ExampleListCellNode.swift in Sources */,
 				4D0B20A6266F5A7F005037E1 /* Book.ImageNode.swift in Sources */,
 				BFAF3BF2266FC7F3008DFED8 /* Rx+Observable.swift in Sources */,
 				4D0B2093266F5A7F005037E1 /* Constants.swift in Sources */,
@@ -466,6 +526,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				4D0B205A266F59C9005037E1 /* Base */,
+				BFFF2E84268A9C6300005591 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -474,8 +535,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				4D0B205F266F59CB005037E1 /* Base */,
+				BFFF2E85268A9C6400005591 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		BFFF2E8A268A9C9F00005591 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFFF2E89268A9C9F00005591 /* en */,
+				BFFF2E8B268A9CA400005591 /* zh-Hans */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -485,6 +556,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -546,6 +618,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -605,7 +678,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "$(SRCROOT)/TextureExamples/Resources/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -625,7 +698,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "$(SRCROOT)/TextureExamples/Resources/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

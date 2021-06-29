@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction private func pushController(_ sender: Any) {
-        let vc = NormalListController()
+        let vc = PhotoListController()
         navigationController?.pushViewController(vc, animated: true)
     }
     

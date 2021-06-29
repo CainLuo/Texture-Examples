@@ -1,5 +1,7 @@
-# Uncomment the next line to define a global platform for your project
- platform :ios, '11.0'
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '12.0'
+inhibit_all_warnings!
 
 target 'TextureExamples' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -21,8 +23,19 @@ target 'TextureExamples' do
   pod "StorybookUI"
   pod "StorybookKitTextureSupport"
   pod "EasyPeasy"
+  
+  pod 'Localize_Swift'
 
   # UI Test Tools
   pod 'LookinServer', :configurations => ['Debug']
 
+end
+
+post_install do |installer|
+  # targets
+    installer.pods_project.targets.each do |target|
+        target.build_configurations.each do |config|
+            config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '12.0'
+        end
+    end
 end

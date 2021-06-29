@@ -71,12 +71,6 @@ extension NormalListController: ASTableDataSource {
         
         return cellNodeBlock
     }
-    
-    func tableNode(_ tableNode: ASTableNode, nodeForRowAt indexPath: IndexPath) -> ASCellNode {
-        let node = ASCellNode()
-        node.backgroundColor = .gray
-        return node
-    }
 }
 
 // MARK: - ASTableDelegate
