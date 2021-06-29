@@ -3,6 +3,12 @@ PODS:
   - GlossButtonNode (2.1.0):
     - Texture/Core (~> 3)
     - TextureSwiftSupport
+  - Localize-Swift (3.2.0):
+    - Localize-Swift/LocalizeSwiftCore (= 3.2.0)
+    - Localize-Swift/UIKit (= 3.2.0)
+  - Localize-Swift/LocalizeSwiftCore (3.2.0)
+  - Localize-Swift/UIKit (3.2.0):
+    - Localize-Swift/LocalizeSwiftCore
   - LookinServer (1.0.2)
   - ObjectMapper (4.2.0)
   - PINCache (3.0.3):
@@ -77,6 +83,7 @@ PODS:
 DEPENDENCIES:
   - EasyPeasy
   - GlossButtonNode
+  - Localize-Swift
   - LookinServer
   - ObjectMapper
   - Reveal-SDK
@@ -91,6 +98,8 @@ DEPENDENCIES:
   - TypedTextAttributes
 
 SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Localize-Swift
   trunk:
     - EasyPeasy
     - GlossButtonNode
@@ -114,6 +123,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   EasyPeasy: b9b1bae024d21a7dfa9bad26d6826d88348cc6f1
   GlossButtonNode: 0b1471447cb4cebc8a959bbca574247ff6b0592b
+  Localize-Swift: 6f4475136bdb0d7b2882ea3d4ea919d70142b232
   LookinServer: d6874df8b58096c8d463817b6baaa3abc21d31f7
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   PINCache: 7a8fc1a691173d21dbddbf86cd515de6efa55086
@@ -131,6 +141,6 @@ SPEC CHECKSUMS:
   TextureSwiftSupport: b97859d0f3016f1af2f276bf6d987e916b23b150
   TypedTextAttributes: 624acbbc3bd067453d76f7408c6d6c5f0964d51b
 
-PODFILE CHECKSUM: b5d5ac7d8dcef411bac6118dc31ec23f9f040e05
+PODFILE CHECKSUM: b40a8d40c32d6d3d9394a53f1b0eeea01542d388
 
 COCOAPODS: 1.10.1
