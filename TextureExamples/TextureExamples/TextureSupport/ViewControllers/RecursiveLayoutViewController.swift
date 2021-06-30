@@ -104,9 +104,9 @@ extension RecursiveLayoutViewController {
         VStackLayout {
           button
           textNode
-          if flag {
-            textNode2
-          }
+//          if flag {
+//            textNode2
+//          }
         }
       }
     }
