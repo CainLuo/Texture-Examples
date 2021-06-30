@@ -32,7 +32,7 @@ extension TabBarController {
 extension TabBarController {
     private func configModels() -> [TabBarModel] {
         [
-            TabBarModel(title: "TabBar_Home", icon: UIImage(named: ""), selectIcon: UIImage(named: ""), controller: ExampleListController())
+            TabBarModel(title: "TabBar_Home", icon: #imageLiteral(resourceName: "tabBarStackContent"), selectIcon: #imageLiteral(resourceName: "tabBarStackContent"), controller: ExampleListController())
         ]
     }
 }
