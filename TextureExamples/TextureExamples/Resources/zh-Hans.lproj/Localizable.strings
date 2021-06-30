@@ -6,4 +6,6 @@
   
 */
 
-"TabBar_Home" = "首页";
+"TabBar_StackContent" = "StackContent";
+"TabBar_LayoutSpec"   = "LayoutSpec";
+"TabBar_List"   = "Attributes";
