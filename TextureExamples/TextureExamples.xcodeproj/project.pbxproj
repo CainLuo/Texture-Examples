@@ -52,6 +52,8 @@
 		BFAF3BF2266FC7F3008DFED8 /* Rx+Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAF3BF1266FC7F3008DFED8 /* Rx+Observable.swift */; };
 		BFC371CD268BF3D600A67231 /* AlignItemsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC371CC268BF3D600A67231 /* AlignItemsController.swift */; };
 		BFC371CF268BF3E100A67231 /* JustifyContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC371CE268BF3E100A67231 /* JustifyContentController.swift */; };
+		BFC371D4268CCCC600A67231 /* LayoutSpecListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC371D3268CCCC600A67231 /* LayoutSpecListController.swift */; };
+		BFC371D7268CCDCE00A67231 /* ListsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC371D6268CCDCE00A67231 /* ListsController.swift */; };
 		BFFF2E72268A065A00005591 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFF2E71268A065A00005591 /* TabBarController.swift */; };
 		BFFF2E74268A078000005591 /* ExampleListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFF2E73268A078000005591 /* ExampleListController.swift */; };
 		BFFF2E77268A082E00005591 /* BaseTableNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFF2E76268A082E00005591 /* BaseTableNodeController.swift */; };
@@ -114,6 +116,8 @@
 		BFAF3BF1266FC7F3008DFED8 /* Rx+Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rx+Observable.swift"; sourceTree = "<group>"; };
 		BFC371CC268BF3D600A67231 /* AlignItemsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignItemsController.swift; sourceTree = "<group>"; };
 		BFC371CE268BF3E100A67231 /* JustifyContentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustifyContentController.swift; sourceTree = "<group>"; };
+		BFC371D3268CCCC600A67231 /* LayoutSpecListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutSpecListController.swift; sourceTree = "<group>"; };
+		BFC371D6268CCDCE00A67231 /* ListsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsController.swift; sourceTree = "<group>"; };
 		BFFF2E71268A065A00005591 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		BFFF2E73268A078000005591 /* ExampleListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleListController.swift; sourceTree = "<group>"; };
 		BFFF2E76268A082E00005591 /* BaseTableNodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableNodeController.swift; sourceTree = "<group>"; };
@@ -361,12 +365,30 @@
 			path = TabBar;
 			sourceTree = "<group>";
 		};
+		BFC371D2268CCCBB00A67231 /* LayoutSpecList */ = {
+			isa = PBXGroup;
+			children = (
+				BFC371D3268CCCC600A67231 /* LayoutSpecListController.swift */,
+			);
+			path = LayoutSpecList;
+			sourceTree = "<group>";
+		};
+		BFC371D5268CCDB200A67231 /* Lists */ = {
+			isa = PBXGroup;
+			children = (
+				BFC371D6268CCDCE00A67231 /* ListsController.swift */,
+			);
+			path = Lists;
+			sourceTree = "<group>";
+		};
 		BFFF2E70268A063400005591 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				BFC371D5268CCDB200A67231 /* Lists */,
 				BFC371CB268BF3C000A67231 /* AlignItems */,
 				BFC371D0268BF46900A67231 /* ExampleList */,
 				BFC371CA268BF3B400A67231 /* JustifyContent */,
+				BFC371D2268CCCBB00A67231 /* LayoutSpecList */,
 				BFC371D1268BF47B00A67231 /* TabBar */,
 			);
 			path = Modules;
@@ -531,11 +553,13 @@
 				4D0B2098266F5A7F005037E1 /* PopularPageModel.swift in Sources */,
 				4D0B20A3266F5A7F005037E1 /* OrderedDictionary+Description.swift in Sources */,
 				4D0B2054266F59C9005037E1 /* AppDelegate.swift in Sources */,
+				BFC371D4268CCCC600A67231 /* LayoutSpecListController.swift in Sources */,
 				BFC371CD268BF3D600A67231 /* AlignItemsController.swift in Sources */,
 				4D0B20A4266F5A7F005037E1 /* Book.StyledEdgeNode.swift in Sources */,
 				BFFF2E7F268A28F500005591 /* NSAttributeString+Extensions.swift in Sources */,
 				4D0B209A266F5A7F005037E1 /* PhotoListModel.swift in Sources */,
 				4D0B20A2266F5A7F005037E1 /* OrderedDictionary.swift in Sources */,
+				BFC371D7268CCDCE00A67231 /* ListsController.swift in Sources */,
 				4D0B2096266F5A7F005037E1 /* PhotoListNodeCell.swift in Sources */,
 				BFFF2E77268A082E00005591 /* BaseTableNodeController.swift in Sources */,
 				4D0B2099266F5A7F005037E1 /* PhotoFeedModel.swift in Sources */,
