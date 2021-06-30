@@ -44,9 +44,9 @@ enum Components {
                 label
                   .flexGrow(1)
               }
-              if description != nil {
-                descriptionLabel
-              }
+//              if description != nil {
+//                descriptionLabel
+//              }
             }
             .padding(.horizontal, 8)
             .padding(.vertical, 12)
