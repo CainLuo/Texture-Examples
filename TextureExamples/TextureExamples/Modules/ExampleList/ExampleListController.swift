@@ -59,6 +59,20 @@ extension ExampleListController: ASTableDataSource {
 extension ExampleListController: ASTableDelegate {
     func tableNode(_ tableNode: ASTableNode, didSelectRowAt indexPath: IndexPath) {
         tableNode.deselectRow(at: indexPath, animated: true)
+        
+        let section = dataSource[indexPath.section]
+        guard let item = section.items?[indexPath.row] else {
+            return
+        }
+        
+        switch section.type {
+        case .justifyContent:
+            navigationController?.pushViewController(JustifyContentController(item.justifyContent ?? .start), animated: true)
+        case .alignItems:
+            navigationController?.pushViewController(AlignItemsController(item.alignItems ?? .start), animated: true)
+        default:
+            break
+        }
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {

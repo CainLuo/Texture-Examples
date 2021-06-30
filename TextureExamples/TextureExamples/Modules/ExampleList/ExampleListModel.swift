@@ -7,10 +7,12 @@
 
 import Foundation
 import ObjectMapper
+import AsyncDisplayKit
 
 enum ExampleListSectionType: Int {
     case justifyContent = 0
     case alignItems
+    case justifyAndAlign
 }
 
 struct ExampleListSectionModel {
@@ -32,6 +34,8 @@ extension ExampleListSectionModel: Mappable {
 
 struct ExampleListItemModel {
     var title: String?
+    var justifyContent: ASStackLayoutJustifyContent?
+    var alignItems: ASStackLayoutAlignItems?
 }
 
 extension ExampleListItemModel: Mappable {
@@ -40,5 +44,7 @@ extension ExampleListItemModel: Mappable {
 
     mutating func mapping(map: Map) {
         title <- map["title"]
+        justifyContent <- map["justifyContent"]
+        alignItems <- map["alignItems"]
     }
 }

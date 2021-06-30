@@ -50,6 +50,8 @@
 		BFAF3BEE266FC504008DFED8 /* NormalListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAF3BED266FC504008DFED8 /* NormalListViewModel.swift */; };
 		BFAF3BF0266FC67B008DFED8 /* NormalListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAF3BEF266FC67B008DFED8 /* NormalListModel.swift */; };
 		BFAF3BF2266FC7F3008DFED8 /* Rx+Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAF3BF1266FC7F3008DFED8 /* Rx+Observable.swift */; };
+		BFC371CD268BF3D600A67231 /* AlignItemsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC371CC268BF3D600A67231 /* AlignItemsController.swift */; };
+		BFC371CF268BF3E100A67231 /* JustifyContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC371CE268BF3E100A67231 /* JustifyContentController.swift */; };
 		BFFF2E72268A065A00005591 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFF2E71268A065A00005591 /* TabBarController.swift */; };
 		BFFF2E74268A078000005591 /* ExampleListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFF2E73268A078000005591 /* ExampleListController.swift */; };
 		BFFF2E77268A082E00005591 /* BaseTableNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFF2E76268A082E00005591 /* BaseTableNodeController.swift */; };
@@ -110,6 +112,8 @@
 		BFAF3BED266FC504008DFED8 /* NormalListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalListViewModel.swift; sourceTree = "<group>"; };
 		BFAF3BEF266FC67B008DFED8 /* NormalListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalListModel.swift; sourceTree = "<group>"; };
 		BFAF3BF1266FC7F3008DFED8 /* Rx+Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rx+Observable.swift"; sourceTree = "<group>"; };
+		BFC371CC268BF3D600A67231 /* AlignItemsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignItemsController.swift; sourceTree = "<group>"; };
+		BFC371CE268BF3E100A67231 /* JustifyContentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustifyContentController.swift; sourceTree = "<group>"; };
 		BFFF2E71268A065A00005591 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		BFFF2E73268A078000005591 /* ExampleListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleListController.swift; sourceTree = "<group>"; };
 		BFFF2E76268A082E00005591 /* BaseTableNodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableNodeController.swift; sourceTree = "<group>"; };
@@ -321,15 +325,49 @@
 			path = NormalList;
 			sourceTree = "<group>";
 		};
-		BFFF2E70268A063400005591 /* Modules */ = {
+		BFC371CA268BF3B400A67231 /* JustifyContent */ = {
+			isa = PBXGroup;
+			children = (
+				BFC371CE268BF3E100A67231 /* JustifyContentController.swift */,
+			);
+			path = JustifyContent;
+			sourceTree = "<group>";
+		};
+		BFC371CB268BF3C000A67231 /* AlignItems */ = {
+			isa = PBXGroup;
+			children = (
+				BFC371CC268BF3D600A67231 /* AlignItemsController.swift */,
+			);
+			path = AlignItems;
+			sourceTree = "<group>";
+		};
+		BFC371D0268BF46900A67231 /* ExampleList */ = {
+			isa = PBXGroup;
+			children = (
+				BFFF2E7C268A0AA700005591 /* ExampleListCellNode.swift */,
+				BFFF2E73268A078000005591 /* ExampleListController.swift */,
+				BFFF2E7A268A09F500005591 /* ExampleListModel.swift */,
+				BFFF2E78268A09AE00005591 /* ExampleListViewModel.swift */,
+			);
+			path = ExampleList;
+			sourceTree = "<group>";
+		};
+		BFC371D1268BF47B00A67231 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
 				BFFF2E71268A065A00005591 /* TabBarController.swift */,
 				BFFF2E82268A9B1800005591 /* TabBarModel.swift */,
-				BFFF2E73268A078000005591 /* ExampleListController.swift */,
-				BFFF2E7A268A09F500005591 /* ExampleListModel.swift */,
-				BFFF2E7C268A0AA700005591 /* ExampleListCellNode.swift */,
-				BFFF2E78268A09AE00005591 /* ExampleListViewModel.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		BFFF2E70268A063400005591 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				BFC371CB268BF3C000A67231 /* AlignItems */,
+				BFC371D0268BF46900A67231 /* ExampleList */,
+				BFC371CA268BF3B400A67231 /* JustifyContent */,
+				BFC371D1268BF47B00A67231 /* TabBar */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -488,10 +526,12 @@
 				4D0B20A9266F5A7F005037E1 /* RecursiveLayoutViewController.swift in Sources */,
 				4D0B20AA266F5A7F005037E1 /* InstagramPostCellViewController.swift in Sources */,
 				BFAF3BF0266FC67B008DFED8 /* NormalListModel.swift in Sources */,
+				BFC371CF268BF3E100A67231 /* JustifyContentController.swift in Sources */,
 				BFFF2E79268A09AE00005591 /* ExampleListViewModel.swift in Sources */,
 				4D0B2098266F5A7F005037E1 /* PopularPageModel.swift in Sources */,
 				4D0B20A3266F5A7F005037E1 /* OrderedDictionary+Description.swift in Sources */,
 				4D0B2054266F59C9005037E1 /* AppDelegate.swift in Sources */,
+				BFC371CD268BF3D600A67231 /* AlignItemsController.swift in Sources */,
 				4D0B20A4266F5A7F005037E1 /* Book.StyledEdgeNode.swift in Sources */,
 				BFFF2E7F268A28F500005591 /* NSAttributeString+Extensions.swift in Sources */,
 				4D0B209A266F5A7F005037E1 /* PhotoListModel.swift in Sources */,
