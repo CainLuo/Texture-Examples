@@ -41,7 +41,10 @@ extension JustifyContentController {
             stack.child = roundNode
             stack.justifyContent = .end
             
-            return stack
+            return ASCenterLayoutSpec(horizontalPosition: .end,
+                                      verticalPosition: .center,
+                                      sizingOption: [],
+                                      child: stack)
         }
     }
 }
