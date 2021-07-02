@@ -25,6 +25,7 @@ extension TabBarController {
             let nv = ASNavigationController(rootViewController: vc)
             nv.tabBarItem.image = item.icon
             nv.tabBarItem.selectedImage = item.selectIcon
+            nv.navigationBar.isTranslucent = false
             return nv
         }
     }
