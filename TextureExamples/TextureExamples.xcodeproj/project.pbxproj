@@ -45,6 +45,7 @@
 		4D0B20B0266F5A7F005037E1 /* Book.TiledLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0B2090266F5A7F005037E1 /* Book.TiledLayer.swift */; };
 		4D0B20B1266F5A7F005037E1 /* ZStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0B2091266F5A7F005037E1 /* ZStackView.swift */; };
 		4D0B20B2266F5A7F005037E1 /* Book.InteractiveNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0B2092266F5A7F005037E1 /* Book.InteractiveNode.swift */; };
+		4D8054DF268F0C0900A9B5E9 /* InfoNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8054DE268F0C0900A9B5E9 /* InfoNode.swift */; };
 		BFAF3BEA266FC352008DFED8 /* NormalListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAF3BE9266FC352008DFED8 /* NormalListController.swift */; };
 		BFAF3BEC266FC406008DFED8 /* NormalNodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAF3BEB266FC406008DFED8 /* NormalNodeCell.swift */; };
 		BFAF3BEE266FC504008DFED8 /* NormalListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAF3BED266FC504008DFED8 /* NormalListViewModel.swift */; };
@@ -109,6 +110,7 @@
 		4D0B2090266F5A7F005037E1 /* Book.TiledLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.TiledLayer.swift; sourceTree = "<group>"; };
 		4D0B2091266F5A7F005037E1 /* ZStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZStackView.swift; sourceTree = "<group>"; };
 		4D0B2092266F5A7F005037E1 /* Book.InteractiveNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.InteractiveNode.swift; sourceTree = "<group>"; };
+		4D8054DE268F0C0900A9B5E9 /* InfoNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoNode.swift; sourceTree = "<group>"; };
 		6CFB62A3112E0806C8A7ED6A /* Pods_TextureExamples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextureExamples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFAF3BE9266FC352008DFED8 /* NormalListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalListController.swift; sourceTree = "<group>"; };
 		BFAF3BEB266FC406008DFED8 /* NormalNodeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalNodeCell.swift; sourceTree = "<group>"; };
@@ -403,6 +405,7 @@
 				BFFF2E76268A082E00005591 /* BaseTableNodeController.swift */,
 				BFFF2E80268A299500005591 /* UIColor+Extensions.swift */,
 				BFFF2E7E268A28F500005591 /* NSAttributeString+Extensions.swift */,
+				4D8054DE268F0C0900A9B5E9 /* InfoNode.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -552,6 +555,7 @@
 				4D0B20AA266F5A7F005037E1 /* InstagramPostCellViewController.swift in Sources */,
 				BFAF3BF0266FC67B008DFED8 /* NormalListModel.swift in Sources */,
 				BFC371CF268BF3E100A67231 /* JustifyContentController.swift in Sources */,
+				4D8054DF268F0C0900A9B5E9 /* InfoNode.swift in Sources */,
 				BFFF2E79268A09AE00005591 /* ExampleListViewModel.swift in Sources */,
 				4D0B2098266F5A7F005037E1 /* PopularPageModel.swift in Sources */,
 				4D0B20A3266F5A7F005037E1 /* OrderedDictionary+Description.swift in Sources */,
