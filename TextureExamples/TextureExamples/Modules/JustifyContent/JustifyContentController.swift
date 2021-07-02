@@ -13,7 +13,7 @@ class JustifyContentController: ASDKViewController<ASDisplayNode> {
     
     init(_ type: ASStackLayoutJustifyContent) {
         super.init(node: ASDisplayNode())
-        
+
         configBackgroundNode()
     }
     
@@ -29,9 +29,9 @@ class JustifyContentController: ASDKViewController<ASDisplayNode> {
 
 extension JustifyContentController {
     private func configBackgroundNode() {
-        
+
         node.addSubnode(roundNode)
-        
+
         node.layoutSpecBlock = { [weak self] node, constrainedSize in
             guard let roundNode = self?.roundNode else { return ASLayoutSpec() }
             
@@ -40,9 +40,9 @@ extension JustifyContentController {
             let stack = ASStackLayoutSpec.horizontal()
             stack.child = roundNode
             stack.justifyContent = .end
-            
+
             return ASCenterLayoutSpec(horizontalPosition: .end,
-                                      verticalPosition: .center,
+                                      verticalPosition: .start,
                                       sizingOption: [],
                                       child: stack)
         }
