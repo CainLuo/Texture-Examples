@@ -8,11 +8,59 @@
 import AsyncDisplayKit
 
 protocol InfoNodeDelegate: AnyObject {
-    func infoNodeDidSelectDefine(_ node: InfoNode)
+    func infoNodeDidSelectDefine(_ node: InfoNode, isReset: Bool)
 }
 
 class InfoNode: ASDisplayNode {
-    private let buttonNode = ASButtonNode()
+    private lazy var resetNode: ASButtonNode = {
+        let node = ASButtonNode()
+        node.backgroundColor = .purple
+        node.setTitle("重置", with: UIFont.systemFont(ofSize: 16), with: .white, for: .normal)
+        node.addTarget(self, action: #selector(resetAction), forControlEvents: .touchUpInside)
+        return node
+    }()
+    private lazy var startNode: ASButtonNode = {
+        let node = ASButtonNode()
+        node.backgroundColor = .blue
+        node.addTarget(self, action: #selector(startAction), forControlEvents: .touchUpInside)
+        node.setTitle("开始移动", with: UIFont.systemFont(ofSize: 16), with: .white, for: .normal)
+        return node
+    }()
     private let textNode = ASTextNode()
+    
+    weak var delegate: InfoNodeDelegate?
+    
+    override init() {
+        super.init()
+        automaticallyManagesSubnodes = true
+        textNode.attributedText = NSAttributedString.attributed("qoweiqopwieopqwieopqiweopiqwpoeioqpweiopqwiepoqiwpoeiqpowieo")
+    }
 
+    override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
+        textNode.style.flexGrow = 1.0
+        textNode.style.flexShrink = 1.0
+        
+        resetNode.style.flexBasis = ASDimensionMake("50%")
+        startNode.style.flexBasis = ASDimensionMake("50%")
+
+        let hStack = ASStackLayoutSpec.horizontal()
+        hStack.children = [resetNode, startNode]
+        hStack.style.preferredSize = CGSize(width: constrainedSize.max.width, height: 44)
+        hStack.style.spacingBefore = 10
+
+        let stack = ASStackLayoutSpec.vertical()
+        stack.children = [textNode, hStack]
+        return stack
+    }
+}
+
+// MARK: - Actions
+extension InfoNode {
+    @objc func resetAction(_ sender: Any) {
+        delegate?.infoNodeDidSelectDefine(self, isReset: true)
+    }
+
+    @objc func startAction(_ sender: Any) {
+        delegate?.infoNodeDidSelectDefine(self, isReset: false)
+    }
 }
