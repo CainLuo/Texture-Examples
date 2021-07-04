@@ -11,11 +11,17 @@ class JustifyContentController: ASDKViewController<ASDisplayNode> {
     
     private let roundNode = JustifyContentRoundNode()
     private let squareNode = JustifyContentSquareNode()
-    private let infoNode = InfoNode()
+    private lazy var infoNode: InfoNode = {
+        let node = InfoNode("JustifyContent_\(justifyContentType.rawValue)".localized())
+        return node
+    }()
     private var isShowAnimated = false
+    
+    private var justifyContentType: ASStackLayoutJustifyContent = .start
     
     init(_ type: ASStackLayoutJustifyContent) {
         super.init(node: ASDisplayNode())
+        justifyContentType = type
         configBackgroundNode()
     }
     
@@ -43,7 +49,7 @@ extension JustifyContentController {
                   let infoNode = self?.infoNode else {
                 return ASLayoutSpec()
             }
-                                                
+            
             squareNode.style.preferredSize = CGSize(width: 100, height: 100)
             squareNode.cornerRadius = 50
             roundNode.style.preferredSize = CGSize(width: 100, height: 100)
@@ -52,17 +58,15 @@ extension JustifyContentController {
             infoNode.style.spacingBefore = 100
 
             let squareStack = ASStackLayoutSpec.horizontal()
-            squareStack.child = squareNode
-            squareStack.justifyContent = self?.isShowAnimated == false ? .start : .end
+            squareStack.justifyContent = self?.foregroundJustifyContentType() ?? .start
+            squareStack.children = [roundNode, squareNode]
             
             let roundStack = ASStackLayoutSpec.horizontal()
             roundStack.child = roundNode
-            roundStack.justifyContent = .end
+            roundStack.justifyContent = self?.justifyContentType ?? .start
             
-            let background = ASBackgroundLayoutSpec(child: squareStack, background: roundStack)
-
             let vstack = ASStackLayoutSpec.vertical()
-            vstack.children = [background, infoNode]
+            vstack.children = [squareStack, infoNode]
             return vstack
         }
     }
@@ -73,5 +77,23 @@ extension JustifyContentController: InfoNodeDelegate {
     func infoNodeDidSelectDefine(_ node: InfoNode, isReset: Bool) {
         isShowAnimated = !isReset
         self.node.setNeedsLayout()
+    }
+}
+
+// MARK: ASStackLayoutJustifyContent Methods
+extension JustifyContentController {
+    func foregroundJustifyContentType() -> ASStackLayoutJustifyContent {
+        switch justifyContentType {
+        case .start:
+            return !isShowAnimated ? .end : justifyContentType
+        case .end, .center:
+            return !isShowAnimated ? .start : justifyContentType
+        case .spaceAround:
+            return !isShowAnimated ? .start : justifyContentType
+        case .spaceBetween:
+            return !isShowAnimated ? .start : justifyContentType
+        default:
+            return justifyContentType
+        }
     }
 }
