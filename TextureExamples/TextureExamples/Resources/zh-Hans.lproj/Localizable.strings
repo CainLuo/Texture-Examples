@@ -9,3 +9,10 @@
 "TabBar_StackContent" = "StackContent";
 "TabBar_LayoutSpec"   = "LayoutSpec";
 "TabBar_List"         = "Lists";
+
+// MARK: - ASStackLayoutJustifyContent
+"JustifyContent_0" = "On overflow, children overflow out of this spec's bounds on the right/bottom side.\nOn underflow, children are left/top-aligned within this spec's bounds.";
+"JustifyContent_1" = "On overflow, children are centered and overflow on both sides.\nOn underflow, children are centered within this spec's bounds in the stacking direction.";
+"JustifyContent_2" = "On overflow, children overflow out of this spec's bounds on the left/top side. On underflow, children are right/bottom-aligned within this spec's bounds.";
+"JustifyContent_3" = "On overflow or if the stack has only 1 child, this value is identical to ASStackLayoutJustifyContentStart.Otherwise, the starting edge of the first child is at the starting edge of the stack,the ending edge of the last child is at the ending edge of the stack, and the remaining children are distributed so that the spacing between any two adjacent ones is the same. If there is a remaining space after spacing division, it is combined with the last spacing (i.e the one between the last 2 children).";
+"JustifyContent_4" = "On overflow or if the stack has only 1 child, this value is identical to ASStackLayoutJustifyContentCenter. Otherwise, children are distributed such that the spacing between any two adjacent ones is the same, and the spacing between the first/last child and the stack edges is half the size of the spacing between children.If there is a remaining space after spacing division, it is combined with the last spacing (i.e the one between the last child and the stack ending edge).";
