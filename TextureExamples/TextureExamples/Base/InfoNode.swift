@@ -30,10 +30,10 @@ class InfoNode: ASDisplayNode {
     
     weak var delegate: InfoNodeDelegate?
     
-    override init() {
+    init(_ content: String) {
         super.init()
         automaticallyManagesSubnodes = true
-        textNode.attributedText = NSAttributedString.attributed("qoweiqopwieopqwieopqiweopiqwpoeioqpweiopqwiepoqiwpoeiqpowieo")
+        textNode.attributedText = NSAttributedString.attributed(content)
     }
 
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
