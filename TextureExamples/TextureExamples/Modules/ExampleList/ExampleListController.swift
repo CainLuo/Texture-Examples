@@ -67,9 +67,13 @@ extension ExampleListController: ASTableDelegate {
         
         switch section.type {
         case .justifyContent:
-            navigationController?.pushViewController(JustifyContentController(item.justifyContent ?? .start), animated: true)
+            let vc = JustifyContentController(item.justifyContent ?? .start)
+            vc.title = item.title
+            navigationController?.pushViewController(vc, animated: true)
         case .alignItems:
-            navigationController?.pushViewController(AlignItemsController(item.alignItems ?? .start), animated: true)
+            let vc = AlignItemsController(item.alignItems ?? .start)
+            vc.title = item.title
+            navigationController?.pushViewController(vc, animated: true)
         default:
             break
         }
