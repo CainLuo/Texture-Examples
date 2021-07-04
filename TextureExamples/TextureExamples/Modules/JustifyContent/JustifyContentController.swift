@@ -67,6 +67,7 @@ extension JustifyContentController {
             
             let vstack = ASStackLayoutSpec.vertical()
             vstack.children = [squareStack, infoNode]
+            vstack.justifyContent = .spaceBetween
             return vstack
         }
     }
