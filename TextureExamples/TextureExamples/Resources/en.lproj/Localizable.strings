@@ -9,3 +9,10 @@
 "TabBar_StackContent" = "StackContent";
 "TabBar_LayoutSpec"   = "LayoutSpec";
 "TabBar_List"         = "Lists";
+
+// MARK: - ASStackLayoutJustifyContent
+"JustifyContent_0" = "溢出时，子节点在右/下侧溢出本规范的范围。在下溢时，子节点在本规范的范围内左/上对齐。";
+"JustifyContent_1" = "溢出时，子节点居中，两边溢出。溢出时，子节点在堆叠方向上在本规范的范围内居中。";
+"JustifyContent_2" = "溢出时，子节点在左/顶部溢出本规范的边界。溢出时，子节点在本规范的范围内右/下对齐。";
+"JustifyContent_3" = "当溢出或堆栈只有1个子节点时，这个值与ASSTACKLayoutJustifyContentStart相同。否则，第一个子节点的起始边缘在堆栈的起始边缘，最后一个子节点的结束边缘在堆栈的结束边缘，其余的子节点被分配，使任何两个相邻的子节点之间的间距是相同的。如果间距划分后还有剩余的空间，它将与最后的间距（即最后两个子节点之间的间距）合并。";
+"JustifyContent_4" = "在溢出或堆栈只有1个子节点时，这个值与ASSTACKLayoutJustifyContentCenter相同。否则，子节点们的分布是这样的：任何两个相邻的子节点之间的间距是相同的，而第一个/最后一个子节点和堆栈边缘之间的间距是子节点之间间距的一半。如果间距划分后还有剩余的空间，它将与最后的间距（即最后一个子节点和堆栈结束边缘之间的间距）相结合。";
