@@ -9,8 +9,8 @@ import AsyncDisplayKit
 
 class AlignItemsController: ASDKViewController<ASDisplayNode> {
     
-    private let roundNode = JustifyContentRoundNode()
-    private let squareNode = JustifyContentSquareNode()
+    private let roundNode = RoundNode()
+    private let squareNode = SquareNode()
     private lazy var infoNode: InfoNode = {
         let node = InfoNode("JustifyContent_\(alignItemsType.rawValue)".localized())
         return node
