@@ -51,8 +51,8 @@ class ExampleListViewModel: ExampleListViewModelInputs, ExampleListViewModelOutp
 private func filterSections() -> [ExampleListSectionModel] {
     [
         ExampleListSectionModel(title: "JustifyContent", type: .justifyContent, items: justifyContentItems()),
-        ExampleListSectionModel(title: "AlignItems", type: .alignItems, items: justifyContentItems()),
-        ExampleListSectionModel(title: "AlignItems", type: .justifyAndAlign, items: justifyAndAlign()),
+        ExampleListSectionModel(title: "AlignItems", type: .alignItems, items: alignItemsItems()),
+        ExampleListSectionModel(title: "JustifyContent And AlignItems", type: .justifyAndAlign, items: justifyAndAlign()),
     ]
 }
 
