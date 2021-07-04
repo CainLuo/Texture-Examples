@@ -86,14 +86,8 @@ extension JustifyContentController {
         switch justifyContentType {
         case .start:
             return !isShowAnimated ? .end : justifyContentType
-        case .end, .center:
-            return !isShowAnimated ? .start : justifyContentType
-        case .spaceAround:
-            return !isShowAnimated ? .start : justifyContentType
-        case .spaceBetween:
-            return !isShowAnimated ? .start : justifyContentType
         default:
-            return justifyContentType
+            return !isShowAnimated ? .start : justifyContentType
         }
     }
 }
