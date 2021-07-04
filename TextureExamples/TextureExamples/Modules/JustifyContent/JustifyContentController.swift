@@ -9,8 +9,8 @@ import AsyncDisplayKit
 
 class JustifyContentController: ASDKViewController<ASDisplayNode> {
     
-    private let roundNode = JustifyContentRoundNode()
-    private let squareNode = JustifyContentSquareNode()
+    private let roundNode = RoundNode()
+    private let squareNode = SquareNode()
     private lazy var infoNode: InfoNode = {
         let node = InfoNode("JustifyContent_\(justifyContentType.rawValue)".localized())
         return node
@@ -55,12 +55,12 @@ extension JustifyContentController {
             roundNode.style.preferredSize = CGSize(width: 100, height: 100)
 
             infoNode.style.preferredSize = CGSize(width: constrainedSize.max.width, height: 300)
-            infoNode.style.spacingBefore = 100
 
             let squareStack = ASStackLayoutSpec.horizontal()
             squareStack.justifyContent = self?.foregroundJustifyContentType() ?? .start
             squareStack.children = [roundNode, squareNode]
-            
+            squareStack.style.flexBasis = ASDimensionMake("50%")
+
             let roundStack = ASStackLayoutSpec.horizontal()
             roundStack.child = roundNode
             roundStack.justifyContent = self?.justifyContentType ?? .start
