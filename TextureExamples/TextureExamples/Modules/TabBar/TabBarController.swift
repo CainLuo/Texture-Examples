@@ -19,10 +19,10 @@ class TabBarController: ASTabBarController {
 
 extension TabBarController {
     private func configControllers() -> [UIViewController] {
-        configModels().map { item -> ASNavigationController in
+        configModels().map { item -> BaseNavigationController in
             let vc = item.controller!
             vc.title = item.title
-            let nv = ASNavigationController(rootViewController: vc)
+            let nv = BaseNavigationController(rootViewController: vc)
             nv.tabBarItem.image = item.icon
             nv.tabBarItem.selectedImage = item.selectIcon
             nv.navigationBar.isTranslucent = false
