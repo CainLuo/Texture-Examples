@@ -24,6 +24,7 @@ class AlignAndJustifyController: ASDKViewController<ASDisplayNode> {
 
     init(_ align: ASStackLayoutAlignItems, justify: ASStackLayoutJustifyContent) {
         super.init(node: ASDisplayNode())
+        node.automaticallyRelayoutOnSafeAreaChanges = true
         alignItemsType = align
         justifyContentType = justify
         configBackgroundNode()
@@ -66,7 +67,7 @@ extension AlignAndJustifyController {
             let vStack = ASStackLayoutSpec.vertical()
             vStack.children = [hStack, infoNode]
             vStack.justifyContent = .spaceBetween
-            return vStack
+            return ASInsetLayoutSpec(insets: node.safeAreaInsets, child: vStack)
         }
     }
 }
