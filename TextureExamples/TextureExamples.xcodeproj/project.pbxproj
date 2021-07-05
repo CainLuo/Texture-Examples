@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		447E9990AB27F7FCD3D924AC /* Pods_TextureExamples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CFB62A3112E0806C8A7ED6A /* Pods_TextureExamples.framework */; };
+		4D0AF9502692E44600382C48 /* JustifyAndAlignController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0AF94F2692E44600382C48 /* JustifyAndAlignController.swift */; };
 		4D0B2054266F59C9005037E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0B2053266F59C9005037E1 /* AppDelegate.swift */; };
 		4D0B2058266F59C9005037E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0B2057266F59C9005037E1 /* ViewController.swift */; };
 		4D0B205B266F59C9005037E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D0B2059266F59C9005037E1 /* Main.storyboard */; };
@@ -72,6 +73,7 @@
 /* Begin PBXFileReference section */
 		14B6AE99CCC904DA354573DB /* Pods-TextureExamples.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextureExamples.release.xcconfig"; path = "Target Support Files/Pods-TextureExamples/Pods-TextureExamples.release.xcconfig"; sourceTree = "<group>"; };
 		4C6F4B15B65F7B3C52AFF782 /* Pods-TextureExamples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextureExamples.debug.xcconfig"; path = "Target Support Files/Pods-TextureExamples/Pods-TextureExamples.debug.xcconfig"; sourceTree = "<group>"; };
+		4D0AF94F2692E44600382C48 /* JustifyAndAlignController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustifyAndAlignController.swift; sourceTree = "<group>"; };
 		4D0B2050266F59C9005037E1 /* TextureExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextureExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D0B2053266F59C9005037E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D0B2057266F59C9005037E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -158,6 +160,14 @@
 				14B6AE99CCC904DA354573DB /* Pods-TextureExamples.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		4D0AF94E2692E43400382C48 /* JustifyAndAlign */ = {
+			isa = PBXGroup;
+			children = (
+				4D0AF94F2692E44600382C48 /* JustifyAndAlignController.swift */,
+			);
+			path = JustifyAndAlign;
 			sourceTree = "<group>";
 		};
 		4D0B2047266F59C9005037E1 = {
@@ -390,11 +400,12 @@
 		BFFF2E70268A063400005591 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				BFC371D5268CCDB200A67231 /* Lists */,
 				BFC371CB268BF3C000A67231 /* AlignItems */,
 				BFC371D0268BF46900A67231 /* ExampleList */,
+				4D0AF94E2692E43400382C48 /* JustifyAndAlign */,
 				BFC371CA268BF3B400A67231 /* JustifyContent */,
 				BFC371D2268CCCBB00A67231 /* LayoutSpecList */,
+				BFC371D5268CCDB200A67231 /* Lists */,
 				BFC371D1268BF47B00A67231 /* TabBar */,
 			);
 			path = Modules;
@@ -579,6 +590,7 @@
 				4D0B20B2266F5A7F005037E1 /* Book.InteractiveNode.swift in Sources */,
 				BFAF3BEC266FC406008DFED8 /* NormalNodeCell.swift in Sources */,
 				4D0B20B0266F5A7F005037E1 /* Book.TiledLayer.swift in Sources */,
+				4D0AF9502692E44600382C48 /* JustifyAndAlignController.swift in Sources */,
 				BFFF2E81268A299500005591 /* UIColor+Extensions.swift in Sources */,
 				4D0B2094266F5A7F005037E1 /* WebService.swift in Sources */,
 				4D0B20A5266F5A7F005037E1 /* RootContainerViewController.swift in Sources */,
