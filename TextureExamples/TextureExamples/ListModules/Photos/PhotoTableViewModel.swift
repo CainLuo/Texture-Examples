@@ -14,6 +14,7 @@ protocol PhotoTableViewModelInputs {
 }
 
 protocol PhotoTableViewModelOutputs {
+    var items: Driver<[PhotoTableModel]> { get }
 }
 
 protocol PhotoTableViewModelTypes {
@@ -21,13 +22,30 @@ protocol PhotoTableViewModelTypes {
     var outputs: PhotoTableViewModelOutputs { get }
 }
 
+private var page: String = "1"
 class PhotoTableViewModel: PhotoTableViewModelInputs, PhotoTableViewModelOutputs, PhotoTableViewModelTypes {
     
     init() {
+        let apiService: ApiService = ApiService()
+        let error = ErrorTracker()
+        
+        let model = viewWillAppearSubject.map {
+            PhotoTableSubmitModel(page: page)
+        }
+        
+        let fetchLists = model
+            .flatMap {
+                apiService.getPhotos($0)
+                    .trackError(error)
+                    .asDriverOnErrorJustComplete()
+            }
+            .share()
+        
         // inputs
         self.viewWillAppear = viewWillAppearSubject.asObserver()
         
         // outputs
+        self.items = fetchLists.asDriverOnErrorJustComplete()
     }
     
     // MARK: subjects
@@ -37,6 +55,7 @@ class PhotoTableViewModel: PhotoTableViewModelInputs, PhotoTableViewModelOutputs
     let viewWillAppear: AnyObserver<Void>
 
     // MARK: outputs
+    let items: Driver<[PhotoTableModel]>
 
     var inputs: PhotoTableViewModelInputs { self }
     var outputs: PhotoTableViewModelOutputs { self }
