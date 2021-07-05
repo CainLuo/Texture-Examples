@@ -12,19 +12,19 @@ import Alamofire
 enum Router {
     
     // MARK: Camera
-    case getPhotos
+    case getPhotos(paremters: Parameters)
 }
 
 extension Router: TargetType {
     var baseURL: URL {
-        URL(string: "")!
+        URL(string: "https://api.unsplash.com/")!
     }
     
     var path: String {
         switch self {
         // MARK: Camera
         case .getPhotos:
-            return "/v1/camera/prop/category/"
+            return "photos"
         }
     }
         
@@ -41,8 +41,8 @@ extension Router: TargetType {
     
     var task: Task {
         switch self {
-        default:
-            return .requestPlain
+        case .getPhotos(let parameters):
+            return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
         }
     }
     

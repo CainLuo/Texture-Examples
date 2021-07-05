@@ -13,4 +13,5 @@ import RxSwift
 
 protocol ApiServiceType {
     // MARK: Photos
+    func getPhotos(_ model: PhotoTableSubmitModel) -> Single<[PhotoTableModel]>
 }

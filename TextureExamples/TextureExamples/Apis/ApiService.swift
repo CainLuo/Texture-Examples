@@ -22,5 +22,7 @@ class ApiService: ApiServiceType {
 
 extension ApiService {
     // MARK: Photos
-    
+    func getPhotos(_ model: PhotoTableSubmitModel) -> Single<[PhotoTableModel]> {
+        requestArray(.getPhotos(paremters: model.toJSON()), type: PhotoTableModel.self)
+    }
 }
