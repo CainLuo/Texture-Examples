@@ -25,3 +25,7 @@
 "AlignItems_4" = "Children align to their first baseline. Only available for horizontal stack spec";
 "AlignItems_5" = "Children align to their last baseline. Only available for horizontal stack spec";
 "AlignItems_6" = "Children align to their last baseline. Only available for horizontal stack spec";
+
+// MARK: - Info Node
+"InfoNode_Reset" = "Reset";
+"InfoNode_Start" = "Start";
