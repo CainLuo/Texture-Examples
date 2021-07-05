@@ -12,7 +12,7 @@ class AlignItemsController: ASDKViewController<ASDisplayNode> {
     private let roundNode = RoundNode()
     private let squareNode = SquareNode()
     private lazy var infoNode: InfoNode = {
-        let node = InfoNode("JustifyContent_\(alignItemsType.rawValue)".localized())
+        let node = InfoNode("AlignItems_\(alignItemsType.rawValue)".localized())
         return node
     }()
     private var isShowAnimated = false
@@ -53,8 +53,6 @@ extension AlignItemsController {
             squareNode.style.preferredSize = CGSize(width: 100, height: 100)
             squareNode.cornerRadius = 50
             roundNode.style.preferredSize = CGSize(width: 100, height: 100)
-
-            infoNode.style.preferredSize = CGSize(width: constrainedSize.max.width, height: 300)
 
             let squareStack = ASStackLayoutSpec.horizontal()
             squareStack.children = [roundNode, squareNode]
