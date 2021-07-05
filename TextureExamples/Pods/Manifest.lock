@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (4.0.1)
   - EasyPeasy (1.10.0)
   - GlossButtonNode (2.1.0):
     - Texture/Core (~> 3)
@@ -10,7 +11,22 @@ PODS:
   - Localize-Swift/UIKit (3.2.0):
     - Localize-Swift/LocalizeSwiftCore
   - LookinServer (1.0.2)
-  - ObjectMapper (4.2.0)
+  - Moya (8.0.0-beta.3):
+    - Moya/Core (= 8.0.0-beta.3)
+  - Moya-ObjectMapper/Core (2.0.1):
+    - Moya (= 8.0.0-beta.3)
+    - ObjectMapper (= 2.2.0)
+  - Moya-ObjectMapper/RxSwift (2.0.1):
+    - Moya-ObjectMapper/Core
+    - Moya/RxSwift
+    - RxSwift
+  - Moya/Core (8.0.0-beta.3):
+    - Alamofire (~> 4.0.0)
+    - Result
+  - Moya/RxSwift (8.0.0-beta.3):
+    - Moya/Core
+    - RxSwift
+  - ObjectMapper (2.2.0)
   - PINCache (3.0.3):
     - PINCache/Arc-exception-safe (= 3.0.3)
     - PINCache/Core (= 3.0.3)
@@ -26,6 +42,7 @@ PODS:
   - PINRemoteImage/PINCache (3.0.3):
     - PINCache (~> 3.0.3)
     - PINRemoteImage/Core
+  - Result (5.0.0)
   - Reveal-SDK (29)
   - RxCocoa (6.2.0):
     - RxRelay (= 6.2.0)
@@ -85,7 +102,8 @@ DEPENDENCIES:
   - GlossButtonNode
   - Localize-Swift
   - LookinServer
-  - ObjectMapper
+  - Moya-ObjectMapper/RxSwift
+  - Moya/RxSwift
   - Reveal-SDK
   - RxCocoa
   - RxSwift
@@ -99,12 +117,16 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - Alamofire
     - Localize-Swift
+    - Moya
+    - Moya-ObjectMapper
+    - ObjectMapper
+    - Result
   trunk:
     - EasyPeasy
     - GlossButtonNode
     - LookinServer
-    - ObjectMapper
     - PINCache
     - PINOperation
     - PINRemoteImage
@@ -121,14 +143,18 @@ SPEC REPOS:
     - TypedTextAttributes
 
 SPEC CHECKSUMS:
+  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
   EasyPeasy: b9b1bae024d21a7dfa9bad26d6826d88348cc6f1
   GlossButtonNode: 0b1471447cb4cebc8a959bbca574247ff6b0592b
   Localize-Swift: 6f4475136bdb0d7b2882ea3d4ea919d70142b232
   LookinServer: d6874df8b58096c8d463817b6baaa3abc21d31f7
-  ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
+  Moya: f83c7f81eaa28cb0151549dfcf1f3fda4440bb50
+  Moya-ObjectMapper: 816d23fdcfb4dcc14a9bbb6f174e8b5d530a881b
+  ObjectMapper: 4060d739febae11ab0c6af8d786f98667c82e1bd
   PINCache: 7a8fc1a691173d21dbddbf86cd515de6efa55086
   PINOperation: 00c935935f1e8cf0d1e2d6b542e75b88fc3e5e20
   PINRemoteImage: f1295b29f8c5e640e25335a1b2bd9d805171bd01
+  Result: ed341d2f236af425b803e690e9bd8fd0a0cb7c5a
   Reveal-SDK: 0ecda2395cf587e2f574c19a723b3dd27c90572e
   RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
   RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
@@ -141,6 +167,6 @@ SPEC CHECKSUMS:
   TextureSwiftSupport: b97859d0f3016f1af2f276bf6d987e916b23b150
   TypedTextAttributes: 624acbbc3bd067453d76f7408c6d6c5f0964d51b
 
-PODFILE CHECKSUM: b40a8d40c32d6d3d9394a53f1b0eeea01542d388
+PODFILE CHECKSUM: a50661bee62648ad6dfa31e00e4a1d4bcf821355
 
 COCOAPODS: 1.10.1

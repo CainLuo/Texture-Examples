@@ -47,6 +47,9 @@
 		4D0B20B1266F5A7F005037E1 /* ZStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0B2091266F5A7F005037E1 /* ZStackView.swift */; };
 		4D0B20B2266F5A7F005037E1 /* Book.InteractiveNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0B2092266F5A7F005037E1 /* Book.InteractiveNode.swift */; };
 		4D5C89D826930E3D007AD78D /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C89D726930E3D007AD78D /* BaseNavigationController.swift */; };
+		4D5C89DB26931551007AD78D /* PhotoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C89DA26931551007AD78D /* PhotoTableViewController.swift */; };
+		4D5C89DD269315D5007AD78D /* PhotoTableNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C89DC269315D5007AD78D /* PhotoTableNodeController.swift */; };
+		4D5C89E02693166B007AD78D /* PhotoTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C89DF2693166B007AD78D /* PhotoTableViewModel.swift */; };
 		4D8054DF268F0C0900A9B5E9 /* InfoNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8054DE268F0C0900A9B5E9 /* InfoNode.swift */; };
 		BF367F82269204C0009A883A /* RoundNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF367F81269204BF009A883A /* RoundNode.swift */; };
 		BF367F84269204DB009A883A /* SquareNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF367F83269204DB009A883A /* SquareNode.swift */; };
@@ -115,6 +118,9 @@
 		4D0B2091266F5A7F005037E1 /* ZStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZStackView.swift; sourceTree = "<group>"; };
 		4D0B2092266F5A7F005037E1 /* Book.InteractiveNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.InteractiveNode.swift; sourceTree = "<group>"; };
 		4D5C89D726930E3D007AD78D /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		4D5C89DA26931551007AD78D /* PhotoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewController.swift; sourceTree = "<group>"; };
+		4D5C89DC269315D5007AD78D /* PhotoTableNodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableNodeController.swift; sourceTree = "<group>"; };
+		4D5C89DF2693166B007AD78D /* PhotoTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewModel.swift; sourceTree = "<group>"; };
 		4D8054DE268F0C0900A9B5E9 /* InfoNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoNode.swift; sourceTree = "<group>"; };
 		6CFB62A3112E0806C8A7ED6A /* Pods_TextureExamples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextureExamples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF367F81269204BF009A883A /* RoundNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundNode.swift; sourceTree = "<group>"; };
@@ -195,6 +201,7 @@
 			children = (
 				4D0B2053266F59C9005037E1 /* AppDelegate.swift */,
 				BFFF2E75268A081D00005591 /* Base */,
+				BFC371D5268CCDB200A67231 /* ListModules */,
 				BFFF2E70268A063400005591 /* Modules */,
 				4D0B207A266F5A7F005037E1 /* CollectionNode */,
 				4D0B2075266F5A7F005037E1 /* Extensions */,
@@ -336,6 +343,16 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		4D5C89DE26931601007AD78D /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				4D5C89DC269315D5007AD78D /* PhotoTableNodeController.swift */,
+				4D5C89DA26931551007AD78D /* PhotoTableViewController.swift */,
+				4D5C89DF2693166B007AD78D /* PhotoTableViewModel.swift */,
+			);
+			path = Photos;
+			sourceTree = "<group>";
+		};
 		BFAF3BE8266FC332008DFED8 /* NormalList */ = {
 			isa = PBXGroup;
 			children = (
@@ -391,12 +408,13 @@
 			path = LayoutSpecList;
 			sourceTree = "<group>";
 		};
-		BFC371D5268CCDB200A67231 /* Lists */ = {
+		BFC371D5268CCDB200A67231 /* ListModules */ = {
 			isa = PBXGroup;
 			children = (
+				4D5C89DE26931601007AD78D /* Photos */,
 				BFC371D6268CCDCE00A67231 /* ListsController.swift */,
 			);
-			path = Lists;
+			path = ListModules;
 			sourceTree = "<group>";
 		};
 		BFFF2E70268A063400005591 /* Modules */ = {
@@ -407,7 +425,6 @@
 				4D0AF94E2692E43400382C48 /* JustifyAndAlign */,
 				BFC371CA268BF3B400A67231 /* JustifyContent */,
 				BFC371D2268CCCBB00A67231 /* LayoutSpecList */,
-				BFC371D5268CCDB200A67231 /* Lists */,
 				BFC371D1268BF47B00A67231 /* TabBar */,
 			);
 			path = Modules;
@@ -565,6 +582,7 @@
 				BFFF2E83268A9B1800005591 /* TabBarModel.swift in Sources */,
 				4D0B20AE266F5A7F005037E1 /* Util.swift in Sources */,
 				4D0B20AB266F5A7F005037E1 /* CompositionCatalogViewController.swift in Sources */,
+				4D5C89E02693166B007AD78D /* PhotoTableViewModel.swift in Sources */,
 				BFFF2E74268A078000005591 /* ExampleListController.swift in Sources */,
 				4D0B2097266F5A7F005037E1 /* PhotoListController.swift in Sources */,
 				4D0B20A0266F5A7F005037E1 /* PhotoCollectionController.swift in Sources */,
@@ -587,6 +605,7 @@
 				4D0B20A2266F5A7F005037E1 /* OrderedDictionary.swift in Sources */,
 				BFC371D7268CCDCE00A67231 /* ListsController.swift in Sources */,
 				4D0B2096266F5A7F005037E1 /* PhotoListNodeCell.swift in Sources */,
+				4D5C89DD269315D5007AD78D /* PhotoTableNodeController.swift in Sources */,
 				BFFF2E77268A082E00005591 /* BaseTableNodeController.swift in Sources */,
 				4D0B2099266F5A7F005037E1 /* PhotoFeedModel.swift in Sources */,
 				4D0B20A1266F5A7F005037E1 /* OrderedDictionary+Codable.swift in Sources */,
@@ -605,6 +624,7 @@
 				4D0B20A6266F5A7F005037E1 /* Book.ImageNode.swift in Sources */,
 				BFAF3BF2266FC7F3008DFED8 /* Rx+Observable.swift in Sources */,
 				4D0B2093266F5A7F005037E1 /* Constants.swift in Sources */,
+				4D5C89DB26931551007AD78D /* PhotoTableViewController.swift in Sources */,
 				4D0B2095266F5A7F005037E1 /* ParseResponse.swift in Sources */,
 				BFAF3BEE266FC504008DFED8 /* NormalListViewModel.swift in Sources */,
 				4D0B20B1266F5A7F005037E1 /* ZStackView.swift in Sources */,
