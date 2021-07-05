@@ -65,6 +65,10 @@
 		BF367F9F2693278B009A883A /* NetworkingTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF367F902693278B009A883A /* NetworkingTypes.swift */; };
 		BF367FA22693278B009A883A /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF367F932693278B009A883A /* ActivityIndicator.swift */; };
 		BF367FA42693278B009A883A /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF367F952693278B009A883A /* ApiService.swift */; };
+		BF367FA626935013009A883A /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF367FA526935013009A883A /* PhotoModel.swift */; };
+		BF367FA826935F95009A883A /* ListsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF367FA726935F95009A883A /* ListsViewModel.swift */; };
+		BF367FAA2693602C009A883A /* ListsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF367FA92693602C009A883A /* ListsModel.swift */; };
+		BF367FAC26936290009A883A /* ListsCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF367FAB26936290009A883A /* ListsCellNode.swift */; };
 		BFAF3BEA266FC352008DFED8 /* NormalListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAF3BE9266FC352008DFED8 /* NormalListController.swift */; };
 		BFAF3BEC266FC406008DFED8 /* NormalNodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAF3BEB266FC406008DFED8 /* NormalNodeCell.swift */; };
 		BFAF3BEE266FC504008DFED8 /* NormalListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAF3BED266FC504008DFED8 /* NormalListViewModel.swift */; };
@@ -149,6 +153,10 @@
 		BF367F902693278B009A883A /* NetworkingTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingTypes.swift; sourceTree = "<group>"; };
 		BF367F932693278B009A883A /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		BF367F952693278B009A883A /* ApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		BF367FA526935013009A883A /* PhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
+		BF367FA726935F95009A883A /* ListsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsViewModel.swift; sourceTree = "<group>"; };
+		BF367FA92693602C009A883A /* ListsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsModel.swift; sourceTree = "<group>"; };
+		BF367FAB26936290009A883A /* ListsCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsCellNode.swift; sourceTree = "<group>"; };
 		BFAF3BE9266FC352008DFED8 /* NormalListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalListController.swift; sourceTree = "<group>"; };
 		BFAF3BEB266FC406008DFED8 /* NormalNodeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalNodeCell.swift; sourceTree = "<group>"; };
 		BFAF3BED266FC504008DFED8 /* NormalListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalListViewModel.swift; sourceTree = "<group>"; };
@@ -374,6 +382,7 @@
 				4D5C89DC269315D5007AD78D /* PhotoTableNodeController.swift */,
 				4D5C89DA26931551007AD78D /* PhotoTableViewController.swift */,
 				4D5C89DF2693166B007AD78D /* PhotoTableViewModel.swift */,
+				BF367FA526935013009A883A /* PhotoModel.swift */,
 			);
 			path = Photos;
 			sourceTree = "<group>";
@@ -465,6 +474,9 @@
 			children = (
 				4D5C89DE26931601007AD78D /* Photos */,
 				BFC371D6268CCDCE00A67231 /* ListsController.swift */,
+				BF367FA726935F95009A883A /* ListsViewModel.swift */,
+				BF367FA92693602C009A883A /* ListsModel.swift */,
+				BF367FAB26936290009A883A /* ListsCellNode.swift */,
 			);
 			path = ListModules;
 			sourceTree = "<group>";
@@ -628,6 +640,7 @@
 				4D0B20AD266F5A7F005037E1 /* TransitionLayoutViewController.swift in Sources */,
 				4D0B209F266F5A7F005037E1 /* PhotoCollectionNodeCell.swift in Sources */,
 				BF367F962693278B009A883A /* ApiServiceType.swift in Sources */,
+				BF367FAA2693602C009A883A /* ListsModel.swift in Sources */,
 				BF367F9C2693278B009A883A /* ErrorType.swift in Sources */,
 				BF367F82269204C0009A883A /* RoundNode.swift in Sources */,
 				4D0B2058266F59C9005037E1 /* ViewController.swift in Sources */,
@@ -666,6 +679,7 @@
 				4D0B2096266F5A7F005037E1 /* PhotoListNodeCell.swift in Sources */,
 				4D5C89DD269315D5007AD78D /* PhotoTableNodeController.swift in Sources */,
 				BFFF2E77268A082E00005591 /* BaseTableNodeController.swift in Sources */,
+				BF367FA626935013009A883A /* PhotoModel.swift in Sources */,
 				4D0B2099266F5A7F005037E1 /* PhotoFeedModel.swift in Sources */,
 				4D0B20A1266F5A7F005037E1 /* OrderedDictionary+Codable.swift in Sources */,
 				BF367F9E2693278B009A883A /* SessionManager.swift in Sources */,
@@ -681,10 +695,12 @@
 				BF367F992693278B009A883A /* ApiService+Request.swift in Sources */,
 				4D0B2094266F5A7F005037E1 /* WebService.swift in Sources */,
 				4D0B20A5266F5A7F005037E1 /* RootContainerViewController.swift in Sources */,
+				BF367FAC26936290009A883A /* ListsCellNode.swift in Sources */,
 				4D0B209D266F5A7F005037E1 /* UIColor.swift in Sources */,
 				4D0B209B266F5A7F005037E1 /* Date.swift in Sources */,
 				BFFF2E72268A065A00005591 /* TabBarController.swift in Sources */,
 				BFFF2E7D268A0AA700005591 /* ExampleListCellNode.swift in Sources */,
+				BF367FA826935F95009A883A /* ListsViewModel.swift in Sources */,
 				4D0B20A6266F5A7F005037E1 /* Book.ImageNode.swift in Sources */,
 				BFAF3BF2266FC7F3008DFED8 /* Rx+Observable.swift in Sources */,
 				4D0B2093266F5A7F005037E1 /* Constants.swift in Sources */,
