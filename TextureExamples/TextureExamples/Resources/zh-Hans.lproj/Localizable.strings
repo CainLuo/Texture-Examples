@@ -25,3 +25,7 @@
 "AlignItems_4" = "子节点与它们的第一条基线对齐。仅适用于水平堆栈规格";
 "AlignItems_5" = "子节点对准他们的最后一条基线。只适用于水平堆栈规格";
 "AlignItems_6" = "子节点对准他们的最后一条基线。只适用于水平堆栈规格";
+
+// MARK: - Info Node
+"InfoNode_Reset" = "重置";
+"InfoNode_Start" = "开始";
