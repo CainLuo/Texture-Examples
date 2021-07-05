@@ -22,6 +22,7 @@ class JustifyContentController: ASDKViewController<ASDisplayNode> {
     
     init(_ type: ASStackLayoutJustifyContent) {
         super.init(node: ASDisplayNode())
+        node.automaticallyRelayoutOnSafeAreaChanges = true
         justifyContentType = type
         configBackgroundNode()
     }
@@ -59,10 +60,10 @@ extension JustifyContentController {
             hStack.children = [roundNode, squareNode]
             hStack.style.flexBasis = ASDimensionMake("50%")
 
-            let vstack = ASStackLayoutSpec.vertical()
-            vstack.children = [hStack, infoNode]
-            vstack.justifyContent = .spaceBetween
-            return vstack
+            let vStack = ASStackLayoutSpec.vertical()
+            vStack.children = [hStack, infoNode]
+            vStack.justifyContent = .spaceBetween
+            return ASInsetLayoutSpec(insets: node.safeAreaInsets, child: vStack)
         }
     }
 }
