@@ -54,8 +54,6 @@ extension JustifyContentController {
             squareNode.cornerRadius = 50
             roundNode.style.preferredSize = CGSize(width: 100, height: 100)
 
-            infoNode.style.preferredSize = CGSize(width: constrainedSize.max.width, height: 300)
-
             let squareStack = ASStackLayoutSpec.horizontal()
             squareStack.justifyContent = self?.foregroundJustifyContentType() ?? .start
             squareStack.children = [roundNode, squareNode]
