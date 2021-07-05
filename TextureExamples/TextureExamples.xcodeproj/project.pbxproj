@@ -53,6 +53,18 @@
 		4D8054DF268F0C0900A9B5E9 /* InfoNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8054DE268F0C0900A9B5E9 /* InfoNode.swift */; };
 		BF367F82269204C0009A883A /* RoundNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF367F81269204BF009A883A /* RoundNode.swift */; };
 		BF367F84269204DB009A883A /* SquareNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF367F83269204DB009A883A /* SquareNode.swift */; };
+		BF367F962693278B009A883A /* ApiServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF367F862693278A009A883A /* ApiServiceType.swift */; };
+		BF367F972693278B009A883A /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF367F872693278A009A883A /* Router.swift */; };
+		BF367F982693278B009A883A /* ApiNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF367F892693278B009A883A /* ApiNetworking.swift */; };
+		BF367F992693278B009A883A /* ApiService+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF367F8A2693278B009A883A /* ApiService+Request.swift */; };
+		BF367F9A2693278B009A883A /* ErrorTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF367F8B2693278B009A883A /* ErrorTracker.swift */; };
+		BF367F9B2693278B009A883A /* ApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF367F8C2693278B009A883A /* ApiProvider.swift */; };
+		BF367F9C2693278B009A883A /* ErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF367F8D2693278B009A883A /* ErrorType.swift */; };
+		BF367F9D2693278B009A883A /* CodeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF367F8E2693278B009A883A /* CodeResponse.swift */; };
+		BF367F9E2693278B009A883A /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF367F8F2693278B009A883A /* SessionManager.swift */; };
+		BF367F9F2693278B009A883A /* NetworkingTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF367F902693278B009A883A /* NetworkingTypes.swift */; };
+		BF367FA22693278B009A883A /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF367F932693278B009A883A /* ActivityIndicator.swift */; };
+		BF367FA42693278B009A883A /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF367F952693278B009A883A /* ApiService.swift */; };
 		BFAF3BEA266FC352008DFED8 /* NormalListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAF3BE9266FC352008DFED8 /* NormalListController.swift */; };
 		BFAF3BEC266FC406008DFED8 /* NormalNodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAF3BEB266FC406008DFED8 /* NormalNodeCell.swift */; };
 		BFAF3BEE266FC504008DFED8 /* NormalListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAF3BED266FC504008DFED8 /* NormalListViewModel.swift */; };
@@ -125,6 +137,18 @@
 		6CFB62A3112E0806C8A7ED6A /* Pods_TextureExamples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextureExamples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF367F81269204BF009A883A /* RoundNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundNode.swift; sourceTree = "<group>"; };
 		BF367F83269204DB009A883A /* SquareNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareNode.swift; sourceTree = "<group>"; };
+		BF367F862693278A009A883A /* ApiServiceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiServiceType.swift; sourceTree = "<group>"; };
+		BF367F872693278A009A883A /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		BF367F892693278B009A883A /* ApiNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiNetworking.swift; sourceTree = "<group>"; };
+		BF367F8A2693278B009A883A /* ApiService+Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ApiService+Request.swift"; sourceTree = "<group>"; };
+		BF367F8B2693278B009A883A /* ErrorTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorTracker.swift; sourceTree = "<group>"; };
+		BF367F8C2693278B009A883A /* ApiProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiProvider.swift; sourceTree = "<group>"; };
+		BF367F8D2693278B009A883A /* ErrorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorType.swift; sourceTree = "<group>"; };
+		BF367F8E2693278B009A883A /* CodeResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeResponse.swift; sourceTree = "<group>"; };
+		BF367F8F2693278B009A883A /* SessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		BF367F902693278B009A883A /* NetworkingTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingTypes.swift; sourceTree = "<group>"; };
+		BF367F932693278B009A883A /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		BF367F952693278B009A883A /* ApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		BFAF3BE9266FC352008DFED8 /* NormalListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalListController.swift; sourceTree = "<group>"; };
 		BFAF3BEB266FC406008DFED8 /* NormalNodeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalNodeCell.swift; sourceTree = "<group>"; };
 		BFAF3BED266FC504008DFED8 /* NormalListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalListViewModel.swift; sourceTree = "<group>"; };
@@ -199,6 +223,7 @@
 		4D0B2052266F59C9005037E1 /* TextureExamples */ = {
 			isa = PBXGroup;
 			children = (
+				BF367F8526932751009A883A /* Apis */,
 				4D0B2053266F59C9005037E1 /* AppDelegate.swift */,
 				BFFF2E75268A081D00005591 /* Base */,
 				BFC371D5268CCDB200A67231 /* ListModules */,
@@ -351,6 +376,33 @@
 				4D5C89DF2693166B007AD78D /* PhotoTableViewModel.swift */,
 			);
 			path = Photos;
+			sourceTree = "<group>";
+		};
+		BF367F8526932751009A883A /* Apis */ = {
+			isa = PBXGroup;
+			children = (
+				BF367F932693278B009A883A /* ActivityIndicator.swift */,
+				BF367F952693278B009A883A /* ApiService.swift */,
+				BF367F862693278A009A883A /* ApiServiceType.swift */,
+				BF367F882693278B009A883A /* NetworkingConfig */,
+				BF367F872693278A009A883A /* Router.swift */,
+			);
+			path = Apis;
+			sourceTree = "<group>";
+		};
+		BF367F882693278B009A883A /* NetworkingConfig */ = {
+			isa = PBXGroup;
+			children = (
+				BF367F892693278B009A883A /* ApiNetworking.swift */,
+				BF367F8A2693278B009A883A /* ApiService+Request.swift */,
+				BF367F8B2693278B009A883A /* ErrorTracker.swift */,
+				BF367F8C2693278B009A883A /* ApiProvider.swift */,
+				BF367F8D2693278B009A883A /* ErrorType.swift */,
+				BF367F8E2693278B009A883A /* CodeResponse.swift */,
+				BF367F8F2693278B009A883A /* SessionManager.swift */,
+				BF367F902693278B009A883A /* NetworkingTypes.swift */,
+			);
+			path = NetworkingConfig;
 			sourceTree = "<group>";
 		};
 		BFAF3BE8266FC332008DFED8 /* NormalList */ = {
@@ -571,9 +623,12 @@
 				4D0B20A7266F5A7F005037E1 /* Mocks.swift in Sources */,
 				4D0B20A8266F5A7F005037E1 /* Components.swift in Sources */,
 				BF367F84269204DB009A883A /* SquareNode.swift in Sources */,
+				BF367F9B2693278B009A883A /* ApiProvider.swift in Sources */,
 				BFFF2E7B268A09F500005591 /* ExampleListModel.swift in Sources */,
 				4D0B20AD266F5A7F005037E1 /* TransitionLayoutViewController.swift in Sources */,
 				4D0B209F266F5A7F005037E1 /* PhotoCollectionNodeCell.swift in Sources */,
+				BF367F962693278B009A883A /* ApiServiceType.swift in Sources */,
+				BF367F9C2693278B009A883A /* ErrorType.swift in Sources */,
 				BF367F82269204C0009A883A /* RoundNode.swift in Sources */,
 				4D0B2058266F59C9005037E1 /* ViewController.swift in Sources */,
 				BFAF3BEA266FC352008DFED8 /* NormalListController.swift in Sources */,
@@ -594,6 +649,7 @@
 				BFC371CF268BF3E100A67231 /* JustifyContentController.swift in Sources */,
 				4D8054DF268F0C0900A9B5E9 /* InfoNode.swift in Sources */,
 				BFFF2E79268A09AE00005591 /* ExampleListViewModel.swift in Sources */,
+				BF367F982693278B009A883A /* ApiNetworking.swift in Sources */,
 				4D0B2098266F5A7F005037E1 /* PopularPageModel.swift in Sources */,
 				4D0B20A3266F5A7F005037E1 /* OrderedDictionary+Description.swift in Sources */,
 				4D0B2054266F59C9005037E1 /* AppDelegate.swift in Sources */,
@@ -603,18 +659,26 @@
 				BFFF2E7F268A28F500005591 /* NSAttributeString+Extensions.swift in Sources */,
 				4D0B209A266F5A7F005037E1 /* PhotoListModel.swift in Sources */,
 				4D0B20A2266F5A7F005037E1 /* OrderedDictionary.swift in Sources */,
+				BF367FA42693278B009A883A /* ApiService.swift in Sources */,
+				BF367F9D2693278B009A883A /* CodeResponse.swift in Sources */,
+				BF367F972693278B009A883A /* Router.swift in Sources */,
 				BFC371D7268CCDCE00A67231 /* ListsController.swift in Sources */,
 				4D0B2096266F5A7F005037E1 /* PhotoListNodeCell.swift in Sources */,
 				4D5C89DD269315D5007AD78D /* PhotoTableNodeController.swift in Sources */,
 				BFFF2E77268A082E00005591 /* BaseTableNodeController.swift in Sources */,
 				4D0B2099266F5A7F005037E1 /* PhotoFeedModel.swift in Sources */,
 				4D0B20A1266F5A7F005037E1 /* OrderedDictionary+Codable.swift in Sources */,
+				BF367F9E2693278B009A883A /* SessionManager.swift in Sources */,
+				BF367F9A2693278B009A883A /* ErrorTracker.swift in Sources */,
 				4D0B20B2266F5A7F005037E1 /* Book.InteractiveNode.swift in Sources */,
 				BFAF3BEC266FC406008DFED8 /* NormalNodeCell.swift in Sources */,
 				4D0B20B0266F5A7F005037E1 /* Book.TiledLayer.swift in Sources */,
 				4D0AF9502692E44600382C48 /* JustifyAndAlignController.swift in Sources */,
 				BFFF2E81268A299500005591 /* UIColor+Extensions.swift in Sources */,
 				4D5C89D826930E3D007AD78D /* BaseNavigationController.swift in Sources */,
+				BF367F9F2693278B009A883A /* NetworkingTypes.swift in Sources */,
+				BF367FA22693278B009A883A /* ActivityIndicator.swift in Sources */,
+				BF367F992693278B009A883A /* ApiService+Request.swift in Sources */,
 				4D0B2094266F5A7F005037E1 /* WebService.swift in Sources */,
 				4D0B20A5266F5A7F005037E1 /* RootContainerViewController.swift in Sources */,
 				4D0B209D266F5A7F005037E1 /* UIColor.swift in Sources */,

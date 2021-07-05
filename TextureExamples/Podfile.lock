@@ -1,9 +1,9 @@
 PODS:
-  - Alamofire (4.0.1)
+  - Alamofire (5.4.3)
   - EasyPeasy (1.10.0)
-  - GlossButtonNode (2.1.0):
+  - GlossButtonNode (3.1.2):
     - Texture/Core (~> 3)
-    - TextureSwiftSupport
+    - TextureSwiftSupport (>= 3.10.0)
   - Localize-Swift (3.2.0):
     - Localize-Swift/LocalizeSwiftCore (= 3.2.0)
     - Localize-Swift/UIKit (= 3.2.0)
@@ -11,22 +11,21 @@ PODS:
   - Localize-Swift/UIKit (3.2.0):
     - Localize-Swift/LocalizeSwiftCore
   - LookinServer (1.0.2)
-  - Moya (8.0.0-beta.3):
-    - Moya/Core (= 8.0.0-beta.3)
-  - Moya-ObjectMapper/Core (2.0.1):
-    - Moya (= 8.0.0-beta.3)
-    - ObjectMapper (= 2.2.0)
-  - Moya-ObjectMapper/RxSwift (2.0.1):
+  - Moya (14.0.0):
+    - Moya/Core (= 14.0.0)
+  - Moya-ObjectMapper/Core (2.9):
+    - Moya (~> 14.0.0-beta.6)
+    - ObjectMapper
+  - Moya-ObjectMapper/RxSwift (2.9):
     - Moya-ObjectMapper/Core
     - Moya/RxSwift
     - RxSwift
-  - Moya/Core (8.0.0-beta.3):
-    - Alamofire (~> 4.0.0)
-    - Result
-  - Moya/RxSwift (8.0.0-beta.3):
+  - Moya/Core (14.0.0):
+    - Alamofire (~> 5.0)
+  - Moya/RxSwift (14.0.0):
     - Moya/Core
-    - RxSwift
-  - ObjectMapper (2.2.0)
+    - RxSwift (~> 5.0)
+  - ObjectMapper (4.2.0)
   - PINCache (3.0.3):
     - PINCache/Arc-exception-safe (= 3.0.3)
     - PINCache/Core (= 3.0.3)
@@ -42,14 +41,13 @@ PODS:
   - PINRemoteImage/PINCache (3.0.3):
     - PINCache (~> 3.0.3)
     - PINRemoteImage/Core
-  - Result (5.0.0)
   - Reveal-SDK (29)
-  - RxCocoa (6.2.0):
-    - RxRelay (= 6.2.0)
-    - RxSwift (= 6.2.0)
-  - RxRelay (6.2.0):
-    - RxSwift (= 6.2.0)
-  - RxSwift (6.2.0)
+  - RxCocoa (5.1.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.2)
   - StorybookKit (1.7.0)
   - StorybookKitTextureSupport (1.7.0):
     - StorybookKit (>= 1.7.0)
@@ -118,15 +116,13 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
+    - EasyPeasy
+    - GlossButtonNode
     - Localize-Swift
+    - LookinServer
     - Moya
     - Moya-ObjectMapper
     - ObjectMapper
-    - Result
-  trunk:
-    - EasyPeasy
-    - GlossButtonNode
-    - LookinServer
     - PINCache
     - PINOperation
     - PINRemoteImage
@@ -143,22 +139,21 @@ SPEC REPOS:
     - TypedTextAttributes
 
 SPEC CHECKSUMS:
-  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
   EasyPeasy: b9b1bae024d21a7dfa9bad26d6826d88348cc6f1
-  GlossButtonNode: 0b1471447cb4cebc8a959bbca574247ff6b0592b
+  GlossButtonNode: 4ea1197a744f2fb5fb875fe31caf17ded4762e8f
   Localize-Swift: 6f4475136bdb0d7b2882ea3d4ea919d70142b232
   LookinServer: d6874df8b58096c8d463817b6baaa3abc21d31f7
-  Moya: f83c7f81eaa28cb0151549dfcf1f3fda4440bb50
-  Moya-ObjectMapper: 816d23fdcfb4dcc14a9bbb6f174e8b5d530a881b
-  ObjectMapper: 4060d739febae11ab0c6af8d786f98667c82e1bd
+  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  Moya-ObjectMapper: 967a99d9ea3aa9c93ddbe112aeca3667f53bfe93
+  ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   PINCache: 7a8fc1a691173d21dbddbf86cd515de6efa55086
   PINOperation: 00c935935f1e8cf0d1e2d6b542e75b88fc3e5e20
   PINRemoteImage: f1295b29f8c5e640e25335a1b2bd9d805171bd01
-  Result: ed341d2f236af425b803e690e9bd8fd0a0cb7c5a
   Reveal-SDK: 0ecda2395cf587e2f574c19a723b3dd27c90572e
-  RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
-  RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
-  RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
+  RxSwift: 1e2e1f9570186967f617e49128ed26ccf1bafc8e
   StorybookKit: 6821c796c7abd909ea370dbf86eb7bd5087a9e04
   StorybookKitTextureSupport: 2fe047a155f87dedff413247ce1d53e26e726a1e
   StorybookUI: aa60ba1ea5a169f39134822cddd2248f3840b79e
