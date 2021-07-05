@@ -39,7 +39,7 @@ class InfoNode: ASDisplayNode {
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
         textNode.style.flexGrow = 1.0
         textNode.style.flexShrink = 1.0
-        
+
         resetNode.style.flexBasis = ASDimensionMake("50%")
         startNode.style.flexBasis = ASDimensionMake("50%")
 
