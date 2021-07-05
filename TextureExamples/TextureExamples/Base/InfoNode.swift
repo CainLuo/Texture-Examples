@@ -15,7 +15,7 @@ class InfoNode: ASDisplayNode {
     private lazy var resetNode: ASButtonNode = {
         let node = ASButtonNode()
         node.backgroundColor = .purple
-        node.setTitle("重置", with: UIFont.systemFont(ofSize: 16), with: .white, for: .normal)
+        node.setTitle("InfoNode_Reset".localized(), with: UIFont.systemFont(ofSize: 16), with: .white, for: .normal)
         node.addTarget(self, action: #selector(resetAction), forControlEvents: .touchUpInside)
         return node
     }()
@@ -23,7 +23,7 @@ class InfoNode: ASDisplayNode {
         let node = ASButtonNode()
         node.backgroundColor = .blue
         node.addTarget(self, action: #selector(startAction), forControlEvents: .touchUpInside)
-        node.setTitle("开始移动", with: UIFont.systemFont(ofSize: 16), with: .white, for: .normal)
+        node.setTitle("InfoNode_Start".localized(), with: UIFont.systemFont(ofSize: 16), with: .white, for: .normal)
         return node
     }()
     private let textNode = ASTextNode()
