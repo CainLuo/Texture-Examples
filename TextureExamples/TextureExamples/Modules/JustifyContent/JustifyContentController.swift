@@ -13,6 +13,7 @@ class JustifyContentController: ASDKViewController<ASDisplayNode> {
     private let squareNode = SquareNode()
     private lazy var infoNode: InfoNode = {
         let node = InfoNode("JustifyContent_\(justifyContentType.rawValue)".localized())
+        node.delegate = self
         return node
     }()
     private var isShowAnimated = false
@@ -31,7 +32,6 @@ class JustifyContentController: ASDKViewController<ASDisplayNode> {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        infoNode.delegate = self
         node.backgroundColor = .white
     }
 }
@@ -54,17 +54,13 @@ extension JustifyContentController {
             squareNode.cornerRadius = 50
             roundNode.style.preferredSize = CGSize(width: 100, height: 100)
 
-            let squareStack = ASStackLayoutSpec.horizontal()
-            squareStack.justifyContent = self?.foregroundJustifyContentType() ?? .start
-            squareStack.children = [roundNode, squareNode]
-            squareStack.style.flexBasis = ASDimensionMake("50%")
+            let hStack = ASStackLayoutSpec.horizontal()
+            hStack.justifyContent = self?.foregroundJustifyContentType() ?? .start
+            hStack.children = [roundNode, squareNode]
+            hStack.style.flexBasis = ASDimensionMake("50%")
 
-            let roundStack = ASStackLayoutSpec.horizontal()
-            roundStack.child = roundNode
-            roundStack.justifyContent = self?.justifyContentType ?? .start
-            
             let vstack = ASStackLayoutSpec.vertical()
-            vstack.children = [squareStack, infoNode]
+            vstack.children = [hStack, infoNode]
             vstack.justifyContent = .spaceBetween
             return vstack
         }
