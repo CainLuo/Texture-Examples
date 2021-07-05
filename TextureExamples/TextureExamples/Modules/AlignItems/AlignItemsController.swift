@@ -21,6 +21,7 @@ class AlignItemsController: ASDKViewController<ASDisplayNode> {
 
     init(_ type: ASStackLayoutAlignItems) {
         super.init(node: ASDisplayNode())
+        node.automaticallyRelayoutOnSafeAreaChanges = true
         alignItemsType = type
         configBackgroundNode()
     }
@@ -58,10 +59,10 @@ extension AlignItemsController {
             hStack.alignItems = self?.foregroundAlignItemsType() ?? .start
             hStack.style.flexBasis = ASDimensionMake("50%")
             
-            let vstack = ASStackLayoutSpec.vertical()
-            vstack.children = [hStack, infoNode]
-            vstack.justifyContent = .spaceBetween
-            return vstack
+            let vStack = ASStackLayoutSpec.vertical()
+            vStack.children = [hStack, infoNode]
+            vStack.justifyContent = .spaceBetween
+            return ASInsetLayoutSpec(insets: node.safeAreaInsets, child: vStack)
         }
     }
 }
