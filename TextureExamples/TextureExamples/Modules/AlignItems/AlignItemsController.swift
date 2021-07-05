@@ -13,6 +13,7 @@ class AlignItemsController: ASDKViewController<ASDisplayNode> {
     private let squareNode = SquareNode()
     private lazy var infoNode: InfoNode = {
         let node = InfoNode("AlignItems_\(alignItemsType.rawValue)".localized())
+        node.delegate = self
         return node
     }()
     private var isShowAnimated = false
@@ -30,8 +31,6 @@ class AlignItemsController: ASDKViewController<ASDisplayNode> {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        node.backgroundColor = .white
-        infoNode.delegate = self
         node.backgroundColor = .white
     }
 }
@@ -54,17 +53,13 @@ extension AlignItemsController {
             squareNode.cornerRadius = 50
             roundNode.style.preferredSize = CGSize(width: 100, height: 100)
 
-            let squareStack = ASStackLayoutSpec.horizontal()
-            squareStack.children = [roundNode, squareNode]
-            squareStack.alignItems = self?.foregroundAlignItemsType() ?? .start
-            squareStack.style.flexBasis = ASDimensionMake("50%")
-            
-            let roundStack = ASStackLayoutSpec.horizontal()
-            roundStack.child = roundNode
-            roundStack.alignItems = self?.alignItemsType ?? .start
+            let hStack = ASStackLayoutSpec.horizontal()
+            hStack.children = [roundNode, squareNode]
+            hStack.alignItems = self?.foregroundAlignItemsType() ?? .start
+            hStack.style.flexBasis = ASDimensionMake("50%")
             
             let vstack = ASStackLayoutSpec.vertical()
-            vstack.children = [squareStack, infoNode]
+            vstack.children = [hStack, infoNode]
             vstack.justifyContent = .spaceBetween
             return vstack
         }
@@ -83,7 +78,7 @@ extension AlignItemsController: InfoNodeDelegate {
 extension AlignItemsController {
     func foregroundAlignItemsType() -> ASStackLayoutAlignItems {
         switch alignItemsType {
-        case .start:
+        case .start, .baselineFirst, .baselineLast:
             return !isShowAnimated ? .end : alignItemsType
         default:
             return !isShowAnimated ? .start : alignItemsType
