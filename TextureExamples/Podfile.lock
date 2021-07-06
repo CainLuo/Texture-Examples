@@ -48,6 +48,7 @@ PODS:
   - RxRelay (5.1.1):
     - RxSwift (~> 5)
   - RxSwift (5.1.2)
+  - SnapKit (5.0.1)
   - StorybookKit (1.7.0)
   - StorybookKitTextureSupport (1.7.0):
     - StorybookKit (>= 1.7.0)
@@ -105,6 +106,7 @@ DEPENDENCIES:
   - Reveal-SDK
   - RxCocoa
   - RxSwift
+  - SnapKit
   - StorybookKit
   - StorybookKitTextureSupport
   - StorybookUI
@@ -130,6 +132,7 @@ SPEC REPOS:
     - RxCocoa
     - RxRelay
     - RxSwift
+    - SnapKit
     - StorybookKit
     - StorybookKitTextureSupport
     - StorybookUI
@@ -154,6 +157,7 @@ SPEC CHECKSUMS:
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 1e2e1f9570186967f617e49128ed26ccf1bafc8e
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   StorybookKit: 6821c796c7abd909ea370dbf86eb7bd5087a9e04
   StorybookKitTextureSupport: 2fe047a155f87dedff413247ce1d53e26e726a1e
   StorybookUI: aa60ba1ea5a169f39134822cddd2248f3840b79e
@@ -162,6 +166,6 @@ SPEC CHECKSUMS:
   TextureSwiftSupport: b97859d0f3016f1af2f276bf6d987e916b23b150
   TypedTextAttributes: 624acbbc3bd067453d76f7408c6d6c5f0964d51b
 
-PODFILE CHECKSUM: a50661bee62648ad6dfa31e00e4a1d4bcf821355
+PODFILE CHECKSUM: 954214308b036c726bf6381e9d4052d90dbfdf3a
 
 COCOAPODS: 1.10.1

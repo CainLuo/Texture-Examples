@@ -24,6 +24,7 @@ target 'TextureExamples' do
   pod "StorybookUI"
   pod "StorybookKitTextureSupport"
   pod "EasyPeasy"
+  pod 'SnapKit'
   
   pod 'Localize-Swift'
 
