@@ -8,3 +8,4 @@
 
 > Note: Since the `LayoutSpec`、`IGListKit` is not finished yet, the diagram here is tentative and will be added after it is finished~.
 
+If you are also interested in improving the project you can private message me and then give you the appropriate development rights~
