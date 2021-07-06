@@ -345,14 +345,30 @@
 		4D5C89DE26931601007AD78D /* Photos */ = {
 			isa = PBXGroup;
 			children = (
+				4D5C89E826940712007AD78D /* AsyncDisplayKit */,
 				BF367FA526935013009A883A /* PhotoTableModel.swift */,
-				4D5C89DC269315D5007AD78D /* PhotoTableNodeController.swift */,
-				4D5C89E52693FE4E007AD78D /* PhotoTableCellNode.swift */,
-				4D5C89E12693EBF7007AD78D /* PhotoTableViewCell.swift */,
-				4D5C89DA26931551007AD78D /* PhotoTableViewController.swift */,
 				4D5C89DF2693166B007AD78D /* PhotoTableViewModel.swift */,
+				4D5C89E7269406FD007AD78D /* UIKits */,
 			);
 			path = Photos;
+			sourceTree = "<group>";
+		};
+		4D5C89E7269406FD007AD78D /* UIKits */ = {
+			isa = PBXGroup;
+			children = (
+				4D5C89E12693EBF7007AD78D /* PhotoTableViewCell.swift */,
+				4D5C89DA26931551007AD78D /* PhotoTableViewController.swift */,
+			);
+			path = UIKits;
+			sourceTree = "<group>";
+		};
+		4D5C89E826940712007AD78D /* AsyncDisplayKit */ = {
+			isa = PBXGroup;
+			children = (
+				4D5C89E52693FE4E007AD78D /* PhotoTableCellNode.swift */,
+				4D5C89DC269315D5007AD78D /* PhotoTableNodeController.swift */,
+			);
+			path = AsyncDisplayKit;
 			sourceTree = "<group>";
 		};
 		BF367F8526932751009A883A /* Apis */ = {
