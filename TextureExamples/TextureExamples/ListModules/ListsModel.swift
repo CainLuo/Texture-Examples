@@ -16,6 +16,7 @@ enum ListsSectionType {
 enum ListsItemType {
     case uikit
     case asyncDisplayKit
+    case igList
 }
 
 // MARK: - ListsSectionsModel

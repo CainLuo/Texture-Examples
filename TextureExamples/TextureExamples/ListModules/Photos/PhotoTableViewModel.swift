@@ -10,7 +10,7 @@ import RxSwift
 import RxCocoa
 
 protocol PhotoTableViewModelInputs {
-    var viewWillAppear: AnyObserver<Void> { get }
+    func fetchList()
 }
 
 protocol PhotoTableViewModelOutputs {
@@ -22,15 +22,15 @@ protocol PhotoTableViewModelTypes {
     var outputs: PhotoTableViewModelOutputs { get }
 }
 
-private var page: String = "1"
+private var page: Int = 1
 class PhotoTableViewModel: PhotoTableViewModelInputs, PhotoTableViewModelOutputs, PhotoTableViewModelTypes {
     
     init() {
         let apiService: ApiService = ApiService()
         let error = ErrorTracker()
         
-        let model = viewWillAppearSubject.map {
-            PhotoTableSubmitModel(page: page)
+        let model = fetchListSubject.map {
+            PhotoTableSubmitModel(page: "\(page)")
         }
         
         let fetchLists = model
@@ -38,21 +38,24 @@ class PhotoTableViewModel: PhotoTableViewModelInputs, PhotoTableViewModelOutputs
                 apiService.getPhotos($0)
                     .trackError(error)
                     .asDriverOnErrorJustComplete()
-            }
+            }.do(onNext: { _ in
+                page += 1
+            })
             .share()
-        
+
         // inputs
-        self.viewWillAppear = viewWillAppearSubject.asObserver()
-        
+
         // outputs
         self.items = fetchLists.asDriverOnErrorJustComplete()
     }
     
     // MARK: subjects
-    let viewWillAppearSubject = PublishSubject<Void>()
-    
+    let fetchListSubject = PublishSubject<Void>()
+
     // MARK: inputs
-    let viewWillAppear: AnyObserver<Void>
+    func fetchList() {
+        fetchListSubject.onNext(())
+    }
 
     // MARK: outputs
     let items: Driver<[PhotoTableModel]>

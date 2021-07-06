@@ -14,17 +14,18 @@ class PhotoTableViewController: UITableViewController {
     private let disposeBag = DisposeBag()
     private let viewModel: PhotoTableViewModelTypes = PhotoTableViewModel()
     private var dataSource: [PhotoTableModel] = []
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        viewModel.inputs.viewWillAppear.onNext(())
-    }
+    private let photoFeed = PhotoFeedModel(photoFeedModelType: .photoFeedModelTypePopular)
+    private var isLoading: Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "PhotoTableView"
         bindViewModel()
         tableView.allowsSelection = false
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
+        tableView.separatorStyle = .none
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.register(PhotoTableViewCell.self, forCellReuseIdentifier: "PhotoTableViewCell")
+        viewModel.inputs.fetchList()
     }
     
     func bindViewModel() {
@@ -35,6 +36,7 @@ class PhotoTableViewController: UITableViewController {
                         self?.dataSource.append(item)
                     }
                     self?.tableView.reloadData()
+                    self?.isLoading = false
                 }
             })
             .disposed(by: disposeBag)
@@ -48,8 +50,10 @@ extension PhotoTableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
-        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoTableViewCell", for: indexPath) as? PhotoTableViewCell else {
+            fatalError("Wrong cell type")
+        }
+        cell.configItem(dataSource[indexPath.row])
         return cell
     }
 }
@@ -58,5 +62,25 @@ extension PhotoTableViewController {
 extension PhotoTableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
+    }
+
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return PhotoTableViewCell.height(
+            for: dataSource[indexPath.row],
+            withWidth: self.view.frame.size.width
+        )
+    }
+
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let currentOffSetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        let screenHeight = UIScreen.main.bounds.height
+        let screenfullsBeforeBottom = (contentHeight - currentOffSetY) / screenHeight
+        if screenfullsBeforeBottom < 2.5 {
+            if !isLoading {
+                viewModel.inputs.fetchList()
+                isLoading = true
+            }
+        }
     }
 }

@@ -5,12 +5,21 @@
 //  Created by YYKJ0048 on 2021/7/5.
 //
 
+import RxSwift
+import RxCocoa
 import AsyncDisplayKit
 
 class PhotoTableNodeController: ASDKViewController<ASTableNode> {
 
+    private let disposeBag = DisposeBag()
+    private let viewModel: PhotoTableViewModelTypes = PhotoTableViewModel()
+    private var dataSource: [PhotoTableModel] = []
+    private let photoFeed = PhotoFeedModel(photoFeedModelType: .photoFeedModelTypePopular)
+    private var context: ASBatchContext?
+
     override init() {
         super.init(node: ASTableNode())
+        navigationItem.title = "PhotoTableNode"
     }
 
     required init?(coder: NSCoder) {
@@ -19,24 +28,52 @@ class PhotoTableNodeController: ASDKViewController<ASTableNode> {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        bindViewModel()
         node.allowsSelection = false
+        node.dataSource = self
+        node.delegate = self
+        node.leadingScreensForBatching = 2.5
+        node.view.separatorStyle = .none
+    }
+
+    func bindViewModel() {
+        viewModel.outputs.items
+            .drive(onNext: { [weak self] items in
+                items.forEach { item in
+                    if self?.dataSource.filter({ $0.id == item.id }).isEmpty == true {
+                        self?.dataSource.append(item)
+                    }
+                    self?.node.reloadData()
+                    self?.context?.completeBatchFetching(true)
+                }
+            })
+            .disposed(by: disposeBag)
     }
 }
 
 // MARK: - ASTableDataSource
 extension PhotoTableNodeController: ASTableDataSource {
-    func numberOfSections(in tableNode: ASTableNode) -> Int {
-        0
-    }
-
     func tableNode(_ tableNode: ASTableNode, numberOfRowsInSection section: Int) -> Int {
-        0
+        dataSource.count
     }
 
     func tableNode(_ tableNode: ASTableNode, nodeBlockForRowAt indexPath: IndexPath) -> ASCellNodeBlock {
+        let item = dataSource[indexPath.row]
         let cell: ASCellNodeBlock = {
-            ASCellNode()
+            PhotoTableCellNode(item)
         }
         return cell
+    }
+}
+
+// MARK: - ASTableDelegate
+extension PhotoTableNodeController: ASTableDelegate {
+    func shouldBatchFetch(for tableNode: ASTableNode) -> Bool {
+        true
+    }
+
+    func tableNode(_ tableNode: ASTableNode, willBeginBatchFetchWith context: ASBatchContext) {
+        self.context = context
+        viewModel.inputs.fetchList()
     }
 }
