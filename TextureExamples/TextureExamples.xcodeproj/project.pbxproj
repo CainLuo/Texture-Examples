@@ -68,6 +68,7 @@
 		BFC371CF268BF3E100A67231 /* JustifyContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC371CE268BF3E100A67231 /* JustifyContentController.swift */; };
 		BFC371D4268CCCC600A67231 /* LayoutSpecListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC371D3268CCCC600A67231 /* LayoutSpecListController.swift */; };
 		BFC371D7268CCDCE00A67231 /* ListsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC371D6268CCDCE00A67231 /* ListsController.swift */; };
+		BFC413282694B82B00385C8D /* PhotoIGCollectionNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC413272694B82B00385C8D /* PhotoIGCollectionNodeController.swift */; };
 		BFFF2E72268A065A00005591 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFF2E71268A065A00005591 /* TabBarController.swift */; };
 		BFFF2E74268A078000005591 /* ExampleListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFF2E73268A078000005591 /* ExampleListController.swift */; };
 		BFFF2E77268A082E00005591 /* BaseTableNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFF2E76268A082E00005591 /* BaseTableNodeController.swift */; };
@@ -146,6 +147,7 @@
 		BFC371CE268BF3E100A67231 /* JustifyContentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustifyContentController.swift; sourceTree = "<group>"; };
 		BFC371D3268CCCC600A67231 /* LayoutSpecListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutSpecListController.swift; sourceTree = "<group>"; };
 		BFC371D6268CCDCE00A67231 /* ListsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsController.swift; sourceTree = "<group>"; };
+		BFC413272694B82B00385C8D /* PhotoIGCollectionNodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoIGCollectionNodeController.swift; sourceTree = "<group>"; };
 		BFFF2E71268A065A00005591 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		BFFF2E73268A078000005591 /* ExampleListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleListController.swift; sourceTree = "<group>"; };
 		BFFF2E76268A082E00005591 /* BaseTableNodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableNodeController.swift; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 		4D0B207A266F5A7F005037E1 /* CollectionNode */ = {
 			isa = PBXGroup;
 			children = (
+				BFC413262694AA1C00385C8D /* IGListKit */,
 				4D5C89F2269448AD007AD78D /* UIKits */,
 				4D5C89F1269448A2007AD78D /* AsyncDisplayKit */,
 			);
@@ -435,6 +438,14 @@
 			path = ListModules;
 			sourceTree = "<group>";
 		};
+		BFC413262694AA1C00385C8D /* IGListKit */ = {
+			isa = PBXGroup;
+			children = (
+				BFC413272694B82B00385C8D /* PhotoIGCollectionNodeController.swift */,
+			);
+			path = IGListKit;
+			sourceTree = "<group>";
+		};
 		BFFF2E70268A063400005591 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -600,6 +611,7 @@
 				4D0B209C266F5A7F005037E1 /* NumberFormatter.swift in Sources */,
 				BFFF2E83268A9B1800005591 /* TabBarModel.swift in Sources */,
 				4D0B20AE266F5A7F005037E1 /* Util.swift in Sources */,
+				BFC413282694B82B00385C8D /* PhotoIGCollectionNodeController.swift in Sources */,
 				4D0B20AB266F5A7F005037E1 /* CompositionCatalogViewController.swift in Sources */,
 				4D5C89E02693166B007AD78D /* PhotoTableViewModel.swift in Sources */,
 				BFFF2E74268A078000005591 /* ExampleListController.swift in Sources */,
