@@ -8,17 +8,6 @@
 import UIKit
 
 struct Constants {
-    struct Unsplash {
-        struct URLS {
-            static let Host = "https://api.unsplash.com/"
-            static let PopularEndpoint = "photos?order_by=popular"
-            static let SearchEndpoint = "photos/search?geo="    //latitude,longitude,radius<units>
-            static let UserEndpoint = "photos?user_id="
-            static let ConsumerKey = "&client_id=3b99a69cee09770a4a0bbb870b437dbda53efb22f6f6de63714b71c4df7c9642"
-            static let ImagesPerPage = 30
-        }
-    }
-
     struct CellLayout {
         static let FontSize: CGFloat = 14
         static let HeaderHeight: CGFloat = 50

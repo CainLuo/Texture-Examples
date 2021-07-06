@@ -4,22 +4,26 @@ import UIKit
 
 final class RootContainerViewController: UIViewController {
 
-  init() {
-    super.init(nibName: nil, bundle: nil)
+    init() {
+        super.init(nibName: nil, bundle: nil)
 
-    let child = StorybookViewController(
-      book: book,
-      dismissHandler: nil
-    )
+        let child = StorybookViewController(
+            book: book,
+            dismissHandler: nil
+        )
 
-    addChild(child)
-    view.addSubview(child.view)
-    child.view.frame = view.bounds
-    child.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        addChild(child)
+        view.addSubview(child.view)
+        child.view.frame = view.bounds
+        child.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+    }
 
-  }
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        print(view.bounds)
+    }
 
-  required init?(coder: NSCoder) {
-    fatalError("init(coder:) has not been implemented")
-  }
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }

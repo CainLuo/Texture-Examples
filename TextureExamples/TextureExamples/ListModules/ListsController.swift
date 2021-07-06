@@ -72,7 +72,8 @@ extension ListsController: ASTableDelegate {
             let vc = item.type == .asyncDisplayKit ? PhotoTableNodeController() : PhotoTableViewController()
             navigationController?.pushViewController(vc, animated: true)
         case .collection:
-            break
+            let vc = PhotoCollectionNodeController()
+            navigationController?.pushViewController(vc, animated: true)
         default:
             break
         }

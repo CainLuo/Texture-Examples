@@ -13,12 +13,7 @@ class PhotoTableNodeController: BaseTableNodeController {
 
     private let viewModel: PhotoTableViewModelTypes = PhotoTableViewModel()
     private var dataSource: [PhotoTableModel] = []
-    private let photoFeed = PhotoFeedModel(photoFeedModelType: .photoFeedModelTypePopular)
     private var context: ASBatchContext?
-
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

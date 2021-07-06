@@ -36,7 +36,8 @@ extension TabBarController {
         [
             TabBarModel(title: "TabBar_StackContent".localized(), icon: #imageLiteral(resourceName: "tabBarStackContent"), selectIcon: #imageLiteral(resourceName: "tabBarStackContent"), controller: ExampleListController()),
             TabBarModel(title: "TabBar_LayoutSpec".localized(), icon: #imageLiteral(resourceName: "tabBarLayoutSpec"), selectIcon: #imageLiteral(resourceName: "tabBarLayoutSpec"), controller: LayoutSpecListController()),
-            TabBarModel(title: "TabBar_List".localized(), icon: #imageLiteral(resourceName: "tabBarList"), selectIcon: #imageLiteral(resourceName: "tabBarList"), controller: ListsController())
+            TabBarModel(title: "TabBar_List".localized(), icon: #imageLiteral(resourceName: "tabBarList"), selectIcon: #imageLiteral(resourceName: "tabBarList"), controller: ListsController()),
+            TabBarModel(title: "TabBar_Support".localized(), icon: #imageLiteral(resourceName: "tabBarSupport"), selectIcon: #imageLiteral(resourceName: "tabBarSupport"), controller: RootContainerViewController())
         ]
     }
 }

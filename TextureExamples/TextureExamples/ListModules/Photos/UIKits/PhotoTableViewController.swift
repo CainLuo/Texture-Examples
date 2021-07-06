@@ -14,7 +14,6 @@ class PhotoTableViewController: UITableViewController {
     private let disposeBag = DisposeBag()
     private let viewModel: PhotoTableViewModelTypes = PhotoTableViewModel()
     private var dataSource: [PhotoTableModel] = []
-    private let photoFeed = PhotoFeedModel(photoFeedModelType: .photoFeedModelTypePopular)
     private var isLoading: Bool = false
 
     override func viewDidLoad() {

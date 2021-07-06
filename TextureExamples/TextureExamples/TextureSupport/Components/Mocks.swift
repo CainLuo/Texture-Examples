@@ -99,11 +99,8 @@ enum Mocks {
     }
 
     final class ButtonNode: WrapperNode<AnyDisplayNode> {
-
         var onTap: () -> Void = {}
-
         init() {
-
             let shape = ShapeLayerNode.roundedCorner(radius: 8)
             shape.shapeFillColor = fillColor
 
@@ -119,7 +116,6 @@ enum Mocks {
             }
         }
     }
-
 
     final class MultipleLineTextNode: WrapperNode<AnyDisplayNode> {
 
@@ -144,5 +140,4 @@ enum Mocks {
             }
         }
     }
-
 }
