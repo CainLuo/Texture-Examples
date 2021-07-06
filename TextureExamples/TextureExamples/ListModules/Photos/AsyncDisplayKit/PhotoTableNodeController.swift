@@ -9,18 +9,12 @@ import RxSwift
 import RxCocoa
 import AsyncDisplayKit
 
-class PhotoTableNodeController: ASDKViewController<ASTableNode> {
+class PhotoTableNodeController: BaseTableNodeController {
 
-    private let disposeBag = DisposeBag()
     private let viewModel: PhotoTableViewModelTypes = PhotoTableViewModel()
     private var dataSource: [PhotoTableModel] = []
     private let photoFeed = PhotoFeedModel(photoFeedModelType: .photoFeedModelTypePopular)
     private var context: ASBatchContext?
-
-    override init() {
-        super.init(node: ASTableNode())
-        navigationItem.title = "PhotoTableNode"
-    }
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -28,6 +22,7 @@ class PhotoTableNodeController: ASDKViewController<ASTableNode> {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "PhotoTableNode"
         bindViewModel()
         node.allowsSelection = false
         node.dataSource = self

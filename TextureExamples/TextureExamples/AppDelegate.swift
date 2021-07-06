@@ -19,8 +19,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
-
+        configNavigationBar()
         return true
+    }
+
+    func configNavigationBar() {
+        UINavigationBar.appearance().backgroundColor = .white
+        UINavigationBar.appearance().shadowImage = UIImage()
     }
 }
 
