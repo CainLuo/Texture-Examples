@@ -12,14 +12,13 @@ class PhotoCollectionViewCell: UICollectionViewCell {
     private lazy var photoImageView: NetworkImageView = {
         let imageView = NetworkImageView()
         imageView.contentMode = .scaleAspectFill
-        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.clipsToBounds = true
         return imageView
     }()
 
     private lazy var avatarImageView: NetworkImageView = {
         let imageView = NetworkImageView()
         imageView.contentMode = .scaleAspectFill
-        imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.layer.cornerRadius = 20 / 2
         imageView.clipsToBounds = true
         return imageView
@@ -29,7 +28,6 @@ class PhotoCollectionViewCell: UICollectionViewCell {
         let label = UILabel()
         label.textColor = .white
         label.font = UIFont.systemFont(ofSize: 12)
-        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
 
@@ -51,7 +49,6 @@ class PhotoCollectionViewCell: UICollectionViewCell {
         addSubview(bgView)
         addSubview(avatarImageView)
         addSubview(usernameLabel)
-        layer.masksToBounds = true
 
         photoImageView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
