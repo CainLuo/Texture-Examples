@@ -34,9 +34,9 @@ class PhotoTableViewController: UITableViewController {
                     if self?.dataSource.filter({ $0.id == item.id }).isEmpty == true {
                         self?.dataSource.append(item)
                     }
-                    self?.tableView.reloadData()
-                    self?.isLoading = false
                 }
+                self?.tableView.reloadData()
+                self?.isLoading = false
             })
             .disposed(by: disposeBag)
     }
@@ -59,10 +59,6 @@ extension PhotoTableViewController {
 
 // MARK: - UITableViewDelegate
 extension PhotoTableViewController {
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
-    }
-
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return PhotoTableViewCell.height(
             for: dataSource[indexPath.row],

@@ -72,19 +72,32 @@ extension ListsController: ASTableDelegate {
             let vc = item.type == .asyncDisplayKit ? PhotoTableNodeController() : PhotoTableViewController()
             navigationController?.pushViewController(vc, animated: true)
         case .collection:
-            switch item.collectionType {
-            case .normal:
-                let vc = CustomCollectionNodeController()
+            switch item.type {
+            case .uikit:
+                let layout = UICollectionViewFlowLayout()
+                layout.itemSize = CGSize(width: UIScreen.main.bounds.size.width / 2, height: UIScreen.main.bounds.size.width / 2)
+                layout.minimumLineSpacing = 0
+                layout.minimumInteritemSpacing = 0
+
+                let vc = PhotoCollectionViewController(collectionViewLayout: layout)
                 navigationController?.pushViewController(vc, animated: true)
-            case .custom:
-                let vc = CustomCollectionNodeController()
-                navigationController?.pushViewController(vc, animated: true)
-            case .photo:
-                let vc = PhotoCollectionNodeController()
-                navigationController?.pushViewController(vc, animated: true)
+            case .asyncDisplayKit:
+                switch item.collectionType {
+                case .normal:
+                    break
+                case .custom:
+                    let vc = CustomCollectionNodeController()
+                    navigationController?.pushViewController(vc, animated: true)
+                case .photo:
+                    let vc = PhotoCollectionNodeController()
+                    navigationController?.pushViewController(vc, animated: true)
+                default:
+                    break
+                }
             default:
                 break
             }
+
         default:
             break
         }

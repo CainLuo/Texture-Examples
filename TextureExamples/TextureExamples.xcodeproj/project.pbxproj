@@ -42,6 +42,8 @@
 		4D5C89EC2694279C007AD78D /* BaseCollectionNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C89EB2694279C007AD78D /* BaseCollectionNodeController.swift */; };
 		4D5C89EE2694386B007AD78D /* PhotoCollectionNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C89ED2694386B007AD78D /* PhotoCollectionNodeController.swift */; };
 		4D5C89F02694387C007AD78D /* PhotoCollectionCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C89EF2694387C007AD78D /* PhotoCollectionCellNode.swift */; };
+		4D5C89F4269448C8007AD78D /* PhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C89F3269448C8007AD78D /* PhotoCollectionViewController.swift */; };
+		4D5C89F6269448D6007AD78D /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C89F5269448D6007AD78D /* PhotoCollectionViewCell.swift */; };
 		4D8054DF268F0C0900A9B5E9 /* InfoNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8054DE268F0C0900A9B5E9 /* InfoNode.swift */; };
 		BF367F82269204C0009A883A /* RoundNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF367F81269204BF009A883A /* RoundNode.swift */; };
 		BF367F84269204DB009A883A /* SquareNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF367F83269204DB009A883A /* SquareNode.swift */; };
@@ -117,6 +119,8 @@
 		4D5C89EB2694279C007AD78D /* BaseCollectionNodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionNodeController.swift; sourceTree = "<group>"; };
 		4D5C89ED2694386B007AD78D /* PhotoCollectionNodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionNodeController.swift; sourceTree = "<group>"; };
 		4D5C89EF2694387C007AD78D /* PhotoCollectionCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionCellNode.swift; sourceTree = "<group>"; };
+		4D5C89F3269448C8007AD78D /* PhotoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewController.swift; sourceTree = "<group>"; };
+		4D5C89F5269448D6007AD78D /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		4D8054DE268F0C0900A9B5E9 /* InfoNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoNode.swift; sourceTree = "<group>"; };
 		6CFB62A3112E0806C8A7ED6A /* Pods_TextureExamples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextureExamples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF367F81269204BF009A883A /* RoundNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundNode.swift; sourceTree = "<group>"; };
@@ -254,10 +258,8 @@
 		4D0B207A266F5A7F005037E1 /* CollectionNode */ = {
 			isa = PBXGroup;
 			children = (
-				4D0B207B266F5A7F005037E1 /* CustomCollectionCellNode.swift */,
-				4D0B207C266F5A7F005037E1 /* CustomCollectionNodeController.swift */,
-				4D5C89ED2694386B007AD78D /* PhotoCollectionNodeController.swift */,
-				4D5C89EF2694387C007AD78D /* PhotoCollectionCellNode.swift */,
+				4D5C89F2269448AD007AD78D /* UIKits */,
+				4D5C89F1269448A2007AD78D /* AsyncDisplayKit */,
 			);
 			path = CollectionNode;
 			sourceTree = "<group>";
@@ -327,6 +329,26 @@
 				4D5C89DC269315D5007AD78D /* PhotoTableNodeController.swift */,
 			);
 			path = AsyncDisplayKit;
+			sourceTree = "<group>";
+		};
+		4D5C89F1269448A2007AD78D /* AsyncDisplayKit */ = {
+			isa = PBXGroup;
+			children = (
+				4D0B207B266F5A7F005037E1 /* CustomCollectionCellNode.swift */,
+				4D0B207C266F5A7F005037E1 /* CustomCollectionNodeController.swift */,
+				4D5C89EF2694387C007AD78D /* PhotoCollectionCellNode.swift */,
+				4D5C89ED2694386B007AD78D /* PhotoCollectionNodeController.swift */,
+			);
+			path = AsyncDisplayKit;
+			sourceTree = "<group>";
+		};
+		4D5C89F2269448AD007AD78D /* UIKits */ = {
+			isa = PBXGroup;
+			children = (
+				4D5C89F3269448C8007AD78D /* PhotoCollectionViewController.swift */,
+				4D5C89F5269448D6007AD78D /* PhotoCollectionViewCell.swift */,
+			);
+			path = UIKits;
 			sourceTree = "<group>";
 		};
 		BF367F8526932751009A883A /* Apis */ = {
@@ -581,6 +603,7 @@
 				4D0B20AB266F5A7F005037E1 /* CompositionCatalogViewController.swift in Sources */,
 				4D5C89E02693166B007AD78D /* PhotoTableViewModel.swift in Sources */,
 				BFFF2E74268A078000005591 /* ExampleListController.swift in Sources */,
+				4D5C89F4269448C8007AD78D /* PhotoCollectionViewController.swift in Sources */,
 				4D5C89E22693EBF7007AD78D /* PhotoTableViewCell.swift in Sources */,
 				4D0B20A0266F5A7F005037E1 /* CustomCollectionNodeController.swift in Sources */,
 				4D0B20AF266F5A7F005037E1 /* Book.swift in Sources */,
@@ -607,6 +630,7 @@
 				4D5C89F02694387C007AD78D /* PhotoCollectionCellNode.swift in Sources */,
 				BF367F9A2693278B009A883A /* ErrorTracker.swift in Sources */,
 				4D0B20B2266F5A7F005037E1 /* Book.InteractiveNode.swift in Sources */,
+				4D5C89F6269448D6007AD78D /* PhotoCollectionViewCell.swift in Sources */,
 				4D0B20B0266F5A7F005037E1 /* Book.TiledLayer.swift in Sources */,
 				4D0AF9502692E44600382C48 /* JustifyAndAlignController.swift in Sources */,
 				4D5C89EE2694386B007AD78D /* PhotoCollectionNodeController.swift in Sources */,
