@@ -20,11 +20,19 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="E8q-bC-Rek">
                                 <rect key="frame" x="87" y="662" width="240" height="200"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Examples" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Cp-zX-JpZ">
+                                <rect key="frame" x="167.5" y="816" width="79" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="1Cp-zX-JpZ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="0o5-0W-QmE"/>
                             <constraint firstItem="E8q-bC-Rek" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="6k3-zw-JdD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1Cp-zX-JpZ" secondAttribute="bottom" constant="25" id="ITE-zw-Vjl"/>
                             <constraint firstItem="E8q-bC-Rek" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="LDT-Or-cln"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="E8q-bC-Rek" secondAttribute="bottom" id="cMI-w9-Knh"/>
                         </constraints>

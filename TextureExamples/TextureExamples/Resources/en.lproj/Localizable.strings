@@ -9,6 +9,7 @@
 "TabBar_StackContent" = "StackContent";
 "TabBar_LayoutSpec"   = "LayoutSpec";
 "TabBar_List"         = "Lists";
+"TabBar_Support"      = "Support";
 
 // MARK: - ASStackLayoutJustifyContent
 "JustifyContent_0" = "On overflow, children overflow out of this spec's bounds on the right/bottom side.\nOn underflow, children are left/top-aligned within this spec's bounds.";

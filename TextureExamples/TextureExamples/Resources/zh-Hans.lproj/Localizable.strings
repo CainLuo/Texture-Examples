@@ -9,6 +9,7 @@
 "TabBar_StackContent" = "StackContent";
 "TabBar_LayoutSpec"   = "LayoutSpec";
 "TabBar_List"         = "Lists";
+"TabBar_Support"      = "Support";
 
 // MARK: - ASStackLayoutJustifyContent
 "JustifyContent_0" = "溢出时，子节点在右/下侧溢出本规范的范围。在下溢时，子节点在本规范的范围内左/上对齐。";
