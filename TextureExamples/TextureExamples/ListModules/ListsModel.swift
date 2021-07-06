@@ -19,6 +19,12 @@ enum ListsItemType {
     case igList
 }
 
+enum ListsItemCollectionType {
+    case photo
+    case normal
+    case custom
+}
+
 // MARK: - ListsSectionsModel
 struct ListsSectionsModel {
     var title: String?
@@ -41,6 +47,7 @@ extension ListsSectionsModel: Mappable {
 struct ListsItemsModel {
     var title: String?
     var type: ListsItemType?
+    var collectionType: ListsItemCollectionType?
 }
 
 extension ListsItemsModel: Mappable {
@@ -50,5 +57,6 @@ extension ListsItemsModel: Mappable {
     mutating func mapping(map: Map) {
         title <- map["title"]
         type <- map["type"]
+        collectionType <- map["ListsItemCollectionType"]
     }
 }

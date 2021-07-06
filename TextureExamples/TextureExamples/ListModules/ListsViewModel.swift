@@ -64,7 +64,8 @@ private func tablesItems() -> [ListsItemsModel] {
 private func collectionsItems() -> [ListsItemsModel] {
     [
         ListsItemsModel(title: "UIKit-CollectionView", type: .uikit),
-        ListsItemsModel(title: "AsyncDisplayKit-CollectionNode", type: .asyncDisplayKit),
+        ListsItemsModel(title: "AsyncDisplayKit-CollectionNode", type: .asyncDisplayKit, collectionType: .normal),
+        ListsItemsModel(title: "AsyncDisplayKit-Photos", type: .asyncDisplayKit, collectionType: .photo),
         ListsItemsModel(title: "IGListKit-CollectionNode", type: .asyncDisplayKit)
     ]
 }
