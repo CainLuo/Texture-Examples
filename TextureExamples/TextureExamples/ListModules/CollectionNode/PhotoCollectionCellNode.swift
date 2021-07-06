@@ -1,105 +1,58 @@
 //
 //  PhotoCollectionCellNode.swift
-//  TextureDemo
+//  TextureExamples
 //
-//  Created by CainLuo on 2021/6/6.
+//  Created by YYKJ0048 on 2021/7/6.
 //
 
 import AsyncDisplayKit
-import TextureSwiftSupport
 
 class PhotoCollectionCellNode: ASCellNode {
-    
-    var index: Int = 0
-    
-    lazy var textNode: ASTextNode = {
-        let textNode = ASTextNode()
-        let text = "这是什么鬼: \(index)"
-        textNode.attributedText = NSAttributedString(string: text,
-                                                     attributes: attributes())
-        return textNode
+    private let textNode = ASTextNode()
+
+    let contentNode = ASDisplayNode()
+    let avatarImageNode: ASNetworkImageNode = {
+        let node = ASNetworkImageNode()
+        node.contentMode = .scaleAspectFill
+        // Set the imageModificationBlock for a rounded avatar
+        node.imageModificationBlock = ASImageNodeRoundBorderModificationBlock(0, nil)
+        return node
     }()
-    lazy var contentNode: ASTextNode = {
-        let contentNode = ASTextNode()
-        let content = "这是内容: \(index)"
-        contentNode.attributedText = NSAttributedString(string: content,
-                                                        attributes: attributes())
-        return contentNode
+
+    private lazy var photoImageNode: ASNetworkImageNode = {
+        let node = ASNetworkImageNode()
+        node.contentMode = .scaleAspectFill
+        node.backgroundColor = UIColor(0xf5f5f5)
+        return node
     }()
-    lazy var otherNode: ASTextNode = {
-        let contentNode = ASTextNode()
-        contentNode.style.alignSelf = .center
-        let content = "其他标签: \(index)"
-        contentNode.attributedText = NSAttributedString(string: content,
-                                                        attributes: attributes())
-        return contentNode
-    }()
-    
-    init(_ index: Int) {
+
+    init(_ item: PhotoTableModel) {
         super.init()
-        self.index = index
         automaticallyManagesSubnodes = true
+        configUIs(item)
     }
-    
-    // 布局样式一
-    //    override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
-    //        let center = ASCenterLayoutSpec()
-    //        center.centeringOptions = .XY
-    //        if let textNode = textNode {
-    //            center.child = textNode
-    //        }
-    //        return ASInsetLayoutSpec(insets: UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15),
-    //                                 child: center)
-    //    }
-    
-    // 布局样式二
-    //    override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
-    //        var leftChildren: [ASLayoutElement] = []
-    //
-    //        let leftStack = ASStackLayoutSpec.vertical()
-    //        leftStack.alignItems = .center
-    //
-    //        textNode.style.flexShrink = 1.0
-    //        leftChildren.append(textNode)
-    //        leftChildren.append(contentNode)
-    //
-    //        leftStack.children = leftChildren
-    //
-    //        let nodeStack = ASStackLayoutSpec.horizontal()
-    //        nodeStack.alignItems = .center
-    //
-    //        otherNode.style.flexShrink = 1.0
-    //
-    //        nodeStack.children = [
-    //            ASInsetLayoutSpec(insets: Constants.CellLayout.InsetForHeader,
-    //                              child: leftStack),
-    //            ASInsetLayoutSpec(insets: Constants.CellLayout.InsetForFooter,
-    //                              child: otherNode)
-    //        ]
-    //
-    //        return nodeStack
-    //    }
-    
-    // TextureSwiftSupport布局样式
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
-        textNode.style.flexGrow = 1.0
-        contentNode.style.flexGrow = 1.0
-        return LayoutSpec {
-            HStackLayout(spacing: 10) {
-                VStackLayout(spacing: 10, justifyContent: .center) {
-                    textNode
-                    contentNode
-                }
-                otherNode
-            }
-            .padding(UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10))
-        }
+
+        avatarImageNode.style.preferredSize = CGSize(width: 20, height: 20)
+        textNode.style.flexShrink = 1.0
+
+        let hStack = ASStackLayoutSpec.horizontal()
+        hStack.spacing = 4
+        hStack.children = [avatarImageNode, textNode]
+
+        let insetStack = ASInsetLayoutSpec(insets: UIEdgeInsets(top: .infinity, left: 5, bottom: 5, right: 5), child: hStack)
+        let overlayContent = ASOverlayLayoutSpec(child: contentNode, overlay: insetStack)
+
+        return ASOverlayLayoutSpec(child: photoImageNode, overlay: overlayContent)
     }
-    
-    private func attributes() -> [NSAttributedString.Key: Any] {
-        [
-            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 10),
-            NSAttributedString.Key.foregroundColor: UIColor.white
-        ]
+}
+
+extension PhotoCollectionCellNode {
+    private func configUIs(_ item: PhotoTableModel) {
+        photoImageNode.url = URL(string: item.urls?.regular ?? "")
+        avatarImageNode.url = URL(string: item.user?.profileImage?.medium ?? "")
+        textNode.attributedText = NSAttributedString.attributed(item.user?.name ?? "", color: .white, fontSize: 12, alignment: .center)
+        textNode.maximumNumberOfLines = 1
+        contentNode.backgroundColor = UIColor(0x000000, alpha: 0.2)
     }
 }
