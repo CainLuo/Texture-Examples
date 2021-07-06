@@ -57,6 +57,10 @@ class PhotoCollectionViewCell: UICollectionViewCell {
             make.edges.equalToSuperview()
         }
 
+        bgView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+
         avatarImageView.snp.makeConstraints { make in
             make.size.equalTo(CGSize(width: 20, height: 20))
             make.left.equalTo(5)
