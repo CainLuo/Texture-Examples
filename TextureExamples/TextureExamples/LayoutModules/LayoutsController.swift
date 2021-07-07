@@ -79,11 +79,11 @@ extension LayoutsController: ASTableDelegate {
         case .overlay:
             vc = OverlayLayoutController()
         case .background:
-            break
+            vc = BackgroundLayoutController()
         case .center:
-            break
+            vc = CenterLayoutController()
         case .ratio:
-            break
+            vc = RatioLayoutController()
         case .relative:
             break
         case .absolute:
