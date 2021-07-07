@@ -45,6 +45,13 @@
 		4D5C89F4269448C8007AD78D /* PhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C89F3269448C8007AD78D /* PhotoCollectionViewController.swift */; };
 		4D5C89F6269448D6007AD78D /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C89F5269448D6007AD78D /* PhotoCollectionViewCell.swift */; };
 		4D8054DF268F0C0900A9B5E9 /* InfoNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8054DE268F0C0900A9B5E9 /* InfoNode.swift */; };
+		4DCD9C1126959E410067DBF6 /* LayoutsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD9C1026959E410067DBF6 /* LayoutsController.swift */; };
+		4DCD9C1326959E8B0067DBF6 /* LayoutsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD9C1226959E8B0067DBF6 /* LayoutsViewModel.swift */; };
+		4DCD9C1526959EB60067DBF6 /* LayoutsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD9C1426959EB60067DBF6 /* LayoutsModel.swift */; };
+		4DCD9C172695A4140067DBF6 /* LayoutsCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD9C162695A4140067DBF6 /* LayoutsCellNode.swift */; };
+		4DCD9C1A2695A73A0067DBF6 /* BaseNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD9C192695A73A0067DBF6 /* BaseNodeController.swift */; };
+		4DCD9C1C2695A7D60067DBF6 /* WrapperLayoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD9C1B2695A7D60067DBF6 /* WrapperLayoutController.swift */; };
+		4DCD9C1E2695AC5D0067DBF6 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD9C1D2695AC5D0067DBF6 /* Logger.swift */; };
 		BF367F82269204C0009A883A /* RoundNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF367F81269204BF009A883A /* RoundNode.swift */; };
 		BF367F84269204DB009A883A /* SquareNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF367F83269204DB009A883A /* SquareNode.swift */; };
 		BF367F962693278B009A883A /* ApiServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF367F862693278A009A883A /* ApiServiceType.swift */; };
@@ -66,7 +73,6 @@
 		BFAF3BF2266FC7F3008DFED8 /* Rx+Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAF3BF1266FC7F3008DFED8 /* Rx+Observable.swift */; };
 		BFC371CD268BF3D600A67231 /* AlignItemsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC371CC268BF3D600A67231 /* AlignItemsController.swift */; };
 		BFC371CF268BF3E100A67231 /* JustifyContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC371CE268BF3E100A67231 /* JustifyContentController.swift */; };
-		BFC371D4268CCCC600A67231 /* LayoutSpecListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC371D3268CCCC600A67231 /* LayoutSpecListController.swift */; };
 		BFC371D7268CCDCE00A67231 /* ListsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC371D6268CCDCE00A67231 /* ListsController.swift */; };
 		BFC413282694B82B00385C8D /* PhotoIGCollectionNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC413272694B82B00385C8D /* PhotoIGCollectionNodeController.swift */; };
 		BFFF2E72268A065A00005591 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFF2E71268A065A00005591 /* TabBarController.swift */; };
@@ -123,6 +129,13 @@
 		4D5C89F3269448C8007AD78D /* PhotoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewController.swift; sourceTree = "<group>"; };
 		4D5C89F5269448D6007AD78D /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		4D8054DE268F0C0900A9B5E9 /* InfoNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoNode.swift; sourceTree = "<group>"; };
+		4DCD9C1026959E410067DBF6 /* LayoutsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutsController.swift; sourceTree = "<group>"; };
+		4DCD9C1226959E8B0067DBF6 /* LayoutsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutsViewModel.swift; sourceTree = "<group>"; };
+		4DCD9C1426959EB60067DBF6 /* LayoutsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutsModel.swift; sourceTree = "<group>"; };
+		4DCD9C162695A4140067DBF6 /* LayoutsCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutsCellNode.swift; sourceTree = "<group>"; };
+		4DCD9C192695A73A0067DBF6 /* BaseNodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNodeController.swift; sourceTree = "<group>"; };
+		4DCD9C1B2695A7D60067DBF6 /* WrapperLayoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrapperLayoutController.swift; sourceTree = "<group>"; };
+		4DCD9C1D2695AC5D0067DBF6 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		6CFB62A3112E0806C8A7ED6A /* Pods_TextureExamples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextureExamples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF367F81269204BF009A883A /* RoundNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundNode.swift; sourceTree = "<group>"; };
 		BF367F83269204DB009A883A /* SquareNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareNode.swift; sourceTree = "<group>"; };
@@ -145,7 +158,6 @@
 		BFAF3BF1266FC7F3008DFED8 /* Rx+Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rx+Observable.swift"; sourceTree = "<group>"; };
 		BFC371CC268BF3D600A67231 /* AlignItemsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignItemsController.swift; sourceTree = "<group>"; };
 		BFC371CE268BF3E100A67231 /* JustifyContentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustifyContentController.swift; sourceTree = "<group>"; };
-		BFC371D3268CCCC600A67231 /* LayoutSpecListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutSpecListController.swift; sourceTree = "<group>"; };
 		BFC371D6268CCDCE00A67231 /* ListsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsController.swift; sourceTree = "<group>"; };
 		BFC413272694B82B00385C8D /* PhotoIGCollectionNodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoIGCollectionNodeController.swift; sourceTree = "<group>"; };
 		BFFF2E71268A065A00005591 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -212,10 +224,11 @@
 		4D0B2052266F59C9005037E1 /* TextureExamples */ = {
 			isa = PBXGroup;
 			children = (
-				4D0B2053266F59C9005037E1 /* AppDelegate.swift */,
 				BF367F8526932751009A883A /* Apis */,
+				4D0B2053266F59C9005037E1 /* AppDelegate.swift */,
 				BFFF2E75268A081D00005591 /* Base */,
 				4D0B2075266F5A7F005037E1 /* Extensions */,
+				4D5C89F926958C43007AD78D /* LayoutModules */,
 				BFC371D5268CCDB200A67231 /* ListModules */,
 				BFFF2E70268A063400005591 /* Modules */,
 				4D0B2067266F59FD005037E1 /* Resources */,
@@ -240,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				4D0B2069266F5A7E005037E1 /* Constants.swift */,
+				4DCD9C1D2695AC5D0067DBF6 /* Logger.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -354,6 +368,26 @@
 			path = UIKits;
 			sourceTree = "<group>";
 		};
+		4D5C89F926958C43007AD78D /* LayoutModules */ = {
+			isa = PBXGroup;
+			children = (
+				4DCD9C182695A6D20067DBF6 /* Controllers */,
+				4DCD9C162695A4140067DBF6 /* LayoutsCellNode.swift */,
+				4DCD9C1026959E410067DBF6 /* LayoutsController.swift */,
+				4DCD9C1426959EB60067DBF6 /* LayoutsModel.swift */,
+				4DCD9C1226959E8B0067DBF6 /* LayoutsViewModel.swift */,
+			);
+			path = LayoutModules;
+			sourceTree = "<group>";
+		};
+		4DCD9C182695A6D20067DBF6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4DCD9C1B2695A7D60067DBF6 /* WrapperLayoutController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		BF367F8526932751009A883A /* Apis */ = {
 			isa = PBXGroup;
 			children = (
@@ -417,14 +451,6 @@
 			path = TabBar;
 			sourceTree = "<group>";
 		};
-		BFC371D2268CCCBB00A67231 /* LayoutSpecList */ = {
-			isa = PBXGroup;
-			children = (
-				BFC371D3268CCCC600A67231 /* LayoutSpecListController.swift */,
-			);
-			path = LayoutSpecList;
-			sourceTree = "<group>";
-		};
 		BFC371D5268CCDB200A67231 /* ListModules */ = {
 			isa = PBXGroup;
 			children = (
@@ -453,7 +479,6 @@
 				BFC371D0268BF46900A67231 /* ExampleList */,
 				4D0AF94E2692E43400382C48 /* JustifyAndAlign */,
 				BFC371CA268BF3B400A67231 /* JustifyContent */,
-				BFC371D2268CCCBB00A67231 /* LayoutSpecList */,
 				BFC371D1268BF47B00A67231 /* TabBar */,
 			);
 			path = Modules;
@@ -462,12 +487,13 @@
 		BFFF2E75268A081D00005591 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				BFFF2E76268A082E00005591 /* BaseTableNodeController.swift */,
 				4D5C89EB2694279C007AD78D /* BaseCollectionNodeController.swift */,
+				4D5C89D726930E3D007AD78D /* BaseNavigationController.swift */,
+				4DCD9C192695A73A0067DBF6 /* BaseNodeController.swift */,
+				BFFF2E76268A082E00005591 /* BaseTableNodeController.swift */,
 				4D8054DE268F0C0900A9B5E9 /* InfoNode.swift */,
 				BF367F81269204BF009A883A /* RoundNode.swift */,
 				BF367F83269204DB009A883A /* SquareNode.swift */,
-				4D5C89D726930E3D007AD78D /* BaseNavigationController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -595,6 +621,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DCD9C1A2695A73A0067DBF6 /* BaseNodeController.swift in Sources */,
 				4D0B20A7266F5A7F005037E1 /* Mocks.swift in Sources */,
 				4D0B20A8266F5A7F005037E1 /* Components.swift in Sources */,
 				BF367F84269204DB009A883A /* SquareNode.swift in Sources */,
@@ -609,6 +636,7 @@
 				BF367F82269204C0009A883A /* RoundNode.swift in Sources */,
 				4D0B20AC266F5A7F005037E1 /* AdaptiveLayoutViewController.swift in Sources */,
 				4D0B209C266F5A7F005037E1 /* NumberFormatter.swift in Sources */,
+				4DCD9C1326959E8B0067DBF6 /* LayoutsViewModel.swift in Sources */,
 				BFFF2E83268A9B1800005591 /* TabBarModel.swift in Sources */,
 				4D0B20AE266F5A7F005037E1 /* Util.swift in Sources */,
 				BFC413282694B82B00385C8D /* PhotoIGCollectionNodeController.swift in Sources */,
@@ -626,13 +654,13 @@
 				BFFF2E79268A09AE00005591 /* ExampleListViewModel.swift in Sources */,
 				BF367F982693278B009A883A /* ApiNetworking.swift in Sources */,
 				4D0B2054266F59C9005037E1 /* AppDelegate.swift in Sources */,
-				BFC371D4268CCCC600A67231 /* LayoutSpecListController.swift in Sources */,
 				BFC371CD268BF3D600A67231 /* AlignItemsController.swift in Sources */,
 				4D0B20A4266F5A7F005037E1 /* Book.StyledEdgeNode.swift in Sources */,
 				BFFF2E7F268A28F500005591 /* NSAttributeString+Extensions.swift in Sources */,
 				BF367FA42693278B009A883A /* ApiService.swift in Sources */,
 				BF367F9D2693278B009A883A /* CodeResponse.swift in Sources */,
 				BF367F972693278B009A883A /* Router.swift in Sources */,
+				4DCD9C1526959EB60067DBF6 /* LayoutsModel.swift in Sources */,
 				BFC371D7268CCDCE00A67231 /* ListsController.swift in Sources */,
 				4D5C89DD269315D5007AD78D /* PhotoTableNodeController.swift in Sources */,
 				4D5C89E62693FE4E007AD78D /* PhotoTableCellNode.swift in Sources */,
@@ -653,8 +681,10 @@
 				BF367F992693278B009A883A /* ApiService+Request.swift in Sources */,
 				4D0B20A5266F5A7F005037E1 /* RootContainerViewController.swift in Sources */,
 				BF367FAC26936290009A883A /* ListsCellNode.swift in Sources */,
+				4DCD9C1126959E410067DBF6 /* LayoutsController.swift in Sources */,
 				4D0B209B266F5A7F005037E1 /* Date.swift in Sources */,
 				BFFF2E72268A065A00005591 /* TabBarController.swift in Sources */,
+				4DCD9C1E2695AC5D0067DBF6 /* Logger.swift in Sources */,
 				BFFF2E7D268A0AA700005591 /* ExampleListCellNode.swift in Sources */,
 				4D5C89EC2694279C007AD78D /* BaseCollectionNodeController.swift in Sources */,
 				BF367FA826935F95009A883A /* ListsViewModel.swift in Sources */,
@@ -662,7 +692,9 @@
 				BFAF3BF2266FC7F3008DFED8 /* Rx+Observable.swift in Sources */,
 				4D0B2093266F5A7F005037E1 /* Constants.swift in Sources */,
 				4D5C89DB26931551007AD78D /* PhotoTableViewController.swift in Sources */,
+				4DCD9C1C2695A7D60067DBF6 /* WrapperLayoutController.swift in Sources */,
 				4D0B20B1266F5A7F005037E1 /* ZStackView.swift in Sources */,
+				4DCD9C172695A4140067DBF6 /* LayoutsCellNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
