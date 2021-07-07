@@ -67,17 +67,17 @@ extension LayoutsController: ASTableDelegate {
             return
         }
 
+        var vc = BaseNodeController()
+
         switch item.type {
         case .wrapper:
-            let vc = WrapperLayoutController()
-            vc.title = item.title
-            navigationController?.pushViewController(vc, animated: true)
+            vc = WrapperLayoutController()
         case .stack:
-            break
+            vc = StackLayoutController()
         case .inset:
-            break
+            vc = InsetLayoutController()
         case .overlay:
-            break
+            vc = OverlayLayoutController()
         case .background:
             break
         case .center:
@@ -93,6 +93,8 @@ extension LayoutsController: ASTableDelegate {
         default:
             break
         }
+        vc.title = item.title
+        navigationController?.pushViewController(vc, animated: true)
     }
 
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {

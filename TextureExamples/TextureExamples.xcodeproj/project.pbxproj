@@ -52,6 +52,9 @@
 		4DCD9C1A2695A73A0067DBF6 /* BaseNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD9C192695A73A0067DBF6 /* BaseNodeController.swift */; };
 		4DCD9C1C2695A7D60067DBF6 /* WrapperLayoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD9C1B2695A7D60067DBF6 /* WrapperLayoutController.swift */; };
 		4DCD9C1E2695AC5D0067DBF6 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD9C1D2695AC5D0067DBF6 /* Logger.swift */; };
+		4DCD9C202695AFB30067DBF6 /* StackLayoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD9C1F2695AFB30067DBF6 /* StackLayoutController.swift */; };
+		4DCD9C222695B2250067DBF6 /* InsetLayoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD9C212695B2250067DBF6 /* InsetLayoutController.swift */; };
+		4DCD9C242695B2E70067DBF6 /* OverlayLayoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD9C232695B2E70067DBF6 /* OverlayLayoutController.swift */; };
 		BF367F82269204C0009A883A /* RoundNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF367F81269204BF009A883A /* RoundNode.swift */; };
 		BF367F84269204DB009A883A /* SquareNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF367F83269204DB009A883A /* SquareNode.swift */; };
 		BF367F962693278B009A883A /* ApiServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF367F862693278A009A883A /* ApiServiceType.swift */; };
@@ -136,6 +139,9 @@
 		4DCD9C192695A73A0067DBF6 /* BaseNodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNodeController.swift; sourceTree = "<group>"; };
 		4DCD9C1B2695A7D60067DBF6 /* WrapperLayoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrapperLayoutController.swift; sourceTree = "<group>"; };
 		4DCD9C1D2695AC5D0067DBF6 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		4DCD9C1F2695AFB30067DBF6 /* StackLayoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackLayoutController.swift; sourceTree = "<group>"; };
+		4DCD9C212695B2250067DBF6 /* InsetLayoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetLayoutController.swift; sourceTree = "<group>"; };
+		4DCD9C232695B2E70067DBF6 /* OverlayLayoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayLayoutController.swift; sourceTree = "<group>"; };
 		6CFB62A3112E0806C8A7ED6A /* Pods_TextureExamples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextureExamples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF367F81269204BF009A883A /* RoundNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundNode.swift; sourceTree = "<group>"; };
 		BF367F83269204DB009A883A /* SquareNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareNode.swift; sourceTree = "<group>"; };
@@ -384,6 +390,9 @@
 			isa = PBXGroup;
 			children = (
 				4DCD9C1B2695A7D60067DBF6 /* WrapperLayoutController.swift */,
+				4DCD9C1F2695AFB30067DBF6 /* StackLayoutController.swift */,
+				4DCD9C212695B2250067DBF6 /* InsetLayoutController.swift */,
+				4DCD9C232695B2E70067DBF6 /* OverlayLayoutController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -633,6 +642,7 @@
 				BF367F962693278B009A883A /* ApiServiceType.swift in Sources */,
 				BF367FAA2693602C009A883A /* ListsModel.swift in Sources */,
 				BF367F9C2693278B009A883A /* ErrorType.swift in Sources */,
+				4DCD9C242695B2E70067DBF6 /* OverlayLayoutController.swift in Sources */,
 				BF367F82269204C0009A883A /* RoundNode.swift in Sources */,
 				4D0B20AC266F5A7F005037E1 /* AdaptiveLayoutViewController.swift in Sources */,
 				4D0B209C266F5A7F005037E1 /* NumberFormatter.swift in Sources */,
@@ -640,6 +650,7 @@
 				BFFF2E83268A9B1800005591 /* TabBarModel.swift in Sources */,
 				4D0B20AE266F5A7F005037E1 /* Util.swift in Sources */,
 				BFC413282694B82B00385C8D /* PhotoIGCollectionNodeController.swift in Sources */,
+				4DCD9C222695B2250067DBF6 /* InsetLayoutController.swift in Sources */,
 				4D0B20AB266F5A7F005037E1 /* CompositionCatalogViewController.swift in Sources */,
 				4D5C89E02693166B007AD78D /* PhotoTableViewModel.swift in Sources */,
 				BFFF2E74268A078000005591 /* ExampleListController.swift in Sources */,
@@ -694,6 +705,7 @@
 				4D5C89DB26931551007AD78D /* PhotoTableViewController.swift in Sources */,
 				4DCD9C1C2695A7D60067DBF6 /* WrapperLayoutController.swift in Sources */,
 				4D0B20B1266F5A7F005037E1 /* ZStackView.swift in Sources */,
+				4DCD9C202695AFB30067DBF6 /* StackLayoutController.swift in Sources */,
 				4DCD9C172695A4140067DBF6 /* LayoutsCellNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
