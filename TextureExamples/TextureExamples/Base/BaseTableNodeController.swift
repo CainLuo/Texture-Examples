@@ -26,5 +26,10 @@ class BaseTableNodeController: ASDKViewController<ASTableNode> {
         super.viewDidLoad()
         view.backgroundColor = .white
         emptyBackBarButtonItem()
+        log.debug(self.className)
+    }
+
+    deinit {
+        log.debug(self.className)
     }
 }

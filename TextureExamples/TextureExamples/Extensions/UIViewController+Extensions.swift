@@ -13,3 +13,14 @@ extension UIViewController {
         navigationItem.backBarButtonItem = backBarButton
     }
 }
+
+// MARK: Class Name
+extension NSObject {
+    class var className: String {
+        String(describing: self)
+    }
+
+    var className: String {
+        type(of: self).className
+    }
+}

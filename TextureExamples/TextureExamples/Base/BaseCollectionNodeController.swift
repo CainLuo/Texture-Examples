@@ -18,5 +18,10 @@ class BaseCollectionNodeController: ASDKViewController<ASCollectionNode> {
         super.viewDidLoad()
         view.backgroundColor = .white
         emptyBackBarButtonItem()
+        log.debug(self.className)
+    }
+
+    deinit {
+        log.debug(self.className)
     }
 }

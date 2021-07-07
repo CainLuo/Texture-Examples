@@ -14,6 +14,11 @@ class TabBarController: ASTabBarController {
         super.viewDidLoad()
         viewControllers = configControllers()
         tabBar.backgroundColor = .white
+        log.debug(self.className)
+    }
+
+    deinit {
+        log.debug(self.className)
     }
 }
 
@@ -35,7 +40,7 @@ extension TabBarController {
     private func configModels() -> [TabBarModel] {
         [
             TabBarModel(title: "TabBar_StackContent".localized(), icon: #imageLiteral(resourceName: "tabBarStackContent"), selectIcon: #imageLiteral(resourceName: "tabBarStackContent"), controller: ExampleListController()),
-            TabBarModel(title: "TabBar_LayoutSpec".localized(), icon: #imageLiteral(resourceName: "tabBarLayoutSpec"), selectIcon: #imageLiteral(resourceName: "tabBarLayoutSpec"), controller: LayoutSpecListController()),
+            TabBarModel(title: "TabBar_LayoutSpec".localized(), icon: #imageLiteral(resourceName: "tabBarLayoutSpec"), selectIcon: #imageLiteral(resourceName: "tabBarLayoutSpec"), controller: LayoutsController()),
             TabBarModel(title: "TabBar_List".localized(), icon: #imageLiteral(resourceName: "tabBarList"), selectIcon: #imageLiteral(resourceName: "tabBarList"), controller: ListsController()),
             TabBarModel(title: "TabBar_Support".localized(), icon: #imageLiteral(resourceName: "tabBarSupport"), selectIcon: #imageLiteral(resourceName: "tabBarSupport"), controller: RootContainerViewController())
         ]

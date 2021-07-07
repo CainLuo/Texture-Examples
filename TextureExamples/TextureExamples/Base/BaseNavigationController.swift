@@ -12,6 +12,11 @@ class BaseNavigationController: ASNavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         delegate = self
+        log.debug(self.className)
+    }
+
+    deinit {
+        log.debug(self.className)
     }
 }
 
