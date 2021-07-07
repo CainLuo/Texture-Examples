@@ -46,15 +46,3 @@ class OverlayContentNode: ASDisplayNode {
         return ASOverlayLayoutSpec(child: backgroundNode, overlay: centerLayout)
     }
 }
-
-// MARK: - ColorNode
-class ColorNode: ASDisplayNode {
-
-    init(_ color: UIColor, size: CGSize = .zero) {
-        super.init()
-        isLayerBacked = true
-        backgroundColor = color
-        style.width = ASDimensionMakeWithPoints(size.width)
-        style.height = ASDimensionMakeWithPoints(size.height)
-    }
-}
