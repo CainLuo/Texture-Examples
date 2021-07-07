@@ -25,6 +25,9 @@ PODS:
   - Moya/RxSwift (14.0.0):
     - Moya/Core
     - RxSwift (~> 5.0)
+  - ObjcExceptionBridging (1.0.1):
+    - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
+  - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
   - ObjectMapper (4.2.0)
   - PINCache (3.0.3):
     - PINCache/Arc-exception-safe (= 3.0.3)
@@ -95,6 +98,10 @@ PODS:
   - TextureSwiftSupport/LayoutSpecBuilders (3.11.0):
     - Texture/Core (>= 3)
   - TypedTextAttributes (1.2.0)
+  - XCGLogger (7.0.1):
+    - XCGLogger/Core (= 7.0.1)
+  - XCGLogger/Core (7.0.1):
+    - ObjcExceptionBridging
 
 DEPENDENCIES:
   - EasyPeasy
@@ -114,6 +121,7 @@ DEPENDENCIES:
   - Texture/PINRemoteImage
   - TextureSwiftSupport
   - TypedTextAttributes
+  - XCGLogger
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -124,6 +132,7 @@ SPEC REPOS:
     - LookinServer
     - Moya
     - Moya-ObjectMapper
+    - ObjcExceptionBridging
     - ObjectMapper
     - PINCache
     - PINOperation
@@ -140,6 +149,7 @@ SPEC REPOS:
     - TextureBridging
     - TextureSwiftSupport
     - TypedTextAttributes
+    - XCGLogger
 
 SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
@@ -149,6 +159,7 @@ SPEC CHECKSUMS:
   LookinServer: d6874df8b58096c8d463817b6baaa3abc21d31f7
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   Moya-ObjectMapper: 967a99d9ea3aa9c93ddbe112aeca3667f53bfe93
+  ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   PINCache: 7a8fc1a691173d21dbddbf86cd515de6efa55086
   PINOperation: 00c935935f1e8cf0d1e2d6b542e75b88fc3e5e20
@@ -165,7 +176,8 @@ SPEC CHECKSUMS:
   TextureBridging: b4035a6a9e64d061f3238f3dc08abd36b8eff8f7
   TextureSwiftSupport: b97859d0f3016f1af2f276bf6d987e916b23b150
   TypedTextAttributes: 624acbbc3bd067453d76f7408c6d6c5f0964d51b
+  XCGLogger: 1943831ef907df55108b0b18657953f868de973b
 
-PODFILE CHECKSUM: 954214308b036c726bf6381e9d4052d90dbfdf3a
+PODFILE CHECKSUM: b12942554bb2efd11b6cd7a0e95f2287111cc378
 
 COCOAPODS: 1.10.1
