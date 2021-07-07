@@ -78,6 +78,10 @@
 		BFC371CF268BF3E100A67231 /* JustifyContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC371CE268BF3E100A67231 /* JustifyContentController.swift */; };
 		BFC371D7268CCDCE00A67231 /* ListsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC371D6268CCDCE00A67231 /* ListsController.swift */; };
 		BFC413282694B82B00385C8D /* PhotoIGCollectionNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC413272694B82B00385C8D /* PhotoIGCollectionNodeController.swift */; };
+		BFC4132A2695CD9D00385C8D /* BackgroundLayoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC413292695CD9D00385C8D /* BackgroundLayoutController.swift */; };
+		BFC4132D2695CDBC00385C8D /* ColorNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC4132C2695CDBC00385C8D /* ColorNode.swift */; };
+		BFC4132F2695D8F200385C8D /* CenterLayoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC4132E2695D8F200385C8D /* CenterLayoutController.swift */; };
+		BFC413312695FE9000385C8D /* RatioLayoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC413302695FE9000385C8D /* RatioLayoutController.swift */; };
 		BFFF2E72268A065A00005591 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFF2E71268A065A00005591 /* TabBarController.swift */; };
 		BFFF2E74268A078000005591 /* ExampleListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFF2E73268A078000005591 /* ExampleListController.swift */; };
 		BFFF2E77268A082E00005591 /* BaseTableNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFF2E76268A082E00005591 /* BaseTableNodeController.swift */; };
@@ -166,6 +170,10 @@
 		BFC371CE268BF3E100A67231 /* JustifyContentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustifyContentController.swift; sourceTree = "<group>"; };
 		BFC371D6268CCDCE00A67231 /* ListsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsController.swift; sourceTree = "<group>"; };
 		BFC413272694B82B00385C8D /* PhotoIGCollectionNodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoIGCollectionNodeController.swift; sourceTree = "<group>"; };
+		BFC413292695CD9D00385C8D /* BackgroundLayoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundLayoutController.swift; sourceTree = "<group>"; };
+		BFC4132C2695CDBC00385C8D /* ColorNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorNode.swift; sourceTree = "<group>"; };
+		BFC4132E2695D8F200385C8D /* CenterLayoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterLayoutController.swift; sourceTree = "<group>"; };
+		BFC413302695FE9000385C8D /* RatioLayoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatioLayoutController.swift; sourceTree = "<group>"; };
 		BFFF2E71268A065A00005591 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		BFFF2E73268A078000005591 /* ExampleListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleListController.swift; sourceTree = "<group>"; };
 		BFFF2E76268A082E00005591 /* BaseTableNodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableNodeController.swift; sourceTree = "<group>"; };
@@ -377,6 +385,7 @@
 		4D5C89F926958C43007AD78D /* LayoutModules */ = {
 			isa = PBXGroup;
 			children = (
+				BFC4132B2695CDB000385C8D /* Nodes */,
 				4DCD9C182695A6D20067DBF6 /* Controllers */,
 				4DCD9C162695A4140067DBF6 /* LayoutsCellNode.swift */,
 				4DCD9C1026959E410067DBF6 /* LayoutsController.swift */,
@@ -393,6 +402,9 @@
 				4DCD9C1F2695AFB30067DBF6 /* StackLayoutController.swift */,
 				4DCD9C212695B2250067DBF6 /* InsetLayoutController.swift */,
 				4DCD9C232695B2E70067DBF6 /* OverlayLayoutController.swift */,
+				BFC413292695CD9D00385C8D /* BackgroundLayoutController.swift */,
+				BFC4132E2695D8F200385C8D /* CenterLayoutController.swift */,
+				BFC413302695FE9000385C8D /* RatioLayoutController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -479,6 +491,14 @@
 				BFC413272694B82B00385C8D /* PhotoIGCollectionNodeController.swift */,
 			);
 			path = IGListKit;
+			sourceTree = "<group>";
+		};
+		BFC4132B2695CDB000385C8D /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				BFC4132C2695CDBC00385C8D /* ColorNode.swift */,
+			);
+			path = Nodes;
 			sourceTree = "<group>";
 		};
 		BFFF2E70268A063400005591 /* Modules */ = {
@@ -637,6 +657,7 @@
 				BF367F9B2693278B009A883A /* ApiProvider.swift in Sources */,
 				4D5C89EA26942745007AD78D /* UIViewController+Extensions.swift in Sources */,
 				BFFF2E7B268A09F500005591 /* ExampleListModel.swift in Sources */,
+				BFC4132D2695CDBC00385C8D /* ColorNode.swift in Sources */,
 				4D0B20AD266F5A7F005037E1 /* TransitionLayoutViewController.swift in Sources */,
 				4D0B209F266F5A7F005037E1 /* CustomCollectionCellNode.swift in Sources */,
 				BF367F962693278B009A883A /* ApiServiceType.swift in Sources */,
@@ -656,6 +677,8 @@
 				BFFF2E74268A078000005591 /* ExampleListController.swift in Sources */,
 				4D5C89F4269448C8007AD78D /* PhotoCollectionViewController.swift in Sources */,
 				4D5C89E22693EBF7007AD78D /* PhotoTableViewCell.swift in Sources */,
+				BFC4132A2695CD9D00385C8D /* BackgroundLayoutController.swift in Sources */,
+				BFC413312695FE9000385C8D /* RatioLayoutController.swift in Sources */,
 				4D0B20A0266F5A7F005037E1 /* CustomCollectionNodeController.swift in Sources */,
 				4D0B20AF266F5A7F005037E1 /* Book.swift in Sources */,
 				4D0B20A9266F5A7F005037E1 /* RecursiveLayoutViewController.swift in Sources */,
@@ -702,6 +725,7 @@
 				4D0B20A6266F5A7F005037E1 /* Book.ImageNode.swift in Sources */,
 				BFAF3BF2266FC7F3008DFED8 /* Rx+Observable.swift in Sources */,
 				4D0B2093266F5A7F005037E1 /* Constants.swift in Sources */,
+				BFC4132F2695D8F200385C8D /* CenterLayoutController.swift in Sources */,
 				4D5C89DB26931551007AD78D /* PhotoTableViewController.swift in Sources */,
 				4DCD9C1C2695A7D60067DBF6 /* WrapperLayoutController.swift in Sources */,
 				4D0B20B1266F5A7F005037E1 /* ZStackView.swift in Sources */,
