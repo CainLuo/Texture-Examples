@@ -12,7 +12,6 @@ class OverlayLayoutController: BaseNodeController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        node.automaticallyRelayoutOnSafeAreaChanges = true
         configBackgroundNode()
         node.setNeedsLayout()
     }

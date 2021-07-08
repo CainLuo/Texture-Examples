@@ -25,6 +25,7 @@ class BaseTableNodeController: ASDKViewController<ASTableNode> {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        node.automaticallyRelayoutOnSafeAreaChanges = true
         emptyBackBarButtonItem()
         log.debug(self.className)
     }

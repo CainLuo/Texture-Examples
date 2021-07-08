@@ -11,7 +11,6 @@ class RatioLayoutController: BaseNodeController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        node.automaticallyRelayoutOnSafeAreaChanges = true
         configBackgroundNode()
         node.setNeedsLayout()
     }
@@ -24,8 +23,7 @@ extension RatioLayoutController {
         node.addSubnode(contentNode)
 
         node.layoutSpecBlock = { node, constrainedSize in
-            contentNode.style.preferredSize = CGSize(width: 300, height: 300)
-            return ASCenterLayoutSpec(centeringOptions: .XY, sizingOptions: .minimumXY, child: contentNode)
+            ASInsetLayoutSpec(insets: UIEdgeInsets(top: 100, left: 20, bottom: 100, right: 20), child: contentNode)
         }
     }
 }
@@ -42,7 +40,7 @@ class RatioContentNode: ASDisplayNode {
     }
 
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
-        let ratio: CGFloat = 3.0 / 1.0 / 10
+        let ratio: CGFloat = 3.0 / 1.0
         return ASRatioLayoutSpec(ratio: ratio, child: imageNode)
     }
 }

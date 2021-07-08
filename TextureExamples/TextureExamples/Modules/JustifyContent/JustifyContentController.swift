@@ -7,7 +7,7 @@
 
 import AsyncDisplayKit
 
-class JustifyContentController: ASDKViewController<ASDisplayNode> {
+class JustifyContentController: BaseNodeController {
     
     private let roundNode = RoundNode()
     private let squareNode = SquareNode()
@@ -21,8 +21,7 @@ class JustifyContentController: ASDKViewController<ASDisplayNode> {
     private var justifyContentType: ASStackLayoutJustifyContent = .start
     
     init(_ type: ASStackLayoutJustifyContent) {
-        super.init(node: ASDisplayNode())
-        node.automaticallyRelayoutOnSafeAreaChanges = true
+        super.init()
         justifyContentType = type
         configBackgroundNode()
     }

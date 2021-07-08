@@ -7,7 +7,7 @@
 
 import AsyncDisplayKit
 
-class AlignItemsController: ASDKViewController<ASDisplayNode> {
+class AlignItemsController: BaseNodeController {
     
     private let roundNode = RoundNode()
     private let squareNode = SquareNode()
@@ -20,8 +20,7 @@ class AlignItemsController: ASDKViewController<ASDisplayNode> {
     private var alignItemsType: ASStackLayoutAlignItems = .start
 
     init(_ type: ASStackLayoutAlignItems) {
-        super.init(node: ASDisplayNode())
-        node.automaticallyRelayoutOnSafeAreaChanges = true
+        super.init()
         alignItemsType = type
         configBackgroundNode()
     }

@@ -26,7 +26,6 @@ class StackLayoutController: BaseNodeController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        node.automaticallyRelayoutOnSafeAreaChanges = true
         configBackgroundNode()
         node.setNeedsLayout()
         node.backgroundColor = UIColor(0xf5f5f5)
