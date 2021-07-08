@@ -50,8 +50,8 @@ class LayoutsViewModel: LayoutsViewModelInputs, LayoutsViewModelOutputs, Layouts
 
 private func filterSections() -> [LayoutsSectionModel] {
     [
-        LayoutsSectionModel(title: "Tables", type: .original, items: originalItems()),
-        LayoutsSectionModel(title: "Collections", type: .textureSwiftSupport, items: textureSwiftSupportItems())
+        LayoutsSectionModel(title: "ASStackLayoutSpec", type: .original, items: originalItems()),
+        LayoutsSectionModel(title: "TextureSwiftSupportLayoutSpec", type: .textureSwiftSupport, items: textureSwiftSupportItems())
     ]
 }
 

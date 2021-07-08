@@ -10,6 +10,26 @@ import AsyncDisplayKit
 
 class StackLayoutController: BaseNodeController {
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        configBackgroundNode()
+        node.setNeedsLayout()
+    }
+}
+
+extension StackLayoutController {
+    private func configBackgroundNode() {
+        let contentNode = StackContentNode()
+        node.addSubnode(contentNode)
+        node.layoutSpecBlock = { node, constrainedSize in
+            ASInsetLayoutSpec(insets: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10), child: contentNode)
+        }
+    }
+}
+
+// MARK: - StackContentNode
+class StackContentNode: ASDisplayNode {
+
     private lazy var imageNode: ASImageNode = {
         let node = ASImageNode()
         node.image = #imageLiteral(resourceName: "image1")
@@ -24,33 +44,21 @@ class StackLayoutController: BaseNodeController {
         return node
     }()
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        configBackgroundNode()
-        node.setNeedsLayout()
-        node.backgroundColor = UIColor(0xf5f5f5)
+    override init() {
+        super.init()
+        automaticallyManagesSubnodes = true
+        backgroundColor = .gray
     }
-}
 
-extension StackLayoutController {
-    private func configBackgroundNode() {
-        node.addSubnode(imageNode)
-        node.addSubnode(imageNode1)
-        node.layoutSpecBlock = { [weak self] node, constrainedSize in
-            guard let imageNode = self?.imageNode,
-                  let imageNode1 = self?.imageNode1 else {
-                return ASLayoutSpec()
-            }
-            let hStack = ASStackLayoutSpec(direction: .vertical,
-                                           spacing: 6.0,
-                                           justifyContent: .center,
-                                           alignItems: .center,
-                                           children: [imageNode, imageNode1])
+    override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
+        let hStack = ASStackLayoutSpec(direction: .vertical,
+                                       spacing: 6.0,
+                                       justifyContent: .center,
+                                       alignItems: .center,
+                                       children: [imageNode, imageNode1])
 
-            hStack.style.minWidth = ASDimensionMakeWithPoints(60.0)
-            hStack.style.maxHeight = ASDimensionMakeWithPoints(40.0)
-
-            return hStack
-        }
+        hStack.style.minWidth = ASDimensionMakeWithPoints(60.0)
+        hStack.style.maxHeight = ASDimensionMakeWithPoints(40.0)
+        return hStack
     }
 }
