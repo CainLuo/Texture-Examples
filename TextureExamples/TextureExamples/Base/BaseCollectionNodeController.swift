@@ -16,6 +16,7 @@ class BaseCollectionNodeController: ASDKViewController<ASCollectionNode> {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        node.automaticallyRelayoutOnSafeAreaChanges = true
         view.backgroundColor = .white
         emptyBackBarButtonItem()
         log.debug(self.className)
