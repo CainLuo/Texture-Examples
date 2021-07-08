@@ -45,6 +45,8 @@
 		4D5C89F4269448C8007AD78D /* PhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C89F3269448C8007AD78D /* PhotoCollectionViewController.swift */; };
 		4D5C89F6269448D6007AD78D /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C89F5269448D6007AD78D /* PhotoCollectionViewCell.swift */; };
 		4D7268452696946D00068C8A /* RelativeLayoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7268442696946D00068C8A /* RelativeLayoutController.swift */; };
+		4D7268472696968400068C8A /* AbsoluteLayoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7268462696968400068C8A /* AbsoluteLayoutController.swift */; };
+		4D72684926969A3D00068C8A /* CornerLayoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D72684826969A3D00068C8A /* CornerLayoutController.swift */; };
 		4D8054DF268F0C0900A9B5E9 /* InfoNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8054DE268F0C0900A9B5E9 /* InfoNode.swift */; };
 		4DCD9C1126959E410067DBF6 /* LayoutsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD9C1026959E410067DBF6 /* LayoutsController.swift */; };
 		4DCD9C1326959E8B0067DBF6 /* LayoutsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD9C1226959E8B0067DBF6 /* LayoutsViewModel.swift */; };
@@ -137,6 +139,8 @@
 		4D5C89F3269448C8007AD78D /* PhotoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewController.swift; sourceTree = "<group>"; };
 		4D5C89F5269448D6007AD78D /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		4D7268442696946D00068C8A /* RelativeLayoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelativeLayoutController.swift; sourceTree = "<group>"; };
+		4D7268462696968400068C8A /* AbsoluteLayoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbsoluteLayoutController.swift; sourceTree = "<group>"; };
+		4D72684826969A3D00068C8A /* CornerLayoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerLayoutController.swift; sourceTree = "<group>"; };
 		4D8054DE268F0C0900A9B5E9 /* InfoNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoNode.swift; sourceTree = "<group>"; };
 		4DCD9C1026959E410067DBF6 /* LayoutsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutsController.swift; sourceTree = "<group>"; };
 		4DCD9C1226959E8B0067DBF6 /* LayoutsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutsViewModel.swift; sourceTree = "<group>"; };
@@ -408,6 +412,8 @@
 				BFC4132E2695D8F200385C8D /* CenterLayoutController.swift */,
 				BFC413302695FE9000385C8D /* RatioLayoutController.swift */,
 				4D7268442696946D00068C8A /* RelativeLayoutController.swift */,
+				4D7268462696968400068C8A /* AbsoluteLayoutController.swift */,
+				4D72684826969A3D00068C8A /* CornerLayoutController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -716,12 +722,14 @@
 				BF367F9F2693278B009A883A /* NetworkingTypes.swift in Sources */,
 				BF367FA22693278B009A883A /* ActivityIndicator.swift in Sources */,
 				BF367F992693278B009A883A /* ApiService+Request.swift in Sources */,
+				4D7268472696968400068C8A /* AbsoluteLayoutController.swift in Sources */,
 				4D0B20A5266F5A7F005037E1 /* RootContainerViewController.swift in Sources */,
 				BF367FAC26936290009A883A /* ListsCellNode.swift in Sources */,
 				4DCD9C1126959E410067DBF6 /* LayoutsController.swift in Sources */,
 				4D0B209B266F5A7F005037E1 /* Date.swift in Sources */,
 				BFFF2E72268A065A00005591 /* TabBarController.swift in Sources */,
 				4DCD9C1E2695AC5D0067DBF6 /* Logger.swift in Sources */,
+				4D72684926969A3D00068C8A /* CornerLayoutController.swift in Sources */,
 				BFFF2E7D268A0AA700005591 /* ExampleListCellNode.swift in Sources */,
 				4D5C89EC2694279C007AD78D /* BaseCollectionNodeController.swift in Sources */,
 				4D7268452696946D00068C8A /* RelativeLayoutController.swift in Sources */,
