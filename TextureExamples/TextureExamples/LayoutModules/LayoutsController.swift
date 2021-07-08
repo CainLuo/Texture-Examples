@@ -85,11 +85,11 @@ extension LayoutsController: ASTableDelegate {
         case .ratio:
             vc = RatioLayoutController()
         case .relative:
-            break
+            vc = RelativeLayoutController()
         case .absolute:
-            break
+            vc = AbsoluteLayoutController()
         case .corner:
-            break
+            vc = CornerLayoutController()
         default:
             break
         }
