@@ -6,8 +6,11 @@
 //
 
 import AsyncDisplayKit
+import TextureSwiftSupport
 
 class BackgroundLayoutController: BaseNodeController {
+
+    var type: LayoutsSectionType = .original
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +22,7 @@ class BackgroundLayoutController: BaseNodeController {
 extension BackgroundLayoutController {
     private func configBackgroundNode() {
         let contentNode = BackgroundContentNode()
-
+        contentNode.type = type
         node.addSubnode(contentNode)
 
         node.layoutSpecBlock = { node, constrainedSize in
@@ -32,17 +35,38 @@ extension BackgroundLayoutController {
 // MARK: - ContentNode
 class BackgroundContentNode: ASDisplayNode {
 
+    private let backgroundNode = ColorNode(.blue)
+    private let foregroundNode = ColorNode(.red, size: CGSize(width: 100, height: 100))
+    private let spacing: CGFloat = 20
+
+    var type: LayoutsSectionType = .original
+
     override init() {
         super.init()
         automaticallyManagesSubnodes = true
     }
 
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
-        let backgroundNode = ColorNode(.blue)
-        let foregroundNode = ColorNode(.red, size: CGSize(width: 100, height: 100))
-        let spacing: CGFloat = 20
+        type == .original ? stackLayoutSpec() : otherLayoutSpec()
+    }
+
+    // MARK: - ASStackLayoutSpec
+    private func stackLayoutSpec() -> ASLayoutSpec {
         let insetLayout = ASInsetLayoutSpec(insets: UIEdgeInsets(top: spacing, left: spacing, bottom: -spacing, right: -spacing), child: foregroundNode)
         return ASBackgroundLayoutSpec(child: insetLayout, background: backgroundNode)
+    }
+
+    // MARK: - TextureSwiftSupport
+    private func otherLayoutSpec() -> ASLayoutSpec {
+        LayoutSpec {
+            BackgroundLayout {
+                InsetLayout(insets: UIEdgeInsets(top: spacing, left: spacing, bottom: -spacing, right: -spacing)) {
+                    foregroundNode
+                }
+            } background: {
+                backgroundNode
+            }
+        }
     }
 }
 

@@ -6,8 +6,11 @@
 //
 
 import AsyncDisplayKit
+import TextureSwiftSupport
 
 class CenterLayoutController: BaseNodeController {
+
+    var type: LayoutsSectionType = .original
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +22,7 @@ class CenterLayoutController: BaseNodeController {
 extension CenterLayoutController {
     private func configBackgroundNode() {
         let contentNode = CenterContentNode()
-
+        contentNode.type = type
         node.addSubnode(contentNode)
 
         node.layoutSpecBlock = { node, constrainedSize in
@@ -31,6 +34,8 @@ extension CenterLayoutController {
 
 // MARK: - ContentNode
 class CenterContentNode: ASDisplayNode {
+
+    var type: LayoutsSectionType = .original
 
     override init() {
         super.init()

@@ -6,8 +6,11 @@
 //
 
 import AsyncDisplayKit
+import TextureSwiftSupport
 
 class AbsoluteLayoutController: BaseNodeController {
+
+    var type: LayoutsSectionType = .original
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +22,7 @@ class AbsoluteLayoutController: BaseNodeController {
 extension AbsoluteLayoutController {
     private func configBackgroundNode() {
         let contentNode = AbsoluteContentNode()
-
+        contentNode.type = type
         node.addSubnode(contentNode)
 
         node.layoutSpecBlock = { node, constrainedSize in
@@ -30,6 +33,8 @@ extension AbsoluteLayoutController {
 
 // MARK: - AbsoluteContentNode
 class AbsoluteContentNode: ASDisplayNode {
+
+    var type: LayoutsSectionType = .original
 
     private let guitarVideoNode = ColorNode(.black)
     private let nicCageVideoNode = ColorNode(.red)

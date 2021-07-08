@@ -6,8 +6,11 @@
 //
 
 import AsyncDisplayKit
+import TextureSwiftSupport
 
 class RatioLayoutController: BaseNodeController {
+
+    var type: LayoutsSectionType = .original
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +22,7 @@ class RatioLayoutController: BaseNodeController {
 extension RatioLayoutController {
     private func configBackgroundNode() {
         let contentNode = RatioContentNode()
-
+        contentNode.type = type
         node.addSubnode(contentNode)
 
         node.layoutSpecBlock = { node, constrainedSize in
@@ -30,7 +33,9 @@ extension RatioLayoutController {
 
 // MARK: - ContentNode
 class RatioContentNode: ASDisplayNode {
-    
+
+    var type: LayoutsSectionType = .original
+
     let imageNode = ASImageNode()
 
     override init() {

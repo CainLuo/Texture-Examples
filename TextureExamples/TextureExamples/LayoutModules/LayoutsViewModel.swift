@@ -72,15 +72,15 @@ private func originalItems() -> [LayoutsItemModel] {
 
 private func textureSwiftSupportItems() -> [LayoutsItemModel] {
     [
-        LayoutsItemModel(title: "ASWrapperLayoutSpec", type: .wrapper),
-        LayoutsItemModel(title: "ASStackLayoutSpec", type: .stack),
-        LayoutsItemModel(title: "ASInsetLayoutSpec", type: .inset),
-        LayoutsItemModel(title: "ASOverlayLayoutSpec", type: .overlay),
-        LayoutsItemModel(title: "ASBackgroundLayoutSpec", type: .background),
-        LayoutsItemModel(title: "ASCenterLayoutSpec", type: .center),
-        LayoutsItemModel(title: "ASRatioLayoutSpec", type: .ratio),
-        LayoutsItemModel(title: "ASRelativeLayoutSpec", type: .relative),
-        LayoutsItemModel(title: "ASAbsoluteLayoutSpec", type: .absolute),
+        LayoutsItemModel(title: "WrapperLayout", type: .wrapper),
+        LayoutsItemModel(title: "StackLayout", type: .stack),
+        LayoutsItemModel(title: "InsetLayout", type: .inset),
+        LayoutsItemModel(title: "OverlayLayout", type: .overlay),
+        LayoutsItemModel(title: "BackgroundLayout", type: .background),
+        LayoutsItemModel(title: "CenterLayout", type: .center),
+        LayoutsItemModel(title: "RatioLayout", type: .ratio),
+        LayoutsItemModel(title: "RelativeLayout", type: .relative),
+        LayoutsItemModel(title: "AbsoluteLayout", type: .absolute),
         LayoutsItemModel(title: "ASCornerLayoutSpec", type: .corner)
     ]
 }

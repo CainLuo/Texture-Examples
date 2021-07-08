@@ -6,8 +6,11 @@
 //
 
 import AsyncDisplayKit
+import TextureSwiftSupport
 
 class RelativeLayoutController: BaseNodeController {
+
+    var type: LayoutsSectionType = .original
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +22,7 @@ class RelativeLayoutController: BaseNodeController {
 extension RelativeLayoutController {
     private func configBackgroundNode() {
         let contentNode = RelativeContentNode()
-
+        contentNode.type = type
         node.addSubnode(contentNode)
 
         node.layoutSpecBlock = { node, constrainedSize in
@@ -30,6 +33,8 @@ extension RelativeLayoutController {
 
 // MARK: -  RelativeContentNode
 class RelativeContentNode: ASDisplayNode {
+
+    var type: LayoutsSectionType = .original
 
     override init() {
         super.init()
