@@ -31,3 +31,9 @@
 // MARK: - Info Node
 "InfoNode_Reset" = "Reset";
 "InfoNode_Start" = "Start";
+
+// MARK: - Text Node
+"TextNode_Title"       = "九月九日忆山东兄弟";
+"TextNode_Description" = "王维 〔唐代〕";
+"TextNode_Content1"    = "独在异乡为异客，\n遥知兄弟登高处，";
+"TextNode_Content2"    = "每逢佳节倍思亲。\n遍插茱萸少一人。";
