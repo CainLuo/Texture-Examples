@@ -43,6 +43,7 @@ extension CenterLayoutController {
 // MARK: - ContentNode
 class CenterContentNode: ASDisplayNode {
 
+    private let foregroundNode = ColorNode(.red, size: CGSize(width: 100, height: 100))
     private var type: LayoutsSectionType = .original
 
     init(_ type: LayoutsSectionType) {
@@ -53,8 +54,21 @@ class CenterContentNode: ASDisplayNode {
     }
 
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
-        let foregroundNode = ColorNode(.red, size: CGSize(width: 100, height: 100))
-        return ASCenterLayoutSpec(centeringOptions: .X, sizingOptions: [], child: foregroundNode)
+        type == .original ? stackLayoutSpec() : otherLayoutSpec()
+    }
+
+    // MARK: - ASStackLayoutSpec
+    private func stackLayoutSpec() -> ASLayoutSpec {
+        ASCenterLayoutSpec(centeringOptions: .X, sizingOptions: [], child: foregroundNode)
+    }
+
+    // MARK: - TextureSwiftSupport
+    private func otherLayoutSpec() -> ASLayoutSpec {
+        LayoutSpec {
+            CenterLayout(centeringOptions: .X) {
+                foregroundNode
+            }
+        }
     }
 }
 

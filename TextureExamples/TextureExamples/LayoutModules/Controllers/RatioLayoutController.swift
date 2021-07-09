@@ -43,7 +43,7 @@ extension RatioLayoutController {
 class RatioContentNode: ASDisplayNode {
 
     let imageNode = ASImageNode()
-
+    private let ratio: CGFloat = 3.0 / 1.0
     private var type: LayoutsSectionType = .original
 
     init(_ type: LayoutsSectionType) {
@@ -54,8 +54,21 @@ class RatioContentNode: ASDisplayNode {
     }
 
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
-        let ratio: CGFloat = 3.0 / 1.0
-        return ASRatioLayoutSpec(ratio: ratio, child: imageNode)
+        type == .original ? stackLayoutSpec() : otherLayoutSpec()
+    }
+
+    // MARK: - ASStackLayoutSpec
+    private func stackLayoutSpec() -> ASLayoutSpec {
+        ASRatioLayoutSpec(ratio: ratio, child: imageNode)
+    }
+
+    // MARK: - TextureSwiftSupport
+    private func otherLayoutSpec() -> ASLayoutSpec {
+        LayoutSpec {
+            AspectRatioLayout(ratio: ratio) {
+                imageNode
+            }
+        }
     }
 }
 

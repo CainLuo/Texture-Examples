@@ -56,6 +56,13 @@ class AbsoluteContentNode: ASDisplayNode {
     }
 
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
+        configUISize(constrainedSize)
+        return type == .original ? stackLayoutSpec() : otherLayoutSpec()
+    }
+
+    /// Update Nodes Size
+    /// - Parameter constrainedSize: ASSizeRange
+    private func configUISize(_ constrainedSize: ASSizeRange) {
         let maxConstrainedSize = constrainedSize.max
 
         let width = maxConstrainedSize.width / 2.0
@@ -72,7 +79,22 @@ class AbsoluteContentNode: ASDisplayNode {
 
         hlsVideoNode.style.layoutPosition = CGPoint(x: 0.0, y: height)
         hlsVideoNode.style.preferredSize = CGSize(width: width, height: height)
+    }
 
-        return ASAbsoluteLayoutSpec(children: [guitarVideoNode, nicCageVideoNode, simonVideoNode, hlsVideoNode])
+    // MARK: - ASStackLayoutSpec
+    private func stackLayoutSpec() -> ASLayoutSpec {
+        ASAbsoluteLayoutSpec(children: [guitarVideoNode, nicCageVideoNode, simonVideoNode, hlsVideoNode])
+    }
+
+    // MARK: - TextureSwiftSupport
+    private func otherLayoutSpec() -> ASLayoutSpec {
+        LayoutSpec {
+            AbsoluteLayout {
+                guitarVideoNode
+                nicCageVideoNode
+                simonVideoNode
+                hlsVideoNode
+            }
+        }
     }
 }

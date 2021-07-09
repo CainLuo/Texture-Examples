@@ -42,6 +42,9 @@ extension RelativeLayoutController {
 // MARK: -  RelativeContentNode
 class RelativeContentNode: ASDisplayNode {
 
+    private let backgroundNode = ColorNode(UIColor.blue)
+    private let foregroundNode = ColorNode(UIColor.red, size: CGSize(width: 70.0, height: 100.0))
+
     private var type: LayoutsSectionType = .original
 
     init(_ type: LayoutsSectionType) {
@@ -51,14 +54,29 @@ class RelativeContentNode: ASDisplayNode {
     }
 
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
-        let backgroundNode = ColorNode(UIColor.blue)
-        let foregroundNode = ColorNode(UIColor.red, size: CGSize(width: 70.0, height: 100.0))
+        type == .original ? stackLayoutSpec() : otherLayoutSpec()
+    }
 
+    // MARK: - ASStackLayoutSpec
+    private func stackLayoutSpec() -> ASLayoutSpec {
         let relativeSpec = ASRelativeLayoutSpec(horizontalPosition: .start,
                                                 verticalPosition: .start,
                                                 sizingOption: [],
                                                 child: foregroundNode)
 
         return ASBackgroundLayoutSpec(child: relativeSpec, background: backgroundNode)
+    }
+
+    // MARK: - TextureSwiftSupport
+    private func otherLayoutSpec() -> ASLayoutSpec {
+        LayoutSpec {
+            BackgroundLayout {
+                RelativeLayout(horizontalPosition: .start, verticalPosition: .start, sizingOption: []) {
+                    foregroundNode
+                }
+            } background: {
+                backgroundNode
+            }
+        }
     }
 }

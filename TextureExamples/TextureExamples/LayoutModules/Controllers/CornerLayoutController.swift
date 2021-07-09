@@ -45,13 +45,28 @@ class CornerContentNode: ASDisplayNode {
     }
 
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
+        stackLayoutSpec()
+    }
+
+    // MARK: - ASStackLayoutSpec
+    private func stackLayoutSpec() -> ASLayoutSpec {
         imageNode.style.preferredSize = CGSize(width: 100, height: 100)
 
         let badgeSpec = ASBackgroundLayoutSpec(child: textNode, background: imageBadge)
         let corner = ASCornerLayoutSpec(child: imageNode, corner: badgeSpec, location: .topRight)
+        corner.offset = CGPoint(x: -3, y: 3)
 
         let vStack = ASStackLayoutSpec.vertical()
         vStack.children = [corner]
         return vStack
+    }
+
+    // MARK: - TextureSwiftSupport
+    private func otherLayoutSpec() {
+        // TextureSwiftSupport没有ASCornerLayoutSpec这个布局方式，如果您需要的话可以自行实现或者直接使用ASCornerLayoutSpec，
+        // 或者可以去https://github.com/TextureCommunity/TextureSwiftSupport给开发者提issues。
+
+        // TextureSwiftSupport does not have ASCornerLayoutSpec layout method, you can implement it yourself if you need or use ASCornerLayoutSpec directly,
+        // or you can go to https://github.com/TextureCommunity/ TextureSwiftSupport gives developers issues.
     }
 }
