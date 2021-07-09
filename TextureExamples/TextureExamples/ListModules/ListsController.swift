@@ -24,7 +24,6 @@ class ListsController: BaseTableNodeController {
         node.allowsSelection = true
         node.dataSource = self
         node.delegate = self
-        node.leadingScreensForBatching = 2.5
         bindViewModel()
     }
     
