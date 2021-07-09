@@ -15,6 +15,7 @@ class PhotoTableCellNode: ASCellNode {
     let timeIntervalLabel = ASTextNode()
     let photoLikesLabel = ASTextNode()
     let photoDescriptionLabel = ASTextNode()
+    let photoDescriptionLabel2 = ASTextNode()
 
     let avatarImageNode: ASNetworkImageNode = {
         let node = ASNetworkImageNode()
@@ -40,6 +41,7 @@ class PhotoTableCellNode: ASCellNode {
         timeIntervalLabel.attributedText = model.attributedStringForTimeSinceString(withSize: Constants.CellLayout.FontSize)
         photoLikesLabel.attributedText = model.attributedStringLikes(withSize: Constants.CellLayout.FontSize)
         photoDescriptionLabel.attributedText = model.attributedStringForDescription(withSize: Constants.CellLayout.FontSize)
+        photoDescriptionLabel2.attributedText = model.attributedStringForDescription(withSize: Constants.CellLayout.FontSize)
     }
 
     // MARK: ASDisplayNode
@@ -66,9 +68,14 @@ class PhotoTableCellNode: ASCellNode {
         timeIntervalLabel.style.spacingBefore = Constants.CellLayout.HorizontalBuffer
         headerChildren.append(timeIntervalLabel)
 
+        let hStack = ASStackLayoutSpec.horizontal()
+        hStack.children = [photoDescriptionLabel, photoDescriptionLabel2]
+        photoDescriptionLabel.style.flexBasis = ASDimensionMake("50%")
+        photoDescriptionLabel2.style.flexBasis = ASDimensionMake("50%")
+
         let footerStack = ASStackLayoutSpec.vertical()
         footerStack.spacing = Constants.CellLayout.VerticalBuffer
-        footerStack.children = [photoLikesLabel, photoDescriptionLabel]
+        footerStack.children = [photoLikesLabel, hStack]
         headerStack.children = headerChildren
 
         let verticalStack = ASStackLayoutSpec.vertical()
