@@ -63,7 +63,8 @@ extension LayoutsController: ASTableDelegate {
         tableNode.deselectRow(at: indexPath, animated: true)
 
         let section = dataSource[indexPath.section]
-        guard let item = section.items?[indexPath.row] else {
+        guard let type = section.type,
+              let item = section.items?[indexPath.row] else {
             return
         }
 
@@ -71,23 +72,23 @@ extension LayoutsController: ASTableDelegate {
 
         switch item.type {
         case .wrapper:
-            vc = WrapperLayoutController()
+            vc = WrapperLayoutController(type)
         case .stack:
-            vc = StackLayoutController()
+            vc = StackLayoutController(type)
         case .inset:
-            vc = InsetLayoutController()
+            vc = InsetLayoutController(type)
         case .overlay:
-            vc = OverlayLayoutController()
+            vc = OverlayLayoutController(type)
         case .background:
-            vc = BackgroundLayoutController()
+            vc = BackgroundLayoutController(type)
         case .center:
-            vc = CenterLayoutController()
+            vc = CenterLayoutController(type)
         case .ratio:
-            vc = RatioLayoutController()
+            vc = RatioLayoutController(type)
         case .relative:
-            vc = RelativeLayoutController()
+            vc = RelativeLayoutController(type)
         case .absolute:
-            vc = AbsoluteLayoutController()
+            vc = AbsoluteLayoutController(type)
         case .corner:
             vc = CornerLayoutController()
         default:

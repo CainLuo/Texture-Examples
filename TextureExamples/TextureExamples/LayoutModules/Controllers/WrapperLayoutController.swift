@@ -10,7 +10,7 @@ import TextureSwiftSupport
 
 class WrapperLayoutController: BaseNodeController {
 
-    var type: LayoutsSectionType = .original
+    private var type: LayoutsSectionType = .original
 
     init(_ type: LayoutsSectionType) {
         super.init()
@@ -20,7 +20,7 @@ class WrapperLayoutController: BaseNodeController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configBackgroundNode()
@@ -31,8 +31,7 @@ class WrapperLayoutController: BaseNodeController {
 
 extension WrapperLayoutController {
     private func configBackgroundNode() {
-        let contentNode = WrapperContentNode()
-        contentNode.type = type
+        let contentNode = WrapperContentNode(type)
         node.addSubnode(contentNode)
         node.layoutSpecBlock = { node, constrainedSize in
             let centerSpec = ASCenterLayoutSpec(centeringOptions: .XY, sizingOptions: [], child: contentNode)
@@ -44,8 +43,6 @@ extension WrapperLayoutController {
 // MARK: - WrapperContentNode
 class WrapperContentNode: ASDisplayNode {
 
-    var type: LayoutsSectionType = .original
-
     private lazy var imageNode: ASImageNode = {
         let node = ASImageNode()
         node.image = #imageLiteral(resourceName: "image2")
@@ -53,8 +50,11 @@ class WrapperContentNode: ASDisplayNode {
         return node
     }()
 
-    override init() {
+    private var type: LayoutsSectionType = .original
+
+    init(_ type: LayoutsSectionType) {
         super.init()
+        log.debug("LayoutsSectionType: \(type)")
         automaticallyManagesSubnodes = true
     }
 

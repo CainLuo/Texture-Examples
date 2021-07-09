@@ -10,7 +10,16 @@ import TextureSwiftSupport
 
 class RatioLayoutController: BaseNodeController {
 
-    var type: LayoutsSectionType = .original
+    private var type: LayoutsSectionType = .original
+
+    init(_ type: LayoutsSectionType) {
+        super.init()
+        self.type = type
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +30,7 @@ class RatioLayoutController: BaseNodeController {
 
 extension RatioLayoutController {
     private func configBackgroundNode() {
-        let contentNode = RatioContentNode()
-        contentNode.type = type
+        let contentNode = RatioContentNode(type)
         node.addSubnode(contentNode)
 
         node.layoutSpecBlock = { node, constrainedSize in
@@ -34,12 +42,13 @@ extension RatioLayoutController {
 // MARK: - ContentNode
 class RatioContentNode: ASDisplayNode {
 
-    var type: LayoutsSectionType = .original
-
     let imageNode = ASImageNode()
 
-    override init() {
+    private var type: LayoutsSectionType = .original
+
+    init(_ type: LayoutsSectionType) {
         super.init()
+        log.debug("LayoutsSectionType: \(type)")
         automaticallyManagesSubnodes = true
         imageNode.image = #imageLiteral(resourceName: "image1")
     }

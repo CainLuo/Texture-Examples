@@ -10,7 +10,16 @@ import TextureSwiftSupport
 
 class InsetLayoutController: BaseNodeController {
 
-    var type: LayoutsSectionType = .original
+    private var type: LayoutsSectionType = .original
+
+    init(_ type: LayoutsSectionType) {
+        super.init()
+        self.type = type
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +30,7 @@ class InsetLayoutController: BaseNodeController {
 
 extension InsetLayoutController {
     private func configBackgroundNode() {
-        let contentNode = InsetLayoutContentNode()
-        contentNode.type = type
+        let contentNode = InsetLayoutContentNode(type)
         node.addSubnode(contentNode)
 
         node.layoutSpecBlock = { node, constrainedSize in
@@ -35,8 +43,6 @@ extension InsetLayoutController {
 // MARK: - ContentNode
 class InsetLayoutContentNode: ASDisplayNode {
 
-    var type: LayoutsSectionType = .original
-
     private let backgroundNode = ASDisplayNode()
     private lazy var imageNode: ASImageNode = {
         let node = ASImageNode()
@@ -45,8 +51,11 @@ class InsetLayoutContentNode: ASDisplayNode {
         return node
     }()
 
-    override init() {
+    private var type: LayoutsSectionType = .original
+
+    init(_ type: LayoutsSectionType) {
         super.init()
+        log.debug("LayoutsSectionType: \(type)")
         automaticallyManagesSubnodes = true
         backgroundNode.backgroundColor = .gray
     }

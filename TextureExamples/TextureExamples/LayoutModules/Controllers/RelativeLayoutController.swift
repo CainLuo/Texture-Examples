@@ -10,7 +10,16 @@ import TextureSwiftSupport
 
 class RelativeLayoutController: BaseNodeController {
 
-    var type: LayoutsSectionType = .original
+    private var type: LayoutsSectionType = .original
+
+    init(_ type: LayoutsSectionType) {
+        super.init()
+        self.type = type
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +30,7 @@ class RelativeLayoutController: BaseNodeController {
 
 extension RelativeLayoutController {
     private func configBackgroundNode() {
-        let contentNode = RelativeContentNode()
-        contentNode.type = type
+        let contentNode = RelativeContentNode(type)
         node.addSubnode(contentNode)
 
         node.layoutSpecBlock = { node, constrainedSize in
@@ -34,10 +42,11 @@ extension RelativeLayoutController {
 // MARK: -  RelativeContentNode
 class RelativeContentNode: ASDisplayNode {
 
-    var type: LayoutsSectionType = .original
+    private var type: LayoutsSectionType = .original
 
-    override init() {
+    init(_ type: LayoutsSectionType) {
         super.init()
+        log.debug("LayoutsSectionType: \(type)")
         automaticallyManagesSubnodes = true
     }
 

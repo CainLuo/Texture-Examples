@@ -10,7 +10,16 @@ import TextureSwiftSupport
 
 class StackLayoutController: BaseNodeController {
 
-    var type: LayoutsSectionType = .original
+    private var type: LayoutsSectionType = .original
+
+    init(_ type: LayoutsSectionType) {
+        super.init()
+        self.type = type
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +30,7 @@ class StackLayoutController: BaseNodeController {
 
 extension StackLayoutController {
     private func configBackgroundNode() {
-        let contentNode = StackContentNode()
-        contentNode.type = type
+        let contentNode = StackContentNode(type)
         node.addSubnode(contentNode)
         node.layoutSpecBlock = { node, constrainedSize in
             ASInsetLayoutSpec(insets: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10), child: contentNode)
@@ -32,8 +40,6 @@ extension StackLayoutController {
 
 // MARK: - StackContentNode
 class StackContentNode: ASDisplayNode {
-
-    var type: LayoutsSectionType = .original
 
     private lazy var imageNode: ASImageNode = {
         let node = ASImageNode()
@@ -49,8 +55,11 @@ class StackContentNode: ASDisplayNode {
         return node
     }()
 
-    override init() {
+    private var type: LayoutsSectionType = .original
+
+    init(_ type: LayoutsSectionType) {
         super.init()
+        log.debug("LayoutsSectionType: \(type)")
         automaticallyManagesSubnodes = true
         backgroundColor = .gray
     }
