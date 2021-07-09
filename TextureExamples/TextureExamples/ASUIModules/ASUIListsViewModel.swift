@@ -50,6 +50,9 @@ class ASUIListsViewModel: ASUIListsViewModelInputs, ASUIListsViewModelOutputs, A
 private func dataSource() -> [ASUIListsModel] {
     [
         ASUIListsModel(title: "ASImageNode", type: .image),
-        ASUIListsModel(title: "ASNetworkImageNode", type: .networkImage)
+        ASUIListsModel(title: "ASNetworkImageNode", type: .networkImage),
+        ASUIListsModel(title: "ASTextNode", type: .text),
+        ASUIListsModel(title: "ASButton", type: .button),
+        ASUIListsModel(title: "ASMap", type: .map)
     ]
 }

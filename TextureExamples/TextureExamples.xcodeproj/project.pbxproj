@@ -53,6 +53,9 @@
 		4D72685E26981AA100068C8A /* ASUIListsCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D72685D26981AA100068C8A /* ASUIListsCellNode.swift */; };
 		4D726861269822A000068C8A /* ImageNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D726860269822A000068C8A /* ImageNodeController.swift */; };
 		4D7268632698243000068C8A /* NetworkImageNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7268622698243000068C8A /* NetworkImageNodeController.swift */; };
+		4D7268652698285D00068C8A /* TextNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7268642698285D00068C8A /* TextNodeController.swift */; };
+		4D7268672698286F00068C8A /* ButtonNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7268662698286F00068C8A /* ButtonNodeController.swift */; };
+		4D7268692698288000068C8A /* MapNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7268682698288000068C8A /* MapNodeController.swift */; };
 		4D8054DF268F0C0900A9B5E9 /* InfoNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8054DE268F0C0900A9B5E9 /* InfoNode.swift */; };
 		4DCD9C1126959E410067DBF6 /* LayoutsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD9C1026959E410067DBF6 /* LayoutsController.swift */; };
 		4DCD9C1326959E8B0067DBF6 /* LayoutsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD9C1226959E8B0067DBF6 /* LayoutsViewModel.swift */; };
@@ -153,6 +156,9 @@
 		4D72685D26981AA100068C8A /* ASUIListsCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASUIListsCellNode.swift; sourceTree = "<group>"; };
 		4D726860269822A000068C8A /* ImageNodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageNodeController.swift; sourceTree = "<group>"; };
 		4D7268622698243000068C8A /* NetworkImageNodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImageNodeController.swift; sourceTree = "<group>"; };
+		4D7268642698285D00068C8A /* TextNodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextNodeController.swift; sourceTree = "<group>"; };
+		4D7268662698286F00068C8A /* ButtonNodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonNodeController.swift; sourceTree = "<group>"; };
+		4D7268682698288000068C8A /* MapNodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapNodeController.swift; sourceTree = "<group>"; };
 		4D8054DE268F0C0900A9B5E9 /* InfoNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoNode.swift; sourceTree = "<group>"; };
 		4DCD9C1026959E410067DBF6 /* LayoutsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutsController.swift; sourceTree = "<group>"; };
 		4DCD9C1226959E8B0067DBF6 /* LayoutsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutsViewModel.swift; sourceTree = "<group>"; };
@@ -431,6 +437,9 @@
 			children = (
 				4D726860269822A000068C8A /* ImageNodeController.swift */,
 				4D7268622698243000068C8A /* NetworkImageNodeController.swift */,
+				4D7268642698285D00068C8A /* TextNodeController.swift */,
+				4D7268662698286F00068C8A /* ButtonNodeController.swift */,
+				4D7268682698288000068C8A /* MapNodeController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -716,6 +725,7 @@
 				4D0B20AE266F5A7F005037E1 /* Util.swift in Sources */,
 				BFC413282694B82B00385C8D /* PhotoIGCollectionNodeController.swift in Sources */,
 				4DCD9C222695B2250067DBF6 /* InsetLayoutController.swift in Sources */,
+				4D7268692698288000068C8A /* MapNodeController.swift in Sources */,
 				4D0B20AB266F5A7F005037E1 /* CompositionCatalogViewController.swift in Sources */,
 				4D5C89E02693166B007AD78D /* PhotoTableViewModel.swift in Sources */,
 				BFFF2E74268A078000005591 /* ExampleListController.swift in Sources */,
@@ -755,10 +765,12 @@
 				4D5C89F6269448D6007AD78D /* PhotoCollectionViewCell.swift in Sources */,
 				4D0B20B0266F5A7F005037E1 /* Book.TiledLayer.swift in Sources */,
 				4D0AF9502692E44600382C48 /* JustifyAndAlignController.swift in Sources */,
+				4D7268652698285D00068C8A /* TextNodeController.swift in Sources */,
 				4D5C89EE2694386B007AD78D /* PhotoCollectionNodeController.swift in Sources */,
 				BFFF2E81268A299500005591 /* UIColor+Extensions.swift in Sources */,
 				4D5C89D826930E3D007AD78D /* BaseNavigationController.swift in Sources */,
 				BF367F9F2693278B009A883A /* NetworkingTypes.swift in Sources */,
+				4D7268672698286F00068C8A /* ButtonNodeController.swift in Sources */,
 				BF367FA22693278B009A883A /* ActivityIndicator.swift in Sources */,
 				4D72685E26981AA100068C8A /* ASUIListsCellNode.swift in Sources */,
 				BF367F992693278B009A883A /* ApiService+Request.swift in Sources */,

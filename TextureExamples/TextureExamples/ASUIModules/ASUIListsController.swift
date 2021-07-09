@@ -64,6 +64,12 @@ extension ASUIListsController: ASTableDelegate {
             vc = ImageNodeController()
         case .networkImage:
             vc = NetworkImageNodeController()
+        case .text:
+            vc = TextNodeController()
+        case .button:
+            vc = ButtonNodeController()
+        case .map:
+            vc = MapNodeController()
         default:
             break
         }
