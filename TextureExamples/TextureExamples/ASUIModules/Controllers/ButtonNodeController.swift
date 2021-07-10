@@ -13,7 +13,6 @@ class ButtonNodeController: BaseNodeController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configBackgroundNode()
-        node.backgroundColor = .gray
         node.setNeedsLayout()
     }
 }
@@ -32,33 +31,50 @@ extension ButtonNodeController {
 // MARK: - ButtonContentNode
 class ButtonContentNode: ASDisplayNode {
 
-    let imageNode1 = ASNetworkImageNode()
-
-    let imageNode2: ASNetworkImageNode = {
-        let node = ASNetworkImageNode()
-        node.contentMode = .scaleAspectFill
-        node.defaultImage = #imageLiteral(resourceName: "image2")
-        node.url = URL(string: "http://texturegroup.org/static/images/layout-examples-photo-with-outset-icon-overlay-photo.png")
-        return node
-    }()
+    private let buttonNode1 = ASButtonNode()
+    private let buttonNode2 = ASButtonNode()
 
     override init() {
         super.init()
         automaticallyManagesSubnodes = true
-        imageNode1.defaultImage = #imageLiteral(resourceName: "image1")
-        imageNode1.setURL(URL(string: "http://texturegroup.org/static/images/layout-examples-photo-with-outset-icon-overlay-photo.png"), resetToDefault: true)
+        configButtonNodes()
     }
 
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
         LayoutSpec {
             VStackLayout(spacing: 10) {
-                CenterLayout(centeringOptions: .X) {
-                    imageNode1
-                }
-                CenterLayout(centeringOptions: .X) {
-                    imageNode2
-                }
+                buttonNode1
+                buttonNode2
             }
         }
+    }
+    
+    private func configButtonNodes() {
+        let normalImage = UIImage.as_resizableRoundedImage(withCornerRadius: 5,
+                                                           cornerColor: .white,
+                                                           fill: .gray,
+                                                           traitCollection: primitiveTraitCollection())
+        let lightImage = UIImage.as_resizableRoundedImage(withCornerRadius: 5,
+                                                          cornerColor: .white,
+                                                          fill: .red,
+                                                          borderColor: .blue,
+                                                          borderWidth: 1.0,
+                                                          traitCollection: primitiveTraitCollection())
+        buttonNode1.style.minSize = CGSize(width: 100, height: 50)
+        buttonNode1.setBackgroundImage(normalImage, for: .normal)
+        buttonNode1.setBackgroundImage(lightImage, for: .highlighted)
+        buttonNode1.addTarget(self, action: #selector(buttonAction), forControlEvents: .touchUpInside)
+        buttonNode1.setTitle("InfoNode_Reset".localized(), with: nil, with: .white, for: .normal)
+
+        buttonNode2.style.minSize = CGSize(width: 100, height: 50)
+        buttonNode2.style.flexBasis = ASDimensionMake("50%")
+        buttonNode2.setBackgroundImage(normalImage, for: .normal)
+        buttonNode2.setBackgroundImage(lightImage, for: .highlighted)
+        buttonNode2.addTarget(self, action: #selector(buttonAction), forControlEvents: .touchUpInside)
+        buttonNode2.setTitle("InfoNode_Start".localized(), with: nil, with: .white, for: .normal)
+    }
+    
+    @objc func buttonAction(_ sender: ASButtonNode) {
+        log.debug("Button Node: \(sender)")
     }
 }
