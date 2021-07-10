@@ -50,6 +50,9 @@ class TextContentNode: ASDisplayNode {
     }
 
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
+        contentNode1.style.flexShrink = 1.0
+        contentNode2.style.flexShrink = 1.0
+        
         contentNode1.style.flexBasis = ASDimensionMake("50%")
         contentNode2.style.flexBasis = ASDimensionMake("50%")
 
