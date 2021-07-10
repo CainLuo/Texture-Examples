@@ -13,7 +13,6 @@ class MapNodeController: BaseNodeController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configBackgroundNode()
-        node.backgroundColor = .gray
         node.setNeedsLayout()
     }
 }
@@ -23,8 +22,7 @@ extension MapNodeController {
         let contentNode = MapContentNode()
         node.addSubnode(contentNode)
         node.layoutSpecBlock = { node, constrainedSize in
-            let centerSpec = ASCenterLayoutSpec(centeringOptions: .XY, sizingOptions: [], child: contentNode)
-            return ASInsetLayoutSpec(insets: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10), child: centerSpec)
+            ASInsetLayoutSpec(insets: node.safeAreaInsets, child: contentNode)
         }
     }
 }
@@ -32,33 +30,63 @@ extension MapNodeController {
 // MARK: - MapContentNode
 class MapContentNode: ASDisplayNode {
 
-    let imageNode1 = ASNetworkImageNode()
-
-    let imageNode2: ASNetworkImageNode = {
-        let node = ASNetworkImageNode()
-        node.contentMode = .scaleAspectFill
-        node.defaultImage = #imageLiteral(resourceName: "image2")
-        node.url = URL(string: "http://texturegroup.org/static/images/layout-examples-photo-with-outset-icon-overlay-photo.png")
-        return node
-    }()
+    let mapNode = ASMapNode()
+    let updateNode = ASButtonNode()
+    let toggleNode = ASButtonNode()
 
     override init() {
         super.init()
         automaticallyManagesSubnodes = true
-        imageNode1.defaultImage = #imageLiteral(resourceName: "image1")
-        imageNode1.setURL(URL(string: "http://texturegroup.org/static/images/layout-examples-photo-with-outset-icon-overlay-photo.png"), resetToDefault: true)
+        configButtonNodes()
+        mapNode.style.flexGrow = 1.0
+        mapNode.region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 21, longitude: 101),
+                                            span: MKCoordinateSpan(latitudeDelta: 1.0, longitudeDelta: 1.0))
     }
 
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
         LayoutSpec {
             VStackLayout(spacing: 10) {
-                CenterLayout(centeringOptions: .X) {
-                    imageNode1
+                mapNode
+                HStackLayout {
+                    updateNode
+                    toggleNode
                 }
-                CenterLayout(centeringOptions: .X) {
-                    imageNode2
-                }
+                .preferredSize(CGSize(width: constrainedSize.max.width, height: 44))
             }
         }
+    }
+    
+    override func didLoad() {
+        super.didLoad()
+        mapNode.isLiveMap = true
+    }
+    
+    private func configButtonNodes() {
+        mapNode.style.flexGrow = 1.0
+        let normalImage = UIImage.as_resizableRoundedImage(withCornerRadius: 5,
+                                                           cornerColor: .white,
+                                                           fill: .gray,
+                                                           traitCollection: primitiveTraitCollection())
+        let lightImage = UIImage.as_resizableRoundedImage(withCornerRadius: 5,
+                                                          cornerColor: .white,
+                                                          fill: .red,
+                                                          borderColor: .blue,
+                                                          borderWidth: 1.0,
+                                                          traitCollection: primitiveTraitCollection())
+        updateNode.style.flexBasis = ASDimensionMake("50%")
+        updateNode.setBackgroundImage(normalImage, for: .normal)
+        updateNode.setBackgroundImage(lightImage, for: .highlighted)
+        updateNode.addTarget(self, action: #selector(buttonAction), forControlEvents: .touchUpInside)
+        updateNode.setTitle("InfoNode_Reset".localized(), with: nil, with: .white, for: .normal)
+
+        toggleNode.style.flexBasis = ASDimensionMake("50%")
+        toggleNode.setBackgroundImage(normalImage, for: .normal)
+        toggleNode.setBackgroundImage(lightImage, for: .highlighted)
+        toggleNode.addTarget(self, action: #selector(buttonAction), forControlEvents: .touchUpInside)
+        toggleNode.setTitle("InfoNode_Start".localized(), with: nil, with: .white, for: .normal)
+    }
+    
+    @objc func buttonAction(_ sender: ASButtonNode) {
+        log.debug("Button Node: \(sender)")
     }
 }
