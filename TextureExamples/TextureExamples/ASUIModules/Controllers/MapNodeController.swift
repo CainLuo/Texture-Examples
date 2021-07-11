@@ -37,56 +37,82 @@ class MapContentNode: ASDisplayNode {
     override init() {
         super.init()
         automaticallyManagesSubnodes = true
-        configButtonNodes()
+        updateRegion()
         mapNode.style.flexGrow = 1.0
-        mapNode.region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 21, longitude: 101),
-                                            span: MKCoordinateSpan(latitudeDelta: 1.0, longitudeDelta: 1.0))
     }
 
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
         LayoutSpec {
-            VStackLayout(spacing: 10) {
-                mapNode
-                HStackLayout {
-                    updateNode
-                    toggleNode
-                }
-                .preferredSize(CGSize(width: constrainedSize.max.width, height: 44))
-            }
+            mapNode
         }
     }
     
     override func didLoad() {
         super.didLoad()
+        mapNode.mapDelegate = self
         mapNode.isLiveMap = true
+        mapNode.imageForStaticMapAnnotationBlock = { (annotation, point) -> UIImage? in
+            if let point = annotation as? CustomAnnotation {
+                return point.image
+            }
+            return nil
+        }
+        
+        configAnnotaions()
     }
-    
-    private func configButtonNodes() {
-        mapNode.style.flexGrow = 1.0
-        let normalImage = UIImage.as_resizableRoundedImage(withCornerRadius: 5,
-                                                           cornerColor: .white,
-                                                           fill: .gray,
-                                                           traitCollection: primitiveTraitCollection())
-        let lightImage = UIImage.as_resizableRoundedImage(withCornerRadius: 5,
-                                                          cornerColor: .white,
-                                                          fill: .red,
-                                                          borderColor: .blue,
-                                                          borderWidth: 1.0,
-                                                          traitCollection: primitiveTraitCollection())
-        updateNode.style.flexBasis = ASDimensionMake("50%")
-        updateNode.setBackgroundImage(normalImage, for: .normal)
-        updateNode.setBackgroundImage(lightImage, for: .highlighted)
-        updateNode.addTarget(self, action: #selector(buttonAction), forControlEvents: .touchUpInside)
-        updateNode.setTitle("InfoNode_Reset".localized(), with: nil, with: .white, for: .normal)
+}
 
-        toggleNode.style.flexBasis = ASDimensionMake("50%")
-        toggleNode.setBackgroundImage(normalImage, for: .normal)
-        toggleNode.setBackgroundImage(lightImage, for: .highlighted)
-        toggleNode.addTarget(self, action: #selector(buttonAction), forControlEvents: .touchUpInside)
-        toggleNode.setTitle("InfoNode_Start".localized(), with: nil, with: .white, for: .normal)
+// MARK: - MKAnnotation Configs
+extension MapContentNode {
+    private func updateRegion() {
+        mapNode.region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 23.15792, longitude: 113.27324),
+                                            span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
     }
     
-    @objc func buttonAction(_ sender: ASButtonNode) {
-        log.debug("Button Node: \(sender)")
+    private func configAnnotaions() {
+        let point1 = MKPointAnnotation()
+        point1.coordinate = CLLocationCoordinate2D(latitude: 23.15792, longitude: 113.27324)
+        point1.title = "GuangZhou"
+        point1.subtitle = "This is GuangZhou"
+        
+        let point2 = CustomAnnotation()
+        point2.image = #imageLiteral(resourceName: "mapPoint")
+        point2.coordinate = CLLocationCoordinate2D(latitude: 23.10647, longitude: 113.324463)
+        point2.title = "Guang Zhou Town"
+        point2.subtitle = "This is Guang Zhou Town"
+
+        let point3 = CustomAnnotation()
+        point3.image = #imageLiteral(resourceName: "mapPoint")
+        point3.coordinate = CLLocationCoordinate2D(latitude: 23.126717, longitude: 113.285688)
+        point3.title = "Lie Shi Ling Yuan"
+        point3.subtitle = "This is Lie Shi Ling Yuan"
+        
+        mapNode.annotations = [point1, point2, point3]
     }
+}
+
+// MARK: - MKMapViewDelegate
+extension MapContentNode: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+        
+    }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        guard let point = annotation as? CustomAnnotation else {
+            return nil
+        }
+        
+        let view = MKAnnotationView()
+        view.image = point.image
+        view.isOpaque = false
+        return view
+    }
+}
+
+// MARK: - MKAnnotation
+class CustomAnnotation: NSObject, MKAnnotation {
+    var coordinate: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 0, longitude: 0)
+    var image: UIImage?
+    var title: String?
+    var subtitle: String?
 }
