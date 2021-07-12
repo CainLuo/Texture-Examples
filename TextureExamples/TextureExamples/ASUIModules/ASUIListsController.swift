@@ -70,6 +70,8 @@ extension ASUIListsController: ASTableDelegate {
             vc = ButtonNodeController()
         case .map:
             vc = MapNodeController()
+        case .editableText:
+            vc = EditableTextNodeController()
         default:
             break
         }
