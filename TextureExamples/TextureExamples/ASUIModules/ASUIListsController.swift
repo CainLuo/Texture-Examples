@@ -72,6 +72,8 @@ extension ASUIListsController: ASTableDelegate {
             vc = MapNodeController()
         case .editableText:
             vc = EditableTextNodeController()
+        case .multiplexImage:
+            vc = MultiplexNodeController()
         default:
             break
         }

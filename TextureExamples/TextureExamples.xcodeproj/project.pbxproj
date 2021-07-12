@@ -57,6 +57,7 @@
 		4D7268672698286F00068C8A /* ButtonNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7268662698286F00068C8A /* ButtonNodeController.swift */; };
 		4D7268692698288000068C8A /* MapNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7268682698288000068C8A /* MapNodeController.swift */; };
 		4D7CCFC7269BE5AD0097EF65 /* EditableTextNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CCFC6269BE5AD0097EF65 /* EditableTextNodeController.swift */; };
+		4D7CCFC9269BF78E0097EF65 /* MultiplexNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CCFC8269BF78E0097EF65 /* MultiplexNodeController.swift */; };
 		4D8054DF268F0C0900A9B5E9 /* InfoNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8054DE268F0C0900A9B5E9 /* InfoNode.swift */; };
 		4DCD9C1126959E410067DBF6 /* LayoutsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD9C1026959E410067DBF6 /* LayoutsController.swift */; };
 		4DCD9C1326959E8B0067DBF6 /* LayoutsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD9C1226959E8B0067DBF6 /* LayoutsViewModel.swift */; };
@@ -161,6 +162,7 @@
 		4D7268662698286F00068C8A /* ButtonNodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonNodeController.swift; sourceTree = "<group>"; };
 		4D7268682698288000068C8A /* MapNodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapNodeController.swift; sourceTree = "<group>"; };
 		4D7CCFC6269BE5AD0097EF65 /* EditableTextNodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditableTextNodeController.swift; sourceTree = "<group>"; };
+		4D7CCFC8269BF78E0097EF65 /* MultiplexNodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplexNodeController.swift; sourceTree = "<group>"; };
 		4D8054DE268F0C0900A9B5E9 /* InfoNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoNode.swift; sourceTree = "<group>"; };
 		4DCD9C1026959E410067DBF6 /* LayoutsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutsController.swift; sourceTree = "<group>"; };
 		4DCD9C1226959E8B0067DBF6 /* LayoutsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutsViewModel.swift; sourceTree = "<group>"; };
@@ -437,12 +439,13 @@
 		4D72685F2698229000068C8A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4D7268662698286F00068C8A /* ButtonNodeController.swift */,
+				4D7CCFC6269BE5AD0097EF65 /* EditableTextNodeController.swift */,
 				4D726860269822A000068C8A /* ImageNodeController.swift */,
+				4D7268682698288000068C8A /* MapNodeController.swift */,
 				4D7268622698243000068C8A /* NetworkImageNodeController.swift */,
 				4D7268642698285D00068C8A /* TextNodeController.swift */,
-				4D7268662698286F00068C8A /* ButtonNodeController.swift */,
-				4D7268682698288000068C8A /* MapNodeController.swift */,
-				4D7CCFC6269BE5AD0097EF65 /* EditableTextNodeController.swift */,
+				4D7CCFC8269BF78E0097EF65 /* MultiplexNodeController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -792,6 +795,7 @@
 				BF367FA826935F95009A883A /* ListsViewModel.swift in Sources */,
 				4D0B20A6266F5A7F005037E1 /* Book.ImageNode.swift in Sources */,
 				BFAF3BF2266FC7F3008DFED8 /* Rx+Observable.swift in Sources */,
+				4D7CCFC9269BF78E0097EF65 /* MultiplexNodeController.swift in Sources */,
 				4D0B2093266F5A7F005037E1 /* Constants.swift in Sources */,
 				BFC4132F2695D8F200385C8D /* CenterLayoutController.swift in Sources */,
 				4D5C89DB26931551007AD78D /* PhotoTableViewController.swift in Sources */,

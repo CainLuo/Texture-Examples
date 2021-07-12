@@ -15,6 +15,7 @@ enum ASUIListsType {
     case button
     case map
     case editableText
+    case multiplexImage
 }
 
 struct ASUIListsModel {
