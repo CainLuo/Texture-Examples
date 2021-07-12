@@ -56,6 +56,7 @@
 		4D7268652698285D00068C8A /* TextNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7268642698285D00068C8A /* TextNodeController.swift */; };
 		4D7268672698286F00068C8A /* ButtonNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7268662698286F00068C8A /* ButtonNodeController.swift */; };
 		4D7268692698288000068C8A /* MapNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7268682698288000068C8A /* MapNodeController.swift */; };
+		4D7CCFC7269BE5AD0097EF65 /* EditableTextNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CCFC6269BE5AD0097EF65 /* EditableTextNodeController.swift */; };
 		4D8054DF268F0C0900A9B5E9 /* InfoNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8054DE268F0C0900A9B5E9 /* InfoNode.swift */; };
 		4DCD9C1126959E410067DBF6 /* LayoutsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD9C1026959E410067DBF6 /* LayoutsController.swift */; };
 		4DCD9C1326959E8B0067DBF6 /* LayoutsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD9C1226959E8B0067DBF6 /* LayoutsViewModel.swift */; };
@@ -159,6 +160,7 @@
 		4D7268642698285D00068C8A /* TextNodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextNodeController.swift; sourceTree = "<group>"; };
 		4D7268662698286F00068C8A /* ButtonNodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonNodeController.swift; sourceTree = "<group>"; };
 		4D7268682698288000068C8A /* MapNodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapNodeController.swift; sourceTree = "<group>"; };
+		4D7CCFC6269BE5AD0097EF65 /* EditableTextNodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditableTextNodeController.swift; sourceTree = "<group>"; };
 		4D8054DE268F0C0900A9B5E9 /* InfoNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoNode.swift; sourceTree = "<group>"; };
 		4DCD9C1026959E410067DBF6 /* LayoutsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutsController.swift; sourceTree = "<group>"; };
 		4DCD9C1226959E8B0067DBF6 /* LayoutsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutsViewModel.swift; sourceTree = "<group>"; };
@@ -440,6 +442,7 @@
 				4D7268642698285D00068C8A /* TextNodeController.swift */,
 				4D7268662698286F00068C8A /* ButtonNodeController.swift */,
 				4D7268682698288000068C8A /* MapNodeController.swift */,
+				4D7CCFC6269BE5AD0097EF65 /* EditableTextNodeController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -778,6 +781,7 @@
 				4D0B20A5266F5A7F005037E1 /* RootContainerViewController.swift in Sources */,
 				BF367FAC26936290009A883A /* ListsCellNode.swift in Sources */,
 				4DCD9C1126959E410067DBF6 /* LayoutsController.swift in Sources */,
+				4D7CCFC7269BE5AD0097EF65 /* EditableTextNodeController.swift in Sources */,
 				4D0B209B266F5A7F005037E1 /* Date.swift in Sources */,
 				BFFF2E72268A065A00005591 /* TabBarController.swift in Sources */,
 				4DCD9C1E2695AC5D0067DBF6 /* Logger.swift in Sources */,
