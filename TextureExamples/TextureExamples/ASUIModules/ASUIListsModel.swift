@@ -14,6 +14,7 @@ enum ASUIListsType {
     case text
     case button
     case map
+    case editableText
 }
 
 struct ASUIListsModel {
