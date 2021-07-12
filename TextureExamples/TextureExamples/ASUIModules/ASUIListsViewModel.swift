@@ -53,6 +53,7 @@ private func dataSource() -> [ASUIListsModel] {
         ASUIListsModel(title: "ASNetworkImageNode", type: .networkImage),
         ASUIListsModel(title: "ASTextNode", type: .text),
         ASUIListsModel(title: "ASButtonNode", type: .button),
-        ASUIListsModel(title: "ASMapNode", type: .map)
+        ASUIListsModel(title: "ASMapNode", type: .map),
+        ASUIListsModel(title: "ASEditableTextNode", type: .editableText)
     ]
 }
