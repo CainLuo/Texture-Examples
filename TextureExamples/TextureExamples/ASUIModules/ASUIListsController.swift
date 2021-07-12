@@ -57,7 +57,7 @@ extension ASUIListsController: ASTableDelegate {
         tableNode.deselectRow(at: indexPath, animated: true)
         let item = dataSource[indexPath.row]
 
-        var vc = BaseNodeController()
+        var vc = UIViewController()
 
         switch item.type {
         case .image:
@@ -74,6 +74,12 @@ extension ASUIListsController: ASTableDelegate {
             vc = EditableTextNodeController()
         case .multiplexImage:
             vc = MultiplexNodeController()
+        case .pager:
+            vc = PagerNodeController()
+        case .video:
+            vc = VideoNodeController()
+        case .scroll:
+            vc = ScrollNodeController()
         default:
             break
         }

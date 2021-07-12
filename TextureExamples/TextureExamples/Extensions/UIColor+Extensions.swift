@@ -21,6 +21,13 @@ extension UIColor {
     }
 
     static var mainBarTintColor: UIColor {
-        return UIColor(red: 69/255, green: 142/255, blue: 255/255, alpha: 1)
+        UIColor(red: 69/255, green: 142/255, blue: 255/255, alpha: 1)
+    }
+
+    static var randomColor: UIColor {
+        UIColor(red: CGFloat(arc4random() % UInt32(256.0)) / 256.0,
+                green: CGFloat(arc4random() % UInt32(256.0)) / 256.0,
+                blue: CGFloat(arc4random() % UInt32(256.0)) / 256.0,
+                alpha: 1)
     }
 }

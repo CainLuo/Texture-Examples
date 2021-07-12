@@ -16,6 +16,9 @@ enum ASUIListsType {
     case map
     case editableText
     case multiplexImage
+    case pager
+    case video
+    case scroll
 }
 
 struct ASUIListsModel {

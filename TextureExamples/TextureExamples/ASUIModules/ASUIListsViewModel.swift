@@ -55,6 +55,9 @@ private func dataSource() -> [ASUIListsModel] {
         ASUIListsModel(title: "ASButtonNode", type: .button),
         ASUIListsModel(title: "ASMapNode", type: .map),
         ASUIListsModel(title: "ASEditableTextNode", type: .editableText),
-        ASUIListsModel(title: "ASMultiplexImageNode", type: .multiplexImage)
+        ASUIListsModel(title: "ASMultiplexImageNode", type: .multiplexImage),
+        ASUIListsModel(title: "ASPagerNode", type: .pager),
+        ASUIListsModel(title: "ASVideoNode", type: .video),
+        ASUIListsModel(title: "ASScrollNode", type: .scroll),
     ]
 }

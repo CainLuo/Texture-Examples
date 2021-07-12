@@ -37,3 +37,7 @@
 "TextNode_Description" = "王维 〔唐代〕";
 "TextNode_Content1"    = "独在异乡为异客，\n遥知兄弟登高处，";
 "TextNode_Content2"    = "每逢佳节倍思亲。\n遍插茱萸少一人。";
+
+// MARK: - Pager Node
+"PagerNode_Next" = "Next";
+"PagerNode_Previous" = "Previous";

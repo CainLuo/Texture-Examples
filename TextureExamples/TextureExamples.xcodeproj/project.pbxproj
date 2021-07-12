@@ -58,6 +58,11 @@
 		4D7268692698288000068C8A /* MapNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7268682698288000068C8A /* MapNodeController.swift */; };
 		4D7CCFC7269BE5AD0097EF65 /* EditableTextNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CCFC6269BE5AD0097EF65 /* EditableTextNodeController.swift */; };
 		4D7CCFC9269BF78E0097EF65 /* MultiplexNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CCFC8269BF78E0097EF65 /* MultiplexNodeController.swift */; };
+		4D7CCFCB269C3C080097EF65 /* PagerNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CCFCA269C3C080097EF65 /* PagerNodeController.swift */; };
+		4D7CCFCD269C3C210097EF65 /* VideoNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CCFCC269C3C210097EF65 /* VideoNodeController.swift */; };
+		4D7CCFCF269C3C400097EF65 /* ScrollNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CCFCE269C3C400097EF65 /* ScrollNodeController.swift */; };
+		4D7CCFD1269C40560097EF65 /* BasePagerNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CCFD0269C40560097EF65 /* BasePagerNodeController.swift */; };
+		4D7CCFD3269C4DC10097EF65 /* simon.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4D7CCFD2269C4C070097EF65 /* simon.mp4 */; };
 		4D8054DF268F0C0900A9B5E9 /* InfoNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8054DE268F0C0900A9B5E9 /* InfoNode.swift */; };
 		4DCD9C1126959E410067DBF6 /* LayoutsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD9C1026959E410067DBF6 /* LayoutsController.swift */; };
 		4DCD9C1326959E8B0067DBF6 /* LayoutsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD9C1226959E8B0067DBF6 /* LayoutsViewModel.swift */; };
@@ -163,6 +168,11 @@
 		4D7268682698288000068C8A /* MapNodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapNodeController.swift; sourceTree = "<group>"; };
 		4D7CCFC6269BE5AD0097EF65 /* EditableTextNodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditableTextNodeController.swift; sourceTree = "<group>"; };
 		4D7CCFC8269BF78E0097EF65 /* MultiplexNodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplexNodeController.swift; sourceTree = "<group>"; };
+		4D7CCFCA269C3C080097EF65 /* PagerNodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagerNodeController.swift; sourceTree = "<group>"; };
+		4D7CCFCC269C3C210097EF65 /* VideoNodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoNodeController.swift; sourceTree = "<group>"; };
+		4D7CCFCE269C3C400097EF65 /* ScrollNodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollNodeController.swift; sourceTree = "<group>"; };
+		4D7CCFD0269C40560097EF65 /* BasePagerNodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePagerNodeController.swift; sourceTree = "<group>"; };
+		4D7CCFD2269C4C070097EF65 /* simon.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = simon.mp4; sourceTree = "<group>"; };
 		4D8054DE268F0C0900A9B5E9 /* InfoNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoNode.swift; sourceTree = "<group>"; };
 		4DCD9C1026959E410067DBF6 /* LayoutsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutsController.swift; sourceTree = "<group>"; };
 		4DCD9C1226959E8B0067DBF6 /* LayoutsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutsViewModel.swift; sourceTree = "<group>"; };
@@ -284,6 +294,7 @@
 		4D0B2067266F59FD005037E1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4D7CCFD2269C4C070097EF65 /* simon.mp4 */,
 				4D0B205C266F59CB005037E1 /* Assets.xcassets */,
 				4D0B205E266F59CB005037E1 /* LaunchScreen.storyboard */,
 				4D0B2061266F59CB005037E1 /* Info.plist */,
@@ -446,6 +457,9 @@
 				4D7268622698243000068C8A /* NetworkImageNodeController.swift */,
 				4D7268642698285D00068C8A /* TextNodeController.swift */,
 				4D7CCFC8269BF78E0097EF65 /* MultiplexNodeController.swift */,
+				4D7CCFCA269C3C080097EF65 /* PagerNodeController.swift */,
+				4D7CCFCC269C3C210097EF65 /* VideoNodeController.swift */,
+				4D7CCFCE269C3C400097EF65 /* ScrollNodeController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -577,6 +591,7 @@
 				4D5C89EB2694279C007AD78D /* BaseCollectionNodeController.swift */,
 				4D5C89D726930E3D007AD78D /* BaseNavigationController.swift */,
 				4DCD9C192695A73A0067DBF6 /* BaseNodeController.swift */,
+				4D7CCFD0269C40560097EF65 /* BasePagerNodeController.swift */,
 				BFFF2E76268A082E00005591 /* BaseTableNodeController.swift */,
 				4D8054DE268F0C0900A9B5E9 /* InfoNode.swift */,
 				BF367F81269204BF009A883A /* RoundNode.swift */,
@@ -655,6 +670,7 @@
 			files = (
 				4D0B2060266F59CB005037E1 /* LaunchScreen.storyboard in Resources */,
 				BFFF2E88268A9C9F00005591 /* Localizable.strings in Resources */,
+				4D7CCFD3269C4DC10097EF65 /* simon.mp4 in Resources */,
 				4D0B205D266F59CB005037E1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -714,6 +730,7 @@
 				BF367F84269204DB009A883A /* SquareNode.swift in Sources */,
 				BF367F9B2693278B009A883A /* ApiProvider.swift in Sources */,
 				4D5C89EA26942745007AD78D /* UIViewController+Extensions.swift in Sources */,
+				4D7CCFCF269C3C400097EF65 /* ScrollNodeController.swift in Sources */,
 				4D72685A269819DD00068C8A /* ASUIListsViewModel.swift in Sources */,
 				BFFF2E7B268A09F500005591 /* ExampleListModel.swift in Sources */,
 				BFC4132D2695CDBC00385C8D /* ColorNode.swift in Sources */,
@@ -753,6 +770,7 @@
 				4D726861269822A000068C8A /* ImageNodeController.swift in Sources */,
 				4D0B20A4266F5A7F005037E1 /* Book.StyledEdgeNode.swift in Sources */,
 				BFFF2E7F268A28F500005591 /* NSAttributeString+Extensions.swift in Sources */,
+				4D7CCFCB269C3C080097EF65 /* PagerNodeController.swift in Sources */,
 				BF367FA42693278B009A883A /* ApiService.swift in Sources */,
 				BF367F9D2693278B009A883A /* CodeResponse.swift in Sources */,
 				BF367F972693278B009A883A /* Router.swift in Sources */,
@@ -771,6 +789,7 @@
 				4D5C89F6269448D6007AD78D /* PhotoCollectionViewCell.swift in Sources */,
 				4D0B20B0266F5A7F005037E1 /* Book.TiledLayer.swift in Sources */,
 				4D0AF9502692E44600382C48 /* JustifyAndAlignController.swift in Sources */,
+				4D7CCFD1269C40560097EF65 /* BasePagerNodeController.swift in Sources */,
 				4D7268652698285D00068C8A /* TextNodeController.swift in Sources */,
 				4D5C89EE2694386B007AD78D /* PhotoCollectionNodeController.swift in Sources */,
 				BFFF2E81268A299500005591 /* UIColor+Extensions.swift in Sources */,
@@ -801,6 +820,7 @@
 				4D5C89DB26931551007AD78D /* PhotoTableViewController.swift in Sources */,
 				4DCD9C1C2695A7D60067DBF6 /* WrapperLayoutController.swift in Sources */,
 				4D0B20B1266F5A7F005037E1 /* ZStackView.swift in Sources */,
+				4D7CCFCD269C3C210097EF65 /* VideoNodeController.swift in Sources */,
 				4DCD9C202695AFB30067DBF6 /* StackLayoutController.swift in Sources */,
 				4DCD9C172695A4140067DBF6 /* LayoutsCellNode.swift in Sources */,
 			);
