@@ -10,7 +10,7 @@ import AsyncDisplayKit
 class ASUIListsController: BaseTableNodeController {
 
     private let viewModel: ASUIListsViewModelTypes = ASUIListsViewModel()
-    private var dataSource: [ASUIListsModel] = []
+    private var dataSource: [ASUIListsSectionModel] = []
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -27,9 +27,9 @@ class ASUIListsController: BaseTableNodeController {
     }
 
     private func bindViewModel() {
-        viewModel.outputs.items
-            .drive(onNext: { [weak self] items in
-                self?.dataSource = items
+        viewModel.outputs.sections
+            .drive(onNext: { [weak self] sections in
+                self?.dataSource = sections
                 self?.node.reloadData()
             })
             .disposed(by: disposeBag)
@@ -38,12 +38,17 @@ class ASUIListsController: BaseTableNodeController {
 
 // MARK: - ASTableDataSource
 extension ASUIListsController: ASTableDataSource {
-    func tableNode(_ tableNode: ASTableNode, numberOfRowsInSection section: Int) -> Int {
+    func numberOfSections(in tableNode: ASTableNode) -> Int {
         dataSource.count
     }
 
+    func tableNode(_ tableNode: ASTableNode, numberOfRowsInSection section: Int) -> Int {
+        dataSource[section].items?.count ?? 0
+    }
+
     func tableNode(_ tableNode: ASTableNode, nodeBlockForRowAt indexPath: IndexPath) -> ASCellNodeBlock {
-        let item = dataSource[indexPath.row]
+        let section = dataSource[indexPath.section]
+        let item = section.items?[indexPath.row]
         let cellBlock: ASCellNodeBlock = {
             ASUIListsCellNode(item)
         }
@@ -55,11 +60,33 @@ extension ASUIListsController: ASTableDataSource {
 extension ASUIListsController: ASTableDelegate {
     func tableNode(_ tableNode: ASTableNode, didSelectRowAt indexPath: IndexPath) {
         tableNode.deselectRow(at: indexPath, animated: true)
-        let item = dataSource[indexPath.row]
+        let section = dataSource[indexPath.section]
+        let item = section.items?[indexPath.row]
 
+        switch section.type {
+        case .ui:
+            selectUIControl(item)
+        case .table:
+            selectTableNode(item)
+        default:
+            break
+        }
+    }
+
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        dataSource[section].title
+    }
+
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        40
+    }
+}
+
+extension ASUIListsController {
+    private func selectUIControl(_ item: ASUIListsModel?) {
         var vc = UIViewController()
 
-        switch item.type {
+        switch item?.type {
         case .image:
             vc = ImageNodeController()
         case .networkImage:
@@ -83,7 +110,20 @@ extension ASUIListsController: ASTableDelegate {
         default:
             break
         }
-        vc.title = item.title
+        vc.title = item?.title
+        navigationController?.pushViewController(vc, animated: true)
+    }
+
+    private func selectTableNode(_ item: ASUIListsModel?) {
+        var vc = UIViewController()
+
+        switch item?.tableType {
+        case .kitten:
+            vc = KittensController()
+        default:
+            break
+        }
+        vc.title = item?.title
         navigationController?.pushViewController(vc, animated: true)
     }
 }

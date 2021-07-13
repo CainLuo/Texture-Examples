@@ -64,6 +64,9 @@
 		4D7CCFD1269C40560097EF65 /* BasePagerNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CCFD0269C40560097EF65 /* BasePagerNodeController.swift */; };
 		4D7CCFD3269C4DC10097EF65 /* simon.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4D7CCFD2269C4C070097EF65 /* simon.mp4 */; };
 		4D8054DF268F0C0900A9B5E9 /* InfoNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8054DE268F0C0900A9B5E9 /* InfoNode.swift */; };
+		4DA181FE269D325600F45A78 /* KittensController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA181FD269D325600F45A78 /* KittensController.swift */; };
+		4DA18200269D326A00F45A78 /* KittensCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA181FF269D326A00F45A78 /* KittensCellNode.swift */; };
+		4DA18202269D47BF00F45A78 /* KittensViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA18201269D47BF00F45A78 /* KittensViewModel.swift */; };
 		4DCD9C1126959E410067DBF6 /* LayoutsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD9C1026959E410067DBF6 /* LayoutsController.swift */; };
 		4DCD9C1326959E8B0067DBF6 /* LayoutsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD9C1226959E8B0067DBF6 /* LayoutsViewModel.swift */; };
 		4DCD9C1526959EB60067DBF6 /* LayoutsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD9C1426959EB60067DBF6 /* LayoutsModel.swift */; };
@@ -174,6 +177,9 @@
 		4D7CCFD0269C40560097EF65 /* BasePagerNodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePagerNodeController.swift; sourceTree = "<group>"; };
 		4D7CCFD2269C4C070097EF65 /* simon.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = simon.mp4; sourceTree = "<group>"; };
 		4D8054DE268F0C0900A9B5E9 /* InfoNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoNode.swift; sourceTree = "<group>"; };
+		4DA181FD269D325600F45A78 /* KittensController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KittensController.swift; sourceTree = "<group>"; };
+		4DA181FF269D326A00F45A78 /* KittensCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KittensCellNode.swift; sourceTree = "<group>"; };
+		4DA18201269D47BF00F45A78 /* KittensViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KittensViewModel.swift; sourceTree = "<group>"; };
 		4DCD9C1026959E410067DBF6 /* LayoutsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutsController.swift; sourceTree = "<group>"; };
 		4DCD9C1226959E8B0067DBF6 /* LayoutsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutsViewModel.swift; sourceTree = "<group>"; };
 		4DCD9C1426959EB60067DBF6 /* LayoutsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutsModel.swift; sourceTree = "<group>"; };
@@ -438,6 +444,7 @@
 		4D7268562698191C00068C8A /* ASUIModules */ = {
 			isa = PBXGroup;
 			children = (
+				4DA181FC269D323E00F45A78 /* Kittens */,
 				4D72685F2698229000068C8A /* Controllers */,
 				4D7268572698195F00068C8A /* ASUIListsController.swift */,
 				4D72685B26981A2300068C8A /* ASUIListsModel.swift */,
@@ -462,6 +469,16 @@
 				4D7CCFCE269C3C400097EF65 /* ScrollNodeController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4DA181FC269D323E00F45A78 /* Kittens */ = {
+			isa = PBXGroup;
+			children = (
+				4DA181FD269D325600F45A78 /* KittensController.swift */,
+				4DA181FF269D326A00F45A78 /* KittensCellNode.swift */,
+				4DA18201269D47BF00F45A78 /* KittensViewModel.swift */,
+			);
+			path = Kittens;
 			sourceTree = "<group>";
 		};
 		4DCD9C182695A6D20067DBF6 /* Controllers */ = {
@@ -742,6 +759,7 @@
 				4DCD9C242695B2E70067DBF6 /* OverlayLayoutController.swift in Sources */,
 				BF367F82269204C0009A883A /* RoundNode.swift in Sources */,
 				4D0B20AC266F5A7F005037E1 /* AdaptiveLayoutViewController.swift in Sources */,
+				4DA18200269D326A00F45A78 /* KittensCellNode.swift in Sources */,
 				4D0B209C266F5A7F005037E1 /* NumberFormatter.swift in Sources */,
 				4DCD9C1326959E8B0067DBF6 /* LayoutsViewModel.swift in Sources */,
 				BFFF2E83268A9B1800005591 /* TabBarModel.swift in Sources */,
@@ -786,6 +804,7 @@
 				4D5C89F02694387C007AD78D /* PhotoCollectionCellNode.swift in Sources */,
 				BF367F9A2693278B009A883A /* ErrorTracker.swift in Sources */,
 				4D0B20B2266F5A7F005037E1 /* Book.InteractiveNode.swift in Sources */,
+				4DA18202269D47BF00F45A78 /* KittensViewModel.swift in Sources */,
 				4D5C89F6269448D6007AD78D /* PhotoCollectionViewCell.swift in Sources */,
 				4D0B20B0266F5A7F005037E1 /* Book.TiledLayer.swift in Sources */,
 				4D0AF9502692E44600382C48 /* JustifyAndAlignController.swift in Sources */,
@@ -800,6 +819,7 @@
 				4D72685E26981AA100068C8A /* ASUIListsCellNode.swift in Sources */,
 				BF367F992693278B009A883A /* ApiService+Request.swift in Sources */,
 				4D7268472696968400068C8A /* AbsoluteLayoutController.swift in Sources */,
+				4DA181FE269D325600F45A78 /* KittensController.swift in Sources */,
 				4D0B20A5266F5A7F005037E1 /* RootContainerViewController.swift in Sources */,
 				BF367FAC26936290009A883A /* ListsCellNode.swift in Sources */,
 				4DCD9C1126959E410067DBF6 /* LayoutsController.swift in Sources */,

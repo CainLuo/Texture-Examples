@@ -14,6 +14,7 @@ protocol ASUIListsViewModelInputs {
 }
 
 protocol ASUIListsViewModelOutputs {
+    var sections: Driver<[ASUIListsSectionModel]> { get }
     var items: Driver<[ASUIListsModel]> { get }
 }
 
@@ -25,12 +26,14 @@ protocol ASUIListsViewModelTypes {
 class ASUIListsViewModel: ASUIListsViewModelInputs, ASUIListsViewModelOutputs, ASUIListsViewModelTypes {
     
     init() {
-        let items = viewWillAppearSubject.map(dataSource)
+        let sections = viewWillAppearSubject.map(filterSections)
+        let items = viewWillAppearSubject.map(controlsDataSource)
 
         // inputs
         self.viewWillAppear = viewWillAppearSubject.asObserver()
         
         // outputs
+        self.sections = sections.asDriverOnErrorJustComplete()
         self.items = items.asDriverOnErrorJustComplete()
     }
     
@@ -41,13 +44,21 @@ class ASUIListsViewModel: ASUIListsViewModelInputs, ASUIListsViewModelOutputs, A
     let viewWillAppear: AnyObserver<Void>
 
     // MARK: outputs
+    let sections: Driver<[ASUIListsSectionModel]>
     let items: Driver<[ASUIListsModel]>
 
     var inputs: ASUIListsViewModelInputs { self }
     var outputs: ASUIListsViewModelOutputs { self }
 }
 
-private func dataSource() -> [ASUIListsModel] {
+private func filterSections() -> [ASUIListsSectionModel] {
+    [
+        ASUIListsSectionModel(title: "AS Controls", type: .ui, items: controlsDataSource()),
+        ASUIListsSectionModel(title: "AS Table Node", type: .table, items: tablesDataSource())
+    ]
+}
+
+private func controlsDataSource() -> [ASUIListsModel] {
     [
         ASUIListsModel(title: "ASImageNode", type: .image),
         ASUIListsModel(title: "ASNetworkImageNode", type: .networkImage),
@@ -58,6 +69,12 @@ private func dataSource() -> [ASUIListsModel] {
         ASUIListsModel(title: "ASMultiplexImageNode", type: .multiplexImage),
         ASUIListsModel(title: "ASPagerNode", type: .pager),
         ASUIListsModel(title: "ASVideoNode", type: .video),
-        ASUIListsModel(title: "ASScrollNode", type: .scroll),
+        ASUIListsModel(title: "ASScrollNode", type: .scroll)
+    ]
+}
+
+private func tablesDataSource() -> [ASUIListsModel] {
+    [
+        ASUIListsModel(title: "Kittens", tableType: .kitten)
     ]
 }

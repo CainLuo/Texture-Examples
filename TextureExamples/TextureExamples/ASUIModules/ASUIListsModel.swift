@@ -8,7 +8,12 @@
 import Foundation
 import ObjectMapper
 
-enum ASUIListsType {
+enum ASUIListsSectionType {
+    case ui
+    case table
+}
+
+enum ASUIListsControlType {
     case image
     case networkImage
     case text
@@ -21,9 +26,34 @@ enum ASUIListsType {
     case scroll
 }
 
+enum ASUITableNodeType {
+    case kitten
+}
+
+// MARK: - ASUIListsSectionModel
+struct ASUIListsSectionModel {
+    var title: String?
+    var type: ASUIListsSectionType?
+    var items: [ASUIListsModel]?
+}
+
+extension ASUIListsSectionModel: Mappable {
+    init?(map: Map) {
+
+    }
+
+    mutating func mapping(map: Map) {
+        title <- map["title"]
+        type <- map["type"]
+        items <- map["ASUIListsModel"]
+    }
+}
+
+// MARK: - ASUIListsModel
 struct ASUIListsModel {
     var title: String?
-    var type: ASUIListsType?
+    var type: ASUIListsControlType?
+    var tableType: ASUITableNodeType?
 }
 
 extension ASUIListsModel: Mappable {
@@ -34,5 +64,6 @@ extension ASUIListsModel: Mappable {
     mutating func mapping(map: Map) {
         title <- map["title"]
         type <- map["type"]
+        tableType <- map["tableType"]
     }
 }
