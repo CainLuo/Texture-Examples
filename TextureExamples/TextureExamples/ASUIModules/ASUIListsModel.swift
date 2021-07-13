@@ -28,6 +28,7 @@ enum ASUIListsControlType {
 
 enum ASUITableNodeType {
     case kitten
+    case rabbit
 }
 
 // MARK: - ASUIListsSectionModel

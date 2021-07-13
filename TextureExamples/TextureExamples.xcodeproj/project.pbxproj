@@ -67,6 +67,10 @@
 		4DA181FE269D325600F45A78 /* KittensController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA181FD269D325600F45A78 /* KittensController.swift */; };
 		4DA18200269D326A00F45A78 /* KittensCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA181FF269D326A00F45A78 /* KittensCellNode.swift */; };
 		4DA18202269D47BF00F45A78 /* KittensViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA18201269D47BF00F45A78 /* KittensViewModel.swift */; };
+		4DA18205269D825800F45A78 /* RabbitVideosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA18204269D825800F45A78 /* RabbitVideosController.swift */; };
+		4DA18207269D82EE00F45A78 /* RabbitVideosCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA18206269D82EE00F45A78 /* RabbitVideosCellNode.swift */; };
+		4DA18209269D82F600F45A78 /* RabbitVideosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA18208269D82F600F45A78 /* RabbitVideosViewModel.swift */; };
+		4DA1820B269D832300F45A78 /* RabbitVideosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA1820A269D832300F45A78 /* RabbitVideosModel.swift */; };
 		4DCD9C1126959E410067DBF6 /* LayoutsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD9C1026959E410067DBF6 /* LayoutsController.swift */; };
 		4DCD9C1326959E8B0067DBF6 /* LayoutsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD9C1226959E8B0067DBF6 /* LayoutsViewModel.swift */; };
 		4DCD9C1526959EB60067DBF6 /* LayoutsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD9C1426959EB60067DBF6 /* LayoutsModel.swift */; };
@@ -180,6 +184,10 @@
 		4DA181FD269D325600F45A78 /* KittensController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KittensController.swift; sourceTree = "<group>"; };
 		4DA181FF269D326A00F45A78 /* KittensCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KittensCellNode.swift; sourceTree = "<group>"; };
 		4DA18201269D47BF00F45A78 /* KittensViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KittensViewModel.swift; sourceTree = "<group>"; };
+		4DA18204269D825800F45A78 /* RabbitVideosController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RabbitVideosController.swift; sourceTree = "<group>"; };
+		4DA18206269D82EE00F45A78 /* RabbitVideosCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RabbitVideosCellNode.swift; sourceTree = "<group>"; };
+		4DA18208269D82F600F45A78 /* RabbitVideosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RabbitVideosViewModel.swift; sourceTree = "<group>"; };
+		4DA1820A269D832300F45A78 /* RabbitVideosModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RabbitVideosModel.swift; sourceTree = "<group>"; };
 		4DCD9C1026959E410067DBF6 /* LayoutsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutsController.swift; sourceTree = "<group>"; };
 		4DCD9C1226959E8B0067DBF6 /* LayoutsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutsViewModel.swift; sourceTree = "<group>"; };
 		4DCD9C1426959EB60067DBF6 /* LayoutsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutsModel.swift; sourceTree = "<group>"; };
@@ -444,6 +452,7 @@
 		4D7268562698191C00068C8A /* ASUIModules */ = {
 			isa = PBXGroup;
 			children = (
+				4DA18203269D822700F45A78 /* RabbitVideos */,
 				4DA181FC269D323E00F45A78 /* Kittens */,
 				4D72685F2698229000068C8A /* Controllers */,
 				4D7268572698195F00068C8A /* ASUIListsController.swift */,
@@ -479,6 +488,17 @@
 				4DA18201269D47BF00F45A78 /* KittensViewModel.swift */,
 			);
 			path = Kittens;
+			sourceTree = "<group>";
+		};
+		4DA18203269D822700F45A78 /* RabbitVideos */ = {
+			isa = PBXGroup;
+			children = (
+				4DA18206269D82EE00F45A78 /* RabbitVideosCellNode.swift */,
+				4DA18204269D825800F45A78 /* RabbitVideosController.swift */,
+				4DA1820A269D832300F45A78 /* RabbitVideosModel.swift */,
+				4DA18208269D82F600F45A78 /* RabbitVideosViewModel.swift */,
+			);
+			path = RabbitVideos;
 			sourceTree = "<group>";
 		};
 		4DCD9C182695A6D20067DBF6 /* Controllers */ = {
@@ -750,6 +770,7 @@
 				4D7CCFCF269C3C400097EF65 /* ScrollNodeController.swift in Sources */,
 				4D72685A269819DD00068C8A /* ASUIListsViewModel.swift in Sources */,
 				BFFF2E7B268A09F500005591 /* ExampleListModel.swift in Sources */,
+				4DA18209269D82F600F45A78 /* RabbitVideosViewModel.swift in Sources */,
 				BFC4132D2695CDBC00385C8D /* ColorNode.swift in Sources */,
 				4D0B20AD266F5A7F005037E1 /* TransitionLayoutViewController.swift in Sources */,
 				4D0B209F266F5A7F005037E1 /* CustomCollectionCellNode.swift in Sources */,
@@ -787,9 +808,11 @@
 				BFC371CD268BF3D600A67231 /* AlignItemsController.swift in Sources */,
 				4D726861269822A000068C8A /* ImageNodeController.swift in Sources */,
 				4D0B20A4266F5A7F005037E1 /* Book.StyledEdgeNode.swift in Sources */,
+				4DA1820B269D832300F45A78 /* RabbitVideosModel.swift in Sources */,
 				BFFF2E7F268A28F500005591 /* NSAttributeString+Extensions.swift in Sources */,
 				4D7CCFCB269C3C080097EF65 /* PagerNodeController.swift in Sources */,
 				BF367FA42693278B009A883A /* ApiService.swift in Sources */,
+				4DA18207269D82EE00F45A78 /* RabbitVideosCellNode.swift in Sources */,
 				BF367F9D2693278B009A883A /* CodeResponse.swift in Sources */,
 				BF367F972693278B009A883A /* Router.swift in Sources */,
 				4DCD9C1526959EB60067DBF6 /* LayoutsModel.swift in Sources */,
@@ -816,6 +839,7 @@
 				BF367F9F2693278B009A883A /* NetworkingTypes.swift in Sources */,
 				4D7268672698286F00068C8A /* ButtonNodeController.swift in Sources */,
 				BF367FA22693278B009A883A /* ActivityIndicator.swift in Sources */,
+				4DA18205269D825800F45A78 /* RabbitVideosController.swift in Sources */,
 				4D72685E26981AA100068C8A /* ASUIListsCellNode.swift in Sources */,
 				BF367F992693278B009A883A /* ApiService+Request.swift in Sources */,
 				4D7268472696968400068C8A /* AbsoluteLayoutController.swift in Sources */,

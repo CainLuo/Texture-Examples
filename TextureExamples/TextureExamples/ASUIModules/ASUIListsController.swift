@@ -120,6 +120,8 @@ extension ASUIListsController {
         switch item?.tableType {
         case .kitten:
             vc = KittensController()
+        case .rabbit:
+            vc = RabbitVideosController()
         default:
             break
         }
