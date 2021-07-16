@@ -22,10 +22,13 @@ class RabbitVideosCellNode: ASCellNode {
 
         titleNode.style.flexGrow = 1.0
         titleNode.attributedText = NSAttributedString.attributed(item.title ?? "")
+//        addSubnode(titleNode)
 
         avatarNode.url = URL(string: item.avatar ?? "")
+        addSubnode(avatarNode)
 
         likeButtonNode.backgroundColor = .cyan
+//        addSubnode(likeButtonNode)
 
         muteButtonNode.setImage(#imageLiteral(resourceName: "videoUnmuteute"), for: .normal)
         muteButtonNode.style.preferredSize = CGSize(width: 16, height: 20)
@@ -34,6 +37,10 @@ class RabbitVideosCellNode: ASCellNode {
         videoNode = ASVideoPlayerNode(url: URL(string: item.url ?? "")!)
         videoNode?.delegate = self
         videoNode?.backgroundColor = .black
+        videoNode?.shouldAutoRepeat = true
+//        if let videoNode = videoNode {
+//            addSubnode(videoNode)
+//        }
     }
 
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
@@ -86,35 +93,42 @@ extension RabbitVideosCellNode: ASVideoPlayerNodeDelegate {
 //                                   forControls controls: [AnyHashable : Any],
 //                                   forMaximumSize maxSize: CGSize) -> ASLayoutSpec {
 //
-//        var videoControls = getControls(controls)
+//        let bottomBarControl = getControls(controls)
+//        guard !bottomBarControl.isEmpty else {
+//            return ASLayoutSpec()
+//        }
 //
-//        if let mute = controls["muteControl"] {
-//            videoControls.append(mute)
+//        var topBarControl: [ASButtonNode] = []
+//
+//        if let mute = controls["muteControl"] as? ASButtonNode {
+//            topBarControl.append(mute)
 //        }
 //
 //        return LayoutSpec {
-//
+//            VStackLayout(spacing: 0, justifyContent: .start, alignItems: .start) {
+////                InsetLayout(insets: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)) {
+////                    HStackLayout(spacing: 10, justifyContent: .start, alignItems: .center) {
+////                        topBarControl
+////                    }
+////                }
+////                SpacerLayout(minLength: 10, flexGrow: 1.0)
+//                InsetLayout(insets: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)) {
+//                    HStackLayout(spacing: 10, justifyContent: .start, alignItems: .stretch) {
+//                        bottomBarControl
+//                    }
+//                }
+//            }
 //        }
 //    }
 //
 //
-//    private func getControls(_ controllBar: [AnyHashable: Any]) -> [Any] {
-//        var array: [Any] = []
+//    private func getControls(_ controllBar: [AnyHashable: Any]) -> [ASDisplayNode] {
+//        var array: [ASDisplayNode] = []
 //
-//        if let backButton = controllBar[ASVideoPlayerNodeControlType.playbackButton] {
-//            array.append(backButton)
-//        }
-//
-//        if let elapsedText = controllBar[ASVideoPlayerNodeControlType.elapsedText] {
-//            array.append(elapsedText)
-//        }
-//
-//        if let scrubber = controllBar[ASVideoPlayerNodeControlType.scrubber] {
-//            array.append(scrubber)
-//        }
-//
-//        if let durationText = controllBar[ASVideoPlayerNodeControlType.durationText] {
-//            array.append(durationText)
+//        controllBar.forEach { (_, value) in
+//            if let node = value as? ASDisplayNode {
+//                array.append(node)
+//            }
 //        }
 //
 //        return array
