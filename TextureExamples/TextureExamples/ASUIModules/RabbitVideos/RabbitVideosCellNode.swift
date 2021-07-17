@@ -22,13 +22,11 @@ class RabbitVideosCellNode: ASCellNode {
 
         titleNode.style.flexGrow = 1.0
         titleNode.attributedText = NSAttributedString.attributed(item.title ?? "")
-//        addSubnode(titleNode)
 
         avatarNode.url = URL(string: item.avatar ?? "")
         addSubnode(avatarNode)
 
         likeButtonNode.backgroundColor = .cyan
-//        addSubnode(likeButtonNode)
 
         muteButtonNode.setImage(#imageLiteral(resourceName: "videoUnmuteute"), for: .normal)
         muteButtonNode.style.preferredSize = CGSize(width: 16, height: 20)
@@ -38,9 +36,6 @@ class RabbitVideosCellNode: ASCellNode {
         videoNode?.delegate = self
         videoNode?.backgroundColor = .black
         videoNode?.shouldAutoRepeat = true
-//        if let videoNode = videoNode {
-//            addSubnode(videoNode)
-//        }
     }
 
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
@@ -68,7 +63,7 @@ class RabbitVideosCellNode: ASCellNode {
 
     @objc private func tapMuteAction(_ node: ASButtonNode) {
         videoNode?.muted = !(videoNode?.muted ?? false)
-        node.setImage(videoNode?.muted == true ? #imageLiteral(resourceName: "videoMute") : #imageLiteral(resourceName: "videoMute"), for: .normal)
+        node.setImage(videoNode?.muted == true ? #imageLiteral(resourceName: "videoMute") : #imageLiteral(resourceName: "videoUnmuteute"), for: .normal)
     }
 }
 
@@ -88,49 +83,79 @@ extension RabbitVideosCellNode: ASVideoPlayerNodeDelegate {
 }
 
 // MARK: - ASVideoPlayerNode Layout Spec
-//extension RabbitVideosCellNode {
-//    func videoPlayerNodeLayoutSpec(_ videoPlayer: ASVideoPlayerNode,
-//                                   forControls controls: [AnyHashable : Any],
-//                                   forMaximumSize maxSize: CGSize) -> ASLayoutSpec {
-//
-//        let bottomBarControl = getControls(controls)
-//        guard !bottomBarControl.isEmpty else {
-//            return ASLayoutSpec()
-//        }
-//
-//        var topBarControl: [ASButtonNode] = []
-//
-//        if let mute = controls["muteControl"] as? ASButtonNode {
-//            topBarControl.append(mute)
-//        }
-//
-//        return LayoutSpec {
-//            VStackLayout(spacing: 0, justifyContent: .start, alignItems: .start) {
-////                InsetLayout(insets: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)) {
-////                    HStackLayout(spacing: 10, justifyContent: .start, alignItems: .center) {
-////                        topBarControl
-////                    }
-////                }
-////                SpacerLayout(minLength: 10, flexGrow: 1.0)
-//                InsetLayout(insets: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)) {
-//                    HStackLayout(spacing: 10, justifyContent: .start, alignItems: .stretch) {
-//                        bottomBarControl
-//                    }
-//                }
-//            }
-//        }
-//    }
-//
-//
-//    private func getControls(_ controllBar: [AnyHashable: Any]) -> [ASDisplayNode] {
-//        var array: [ASDisplayNode] = []
-//
-//        controllBar.forEach { (_, value) in
-//            if let node = value as? ASDisplayNode {
-//                array.append(node)
-//            }
-//        }
-//
-//        return array
-//    }
-//}
+extension RabbitVideosCellNode {
+    func videoPlayerNodeLayoutSpec(_ videoPlayer: ASVideoPlayerNode,
+                                   forControls controls: [AnyHashable : Any],
+                                   forMaximumSize maxSize: CGSize) -> ASLayoutSpec {
+
+        let topControl = getCustomControls(controls, maxSize: maxSize)
+        let bottomControl = getDefaultControls(controls, maxSize: maxSize)
+        guard !bottomControl.isEmpty else {
+            return ASLayoutSpec()
+        }
+
+        let insets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+
+        return LayoutSpec {
+            VStackLayout {
+                InsetLayout(insets: insets) {
+                    HStackLayout(spacing: 10, justifyContent: .start, alignItems: .center) {
+                        topControl
+                    }
+                }
+                SpacerLayout(minLength: 10, flexGrow: 1.0)
+                InsetLayout(insets: insets) {
+                    HStackLayout(spacing: 10, justifyContent: .start, alignItems: .center) {
+                        bottomControl
+                    }
+                }
+            }
+        }
+    }
+    
+    /// Get ASVideoPlayerNode custom controls
+    /// - Parameters:
+    ///   - controllBar: [AnyHashable: Any]
+    ///   - maxSize: CGSize
+    /// - Returns: [ASDisplayNode]
+    private func getCustomControls(_ controls: [AnyHashable: Any], maxSize: CGSize) -> [ASDisplayNode] {
+        var array: [ASButtonNode] = []
+
+        if let mute = controls["muteControl"] as? ASButtonNode {
+            mute.style.preferredSize = CGSize(width: 29, height: 20)
+            array.append(mute)
+        }
+        return array
+    }
+    
+    /// Get ASVideoPlayerNode default controls
+    /// - Parameters:
+    ///   - controllBar: [AnyHashable: Any]
+    ///   - maxSize: CGSize
+    /// - Returns: [ASDisplayNode]
+    private func getDefaultControls(_ controls: [AnyHashable: Any], maxSize: CGSize) -> [ASDisplayNode] {
+        var array: [ASDisplayNode] = []
+
+        if let playbackButton = controls[ASVideoPlayerNodeControlType.playbackButton.rawValue] as? ASControlNode {
+            array.append(playbackButton)
+        }
+        
+        if let elapsedText = controls[ASVideoPlayerNodeControlType.elapsedText.rawValue] as? ASTextNode {
+            array.append(elapsedText)
+        }
+
+        if let scrubber = controls[ASVideoPlayerNodeControlType.scrubber.rawValue] as? ASDisplayNode {
+            scrubber.style.height = ASDimensionMake(44.0)
+            scrubber.style.minWidth = ASDimensionMake(0.0)
+            scrubber.style.maxWidth = ASDimensionMake(maxSize.width)
+            scrubber.style.flexGrow = 1.0
+            array.append(scrubber)
+        }
+
+        if let durationText = controls[ASVideoPlayerNodeControlType.durationText.rawValue] as? ASTextNode {
+            array.append(durationText)
+        }
+
+        return array
+    }
+}
