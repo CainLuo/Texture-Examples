@@ -122,6 +122,8 @@ extension ASUIListsController {
             vc = KittensController()
         case .rabbit:
             vc = RabbitVideosController()
+        case .ninePattern:
+            vc = NinePatternsController()
         default:
             break
         }

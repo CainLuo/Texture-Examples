@@ -29,6 +29,7 @@ enum ASUIListsControlType {
 enum ASUITableNodeType {
     case kitten
     case rabbit
+    case ninePattern
 }
 
 // MARK: - ASUIListsSectionModel
@@ -55,6 +56,7 @@ struct ASUIListsModel {
     var title: String?
     var type: ASUIListsControlType?
     var tableType: ASUITableNodeType?
+    var images: [String] = []
 }
 
 extension ASUIListsModel: Mappable {
@@ -66,5 +68,6 @@ extension ASUIListsModel: Mappable {
         title <- map["title"]
         type <- map["type"]
         tableType <- map["tableType"]
+        images <- map["images"]
     }
 }

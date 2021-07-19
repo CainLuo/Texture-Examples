@@ -99,6 +99,10 @@
 		BF367FA826935F95009A883A /* ListsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF367FA726935F95009A883A /* ListsViewModel.swift */; };
 		BF367FAA2693602C009A883A /* ListsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF367FA92693602C009A883A /* ListsModel.swift */; };
 		BF367FAC26936290009A883A /* ListsCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF367FAB26936290009A883A /* ListsCellNode.swift */; };
+		BF3D57E426A5D679009C8DC8 /* NinePatternsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3D57E326A5D679009C8DC8 /* NinePatternsController.swift */; };
+		BF3D57E626A5D695009C8DC8 /* NinePatternsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3D57E526A5D695009C8DC8 /* NinePatternsViewModel.swift */; };
+		BF3D57E826A5D8A2009C8DC8 /* NinePatternsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3D57E726A5D8A2009C8DC8 /* NinePatternsModel.swift */; };
+		BF3D57EA26A5DA2C009C8DC8 /* NinePatternsCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3D57E926A5DA2C009C8DC8 /* NinePatternsCellNode.swift */; };
 		BFAF3BF2266FC7F3008DFED8 /* Rx+Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAF3BF1266FC7F3008DFED8 /* Rx+Observable.swift */; };
 		BFC371CD268BF3D600A67231 /* AlignItemsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC371CC268BF3D600A67231 /* AlignItemsController.swift */; };
 		BFC371CF268BF3E100A67231 /* JustifyContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC371CE268BF3E100A67231 /* JustifyContentController.swift */; };
@@ -217,6 +221,10 @@
 		BF367FA726935F95009A883A /* ListsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsViewModel.swift; sourceTree = "<group>"; };
 		BF367FA92693602C009A883A /* ListsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsModel.swift; sourceTree = "<group>"; };
 		BF367FAB26936290009A883A /* ListsCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsCellNode.swift; sourceTree = "<group>"; };
+		BF3D57E326A5D679009C8DC8 /* NinePatternsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NinePatternsController.swift; sourceTree = "<group>"; };
+		BF3D57E526A5D695009C8DC8 /* NinePatternsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NinePatternsViewModel.swift; sourceTree = "<group>"; };
+		BF3D57E726A5D8A2009C8DC8 /* NinePatternsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NinePatternsModel.swift; sourceTree = "<group>"; };
+		BF3D57E926A5DA2C009C8DC8 /* NinePatternsCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NinePatternsCellNode.swift; sourceTree = "<group>"; };
 		BFAF3BF1266FC7F3008DFED8 /* Rx+Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rx+Observable.swift"; sourceTree = "<group>"; };
 		BFC371CC268BF3D600A67231 /* AlignItemsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignItemsController.swift; sourceTree = "<group>"; };
 		BFC371CE268BF3E100A67231 /* JustifyContentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustifyContentController.swift; sourceTree = "<group>"; };
@@ -452,6 +460,7 @@
 		4D7268562698191C00068C8A /* ASUIModules */ = {
 			isa = PBXGroup;
 			children = (
+				BF3D57E226A5D5C2009C8DC8 /* NinePatterns */,
 				4DA18203269D822700F45A78 /* RabbitVideos */,
 				4DA181FC269D323E00F45A78 /* Kittens */,
 				4D72685F2698229000068C8A /* Controllers */,
@@ -543,6 +552,17 @@
 				BF367F902693278B009A883A /* NetworkingTypes.swift */,
 			);
 			path = NetworkingConfig;
+			sourceTree = "<group>";
+		};
+		BF3D57E226A5D5C2009C8DC8 /* NinePatterns */ = {
+			isa = PBXGroup;
+			children = (
+				BF3D57E326A5D679009C8DC8 /* NinePatternsController.swift */,
+				BF3D57E526A5D695009C8DC8 /* NinePatternsViewModel.swift */,
+				BF3D57E726A5D8A2009C8DC8 /* NinePatternsModel.swift */,
+				BF3D57E926A5DA2C009C8DC8 /* NinePatternsCellNode.swift */,
+			);
+			path = NinePatterns;
 			sourceTree = "<group>";
 		};
 		BFC371CA268BF3B400A67231 /* JustifyContent */ = {
@@ -762,6 +782,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DCD9C1A2695A73A0067DBF6 /* BaseNodeController.swift in Sources */,
+				BF3D57E626A5D695009C8DC8 /* NinePatternsViewModel.swift in Sources */,
 				4D0B20A7266F5A7F005037E1 /* Mocks.swift in Sources */,
 				4D0B20A8266F5A7F005037E1 /* Components.swift in Sources */,
 				BF367F84269204DB009A883A /* SquareNode.swift in Sources */,
@@ -777,6 +798,7 @@
 				BF367F962693278B009A883A /* ApiServiceType.swift in Sources */,
 				BF367FAA2693602C009A883A /* ListsModel.swift in Sources */,
 				BF367F9C2693278B009A883A /* ErrorType.swift in Sources */,
+				BF3D57E426A5D679009C8DC8 /* NinePatternsController.swift in Sources */,
 				4DCD9C242695B2E70067DBF6 /* OverlayLayoutController.swift in Sources */,
 				BF367F82269204C0009A883A /* RoundNode.swift in Sources */,
 				4D0B20AC266F5A7F005037E1 /* AdaptiveLayoutViewController.swift in Sources */,
@@ -831,6 +853,7 @@
 				4D5C89F6269448D6007AD78D /* PhotoCollectionViewCell.swift in Sources */,
 				4D0B20B0266F5A7F005037E1 /* Book.TiledLayer.swift in Sources */,
 				4D0AF9502692E44600382C48 /* JustifyAndAlignController.swift in Sources */,
+				BF3D57EA26A5DA2C009C8DC8 /* NinePatternsCellNode.swift in Sources */,
 				4D7CCFD1269C40560097EF65 /* BasePagerNodeController.swift in Sources */,
 				4D7268652698285D00068C8A /* TextNodeController.swift in Sources */,
 				4D5C89EE2694386B007AD78D /* PhotoCollectionNodeController.swift in Sources */,
@@ -865,6 +888,7 @@
 				4DCD9C1C2695A7D60067DBF6 /* WrapperLayoutController.swift in Sources */,
 				4D0B20B1266F5A7F005037E1 /* ZStackView.swift in Sources */,
 				4D7CCFCD269C3C210097EF65 /* VideoNodeController.swift in Sources */,
+				BF3D57E826A5D8A2009C8DC8 /* NinePatternsModel.swift in Sources */,
 				4DCD9C202695AFB30067DBF6 /* StackLayoutController.swift in Sources */,
 				4DCD9C172695A4140067DBF6 /* LayoutsCellNode.swift in Sources */,
 			);

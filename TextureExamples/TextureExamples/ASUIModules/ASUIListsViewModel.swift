@@ -76,6 +76,7 @@ private func controlsDataSource() -> [ASUIListsModel] {
 private func tablesDataSource() -> [ASUIListsModel] {
     [
         ASUIListsModel(title: "Kittens", tableType: .kitten),
-        ASUIListsModel(title: "Rabbit Videos", tableType: .rabbit)
+        ASUIListsModel(title: "Rabbit Videos", tableType: .rabbit),
+        ASUIListsModel(title: "Nine Pattern Images", tableType: .ninePattern)
     ]
 }
