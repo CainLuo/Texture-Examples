@@ -12,24 +12,36 @@ class KittensController: BaseTableNodeController {
 
     private var dataSource: [CGSize] = []
     private let viewModel: KittensViewModelTypes = KittensViewModel()
+    private var context: ASBatchContext?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         bindViewModel()
         node.dataSource = self
         node.delegate = self
-        node.leadingScreensForBatching = 2.5
+        node.leadingScreensForBatching = 1.5
         node.view.separatorStyle = .none
-        viewModel.inputs.reloadItems()
     }
 
     func bindViewModel() {
         viewModel.outputs.items
             .drive(onNext: { [weak self] items in
-                self?.dataSource.append(contentsOf: items)
-                self?.node.reloadData()
+                self?.reloadTableNode(items)
             })
             .disposed(by: disposeBag)
+    }
+    
+    private func reloadTableNode(_ items: [CGSize]) {
+        var indexPaths: [IndexPath] = []
+        let endIndex = dataSource.count
+        
+        for index in 0..<items.count {
+            indexPaths.append(IndexPath(row: index + endIndex, section: 0))
+        }
+        
+        dataSource.append(contentsOf: items)
+        node.insertRows(at: indexPaths, with: .automatic)
+        context?.completeBatchFetching(true)
     }
 }
 
@@ -58,8 +70,8 @@ extension KittensController: ASTableDelegate {
     }
 
     func tableNode(_ tableNode: ASTableNode, willBeginBatchFetchWith context: ASBatchContext) {
+        self.context = context
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [weak self] in
-            context.completeBatchFetching(true)
             self?.viewModel.inputs.reloadItems()
         }
     }
