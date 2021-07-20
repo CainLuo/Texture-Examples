@@ -48,13 +48,15 @@ extension NinePatternsCellNode {
     private func configNicePatternsNodes(_ size: CGSize) -> ASLayoutSpec {
         var nodes: [ASDisplayNode] = []
 
+        let colCount = 3
+        let margin: CGFloat = 4
+        let width = (size.width - CGFloat(colCount - 1) * margin - 20) / CGFloat(colCount)
+
         for index in 0..<images.count {
-            let colCount = 3
-            let width = size.width / CGFloat(colCount)
             let row = index / colCount
             let col = index % colCount
-            let pointX = width * CGFloat(col)
-            let pointY = width * CGFloat(row)
+            let pointX = CGFloat(col) * (width + margin)
+            let pointY = CGFloat(row) * (width + margin)
 
             let node = ASNetworkImageNode()
             node.setURL(URL(string: images[index]), resetToDefault: true)
