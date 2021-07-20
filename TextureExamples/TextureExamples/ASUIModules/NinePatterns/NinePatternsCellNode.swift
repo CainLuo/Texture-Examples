@@ -15,6 +15,7 @@ class NinePatternsCellNode: ASCellNode {
     private let avatarImageNode = ASNetworkImageNode()
     private let nameNode = ASTextNode()
     private var images: [String] = []
+    private let insets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
     
     init(_ item: NinePatternsModel) {
         super.init()
@@ -30,7 +31,7 @@ class NinePatternsCellNode: ASCellNode {
 extension NinePatternsCellNode {
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
         LayoutSpec {
-            InsetLayout(insets: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)) {
+            InsetLayout(insets: insets) {
                 VStackLayout(spacing: 10) {
                     HStackLayout(spacing: 10, alignItems: .center) {
                         avatarImageNode
@@ -50,7 +51,7 @@ extension NinePatternsCellNode {
 
         let colCount = 3
         let margin: CGFloat = 4
-        let width = (size.width - CGFloat(colCount - 1) * margin - 20) / CGFloat(colCount)
+        let width = (size.width - CGFloat(colCount - 1) * margin - (insets.left * 2)) / CGFloat(colCount)
 
         for index in 0..<images.count {
             let row = index / colCount
