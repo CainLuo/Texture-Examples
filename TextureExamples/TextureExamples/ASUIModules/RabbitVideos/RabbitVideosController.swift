@@ -12,11 +12,7 @@ class RabbitVideosController: BaseTableNodeController {
 
     private var dataSource: [RabbitVideosModel] = []
     private let viewModel: RabbitVideosViewModelTypes = RabbitVideosViewModel()
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        viewModel.inputs.viewDidAppear.onNext(())
-    }
+    private var context: ASBatchContext?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,10 +24,22 @@ class RabbitVideosController: BaseTableNodeController {
     func bindViewModel() {
         viewModel.outputs.items
             .drive(onNext: { [weak self] items in
-                self?.dataSource.append(contentsOf: items)
-                self?.node.reloadData()
+                self?.reloadTableNode(items)
             })
             .disposed(by: disposeBag)
+    }
+    
+    private func reloadTableNode(_ items: [RabbitVideosModel]) {
+        var indexPaths: [IndexPath] = []
+        let endIndex = dataSource.count
+        
+        for index in 0..<items.count {
+            indexPaths.append(IndexPath(row: index + endIndex, section: 0))
+        }
+        
+        dataSource.append(contentsOf: items)
+        node.insertRows(at: indexPaths, with: .automatic)
+        context?.completeBatchFetching(true)
     }
 }
 
@@ -52,5 +60,10 @@ extension RabbitVideosController: ASTableDataSource {
 
 // MARK: - ASTableDelegate
 extension RabbitVideosController: ASTableDelegate {
-
+    func tableNode(_ tableNode: ASTableNode, willBeginBatchFetchWith context: ASBatchContext) {
+        self.context = context
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [weak self] in
+            self?.viewModel.inputs.viewDidAppear.onNext(())
+        }
+    }
 }
