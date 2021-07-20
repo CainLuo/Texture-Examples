@@ -12,29 +12,37 @@ class NinePatternsController: BaseTableNodeController {
 
     private var dataSource: [NinePatternsModel] = []
     private let viewModel: NinePatternsViewModelTypes = NinePatternsViewModel()
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        viewModel.inputs.viewDidAppear.onNext(())
-    }
-
+    private var context: ASBatchContext?
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         bindViewModel()
         node.allowsSelection = false
         node.dataSource = self
         node.delegate = self
-        node.leadingScreensForBatching = 2.5
+        node.leadingScreensForBatching = 1.5
         node.view.separatorStyle = .none
     }
 
     func bindViewModel() {
         viewModel.outputs.items
             .drive(onNext: { [weak self] items in
-                self?.dataSource.append(contentsOf: items)
-                self?.node.reloadData()
+                self?.reloadTableNode(items)
             })
             .disposed(by: disposeBag)
+    }
+    
+    private func reloadTableNode(_ items: [NinePatternsModel]) {
+        var indexPaths: [IndexPath] = []
+        let endIndex = dataSource.count
+        
+        for index in 0..<items.count {
+            indexPaths.append(IndexPath(row: index + endIndex, section: 0))
+        }
+        
+        dataSource.append(contentsOf: items)
+        node.insertRows(at: indexPaths, with: .automatic)
+        context?.completeBatchFetching(true)
     }
 }
 
@@ -55,10 +63,10 @@ extension NinePatternsController: ASTableDataSource {
 
 // MARK: - ASTableDelegate
 extension NinePatternsController: ASTableDelegate {
-//    func tableNode(_ tableNode: ASTableNode, didSelectRowAt indexPath: IndexPath) {
-//        tableNode.deselectRow(at: indexPath, animated: true)
-//        if let cell = tableNode.nodeForRow(at: indexPath) as? KittensCellNode {
-//            cell.toggleImageEnlargement()
-//        }
-//    }
+    func tableNode(_ tableNode: ASTableNode, willBeginBatchFetchWith context: ASBatchContext) {
+        self.context = context
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [weak self] in
+            self?.viewModel.inputs.viewDidAppear.onNext(())
+        }
+    }
 }
