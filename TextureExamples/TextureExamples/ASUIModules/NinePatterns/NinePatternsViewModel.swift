@@ -58,6 +58,9 @@ private func filterDataSource() -> [NinePatternsModel] {
             let height = Int(arc4random_uniform(350) + 100)
             urls.append("https://placekitten.com/\(width)/\(height)")
         }
+        if urls.isEmpty {
+            urls.append("https://placekitten.com/350/350")
+        }
         items.append(NinePatternsModel(avatar: "https://placekitten.com/350/350", name: "Kitten", image: urls))
     }
     
