@@ -51,7 +51,7 @@ class RabbitVideosViewModel: RabbitVideosViewModelInputs, RabbitVideosViewModelO
 private func filterDataSource() -> [RabbitVideosModel] {
     var items: [RabbitVideosModel] = []
 
-    for _ in 0...100 {
+    for _ in 0...10 {
         items.append(RabbitVideosModel(title: "Rabbit Video",
                                        url: "https://www.w3schools.com/html/mov_bbb.mp4",
                                        username: "Rabbit",
