@@ -39,7 +39,6 @@
 		4D5C89E22693EBF7007AD78D /* PhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C89E12693EBF7007AD78D /* PhotoTableViewCell.swift */; };
 		4D5C89E62693FE4E007AD78D /* PhotoTableCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C89E52693FE4E007AD78D /* PhotoTableCellNode.swift */; };
 		4D5C89EA26942745007AD78D /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C89E926942745007AD78D /* UIViewController+Extensions.swift */; };
-		4D5C89EC2694279C007AD78D /* BaseCollectionNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C89EB2694279C007AD78D /* BaseCollectionNodeController.swift */; };
 		4D5C89EE2694386B007AD78D /* PhotoCollectionNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C89ED2694386B007AD78D /* PhotoCollectionNodeController.swift */; };
 		4D5C89F02694387C007AD78D /* PhotoCollectionCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C89EF2694387C007AD78D /* PhotoCollectionCellNode.swift */; };
 		4D5C89F4269448C8007AD78D /* PhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C89F3269448C8007AD78D /* PhotoCollectionViewController.swift */; };
@@ -160,7 +159,6 @@
 		4D5C89E12693EBF7007AD78D /* PhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewCell.swift; sourceTree = "<group>"; };
 		4D5C89E52693FE4E007AD78D /* PhotoTableCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableCellNode.swift; sourceTree = "<group>"; };
 		4D5C89E926942745007AD78D /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
-		4D5C89EB2694279C007AD78D /* BaseCollectionNodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionNodeController.swift; sourceTree = "<group>"; };
 		4D5C89ED2694386B007AD78D /* PhotoCollectionNodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionNodeController.swift; sourceTree = "<group>"; };
 		4D5C89EF2694387C007AD78D /* PhotoCollectionCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionCellNode.swift; sourceTree = "<group>"; };
 		4D5C89F3269448C8007AD78D /* PhotoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewController.swift; sourceTree = "<group>"; };
@@ -645,7 +643,6 @@
 		BFFF2E75268A081D00005591 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				4D5C89EB2694279C007AD78D /* BaseCollectionNodeController.swift */,
 				4D5C89D726930E3D007AD78D /* BaseNavigationController.swift */,
 				4DCD9C192695A73A0067DBF6 /* BaseNodeController.swift */,
 				4D7CCFD0269C40560097EF65 /* BasePagerNodeController.swift */,
@@ -876,7 +873,6 @@
 				4DCD9C1E2695AC5D0067DBF6 /* Logger.swift in Sources */,
 				4D72684926969A3D00068C8A /* CornerLayoutController.swift in Sources */,
 				BFFF2E7D268A0AA700005591 /* ExampleListCellNode.swift in Sources */,
-				4D5C89EC2694279C007AD78D /* BaseCollectionNodeController.swift in Sources */,
 				4D7268452696946D00068C8A /* RelativeLayoutController.swift in Sources */,
 				BF367FA826935F95009A883A /* ListsViewModel.swift in Sources */,
 				4D0B20A6266F5A7F005037E1 /* Book.ImageNode.swift in Sources */,
