@@ -7,7 +7,7 @@
 
 import AsyncDisplayKit
 
-class PhotoCollectionNodeController: BaseCollectionNodeController {
+class PhotoCollectionNodeController: BaseNodeController {
 
     private var context: ASBatchContext?
     private var dataSource: [PhotoTableModel] = []
