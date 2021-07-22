@@ -7,7 +7,7 @@
 
 import AsyncDisplayKit
 
-class PhotoIGCollectionNodeController: BaseCollectionNodeController {
+class PhotoIGCollectionNodeController: BaseNodeController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
