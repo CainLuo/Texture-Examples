@@ -7,7 +7,7 @@
 
 import AsyncDisplayKit
 
-class CustomCollectionNodeController: BaseCollectionNodeController {
+class CustomCollectionNodeController: BaseNodeController {
     
     lazy var collectionNode: ASCollectionNode = {
         let layout = UICollectionViewFlowLayout()
