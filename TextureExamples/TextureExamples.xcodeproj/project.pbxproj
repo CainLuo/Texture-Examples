@@ -63,6 +63,10 @@
 		4D7CCFD1269C40560097EF65 /* BasePagerNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CCFD0269C40560097EF65 /* BasePagerNodeController.swift */; };
 		4D7CCFD3269C4DC10097EF65 /* simon.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4D7CCFD2269C4C070097EF65 /* simon.mp4 */; };
 		4D8054DF268F0C0900A9B5E9 /* InfoNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8054DE268F0C0900A9B5E9 /* InfoNode.swift */; };
+		4D93006826AEA04F00F567F6 /* GIFListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D93006726AEA04F00F567F6 /* GIFListController.swift */; };
+		4D93006A26AEA08700F567F6 /* GIFListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D93006926AEA08700F567F6 /* GIFListViewModel.swift */; };
+		4D93006C26AEA0F700F567F6 /* GIFListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D93006B26AEA0F700F567F6 /* GIFListModel.swift */; };
+		4D93006E26AEA1E200F567F6 /* GIFListCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D93006D26AEA1E200F567F6 /* GIFListCellNode.swift */; };
 		4DA181FE269D325600F45A78 /* KittensController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA181FD269D325600F45A78 /* KittensController.swift */; };
 		4DA18200269D326A00F45A78 /* KittensCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA181FF269D326A00F45A78 /* KittensCellNode.swift */; };
 		4DA18202269D47BF00F45A78 /* KittensViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA18201269D47BF00F45A78 /* KittensViewModel.swift */; };
@@ -183,6 +187,10 @@
 		4D7CCFD0269C40560097EF65 /* BasePagerNodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePagerNodeController.swift; sourceTree = "<group>"; };
 		4D7CCFD2269C4C070097EF65 /* simon.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = simon.mp4; sourceTree = "<group>"; };
 		4D8054DE268F0C0900A9B5E9 /* InfoNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoNode.swift; sourceTree = "<group>"; };
+		4D93006726AEA04F00F567F6 /* GIFListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFListController.swift; sourceTree = "<group>"; };
+		4D93006926AEA08700F567F6 /* GIFListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFListViewModel.swift; sourceTree = "<group>"; };
+		4D93006B26AEA0F700F567F6 /* GIFListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFListModel.swift; sourceTree = "<group>"; };
+		4D93006D26AEA1E200F567F6 /* GIFListCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFListCellNode.swift; sourceTree = "<group>"; };
 		4DA181FD269D325600F45A78 /* KittensController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KittensController.swift; sourceTree = "<group>"; };
 		4DA181FF269D326A00F45A78 /* KittensCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KittensCellNode.swift; sourceTree = "<group>"; };
 		4DA18201269D47BF00F45A78 /* KittensViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KittensViewModel.swift; sourceTree = "<group>"; };
@@ -458,6 +466,7 @@
 		4D7268562698191C00068C8A /* ASUIModules */ = {
 			isa = PBXGroup;
 			children = (
+				4D93006626AEA00300F567F6 /* GIFList */,
 				BF3D57E226A5D5C2009C8DC8 /* NinePatterns */,
 				4DA18203269D822700F45A78 /* RabbitVideos */,
 				4DA181FC269D323E00F45A78 /* Kittens */,
@@ -485,6 +494,17 @@
 				4D7CCFCE269C3C400097EF65 /* ScrollNodeController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4D93006626AEA00300F567F6 /* GIFList */ = {
+			isa = PBXGroup;
+			children = (
+				4D93006D26AEA1E200F567F6 /* GIFListCellNode.swift */,
+				4D93006726AEA04F00F567F6 /* GIFListController.swift */,
+				4D93006B26AEA0F700F567F6 /* GIFListModel.swift */,
+				4D93006926AEA08700F567F6 /* GIFListViewModel.swift */,
+			);
+			path = GIFList;
 			sourceTree = "<group>";
 		};
 		4DA181FC269D323E00F45A78 /* Kittens */ = {
@@ -555,10 +575,10 @@
 		BF3D57E226A5D5C2009C8DC8 /* NinePatterns */ = {
 			isa = PBXGroup;
 			children = (
-				BF3D57E326A5D679009C8DC8 /* NinePatternsController.swift */,
-				BF3D57E526A5D695009C8DC8 /* NinePatternsViewModel.swift */,
-				BF3D57E726A5D8A2009C8DC8 /* NinePatternsModel.swift */,
 				BF3D57E926A5DA2C009C8DC8 /* NinePatternsCellNode.swift */,
+				BF3D57E326A5D679009C8DC8 /* NinePatternsController.swift */,
+				BF3D57E726A5D8A2009C8DC8 /* NinePatternsModel.swift */,
+				BF3D57E526A5D695009C8DC8 /* NinePatternsViewModel.swift */,
 			);
 			path = NinePatterns;
 			sourceTree = "<group>";
@@ -778,6 +798,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D93006C26AEA0F700F567F6 /* GIFListModel.swift in Sources */,
 				4DCD9C1A2695A73A0067DBF6 /* BaseNodeController.swift in Sources */,
 				BF3D57E626A5D695009C8DC8 /* NinePatternsViewModel.swift in Sources */,
 				4D0B20A7266F5A7F005037E1 /* Mocks.swift in Sources */,
@@ -794,6 +815,8 @@
 				4D0B209F266F5A7F005037E1 /* CustomCollectionCellNode.swift in Sources */,
 				BF367F962693278B009A883A /* ApiServiceType.swift in Sources */,
 				BF367FAA2693602C009A883A /* ListsModel.swift in Sources */,
+				4D93006826AEA04F00F567F6 /* GIFListController.swift in Sources */,
+				4D93006A26AEA08700F567F6 /* GIFListViewModel.swift in Sources */,
 				BF367F9C2693278B009A883A /* ErrorType.swift in Sources */,
 				BF3D57E426A5D679009C8DC8 /* NinePatternsController.swift in Sources */,
 				4DCD9C242695B2E70067DBF6 /* OverlayLayoutController.swift in Sources */,
@@ -831,6 +854,7 @@
 				BFFF2E7F268A28F500005591 /* NSAttributeString+Extensions.swift in Sources */,
 				4D7CCFCB269C3C080097EF65 /* PagerNodeController.swift in Sources */,
 				BF367FA42693278B009A883A /* ApiService.swift in Sources */,
+				4D93006E26AEA1E200F567F6 /* GIFListCellNode.swift in Sources */,
 				4DA18207269D82EE00F45A78 /* RabbitVideosCellNode.swift in Sources */,
 				BF367F9D2693278B009A883A /* CodeResponse.swift in Sources */,
 				BF367F972693278B009A883A /* Router.swift in Sources */,

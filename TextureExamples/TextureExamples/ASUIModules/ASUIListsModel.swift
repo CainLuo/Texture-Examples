@@ -30,6 +30,7 @@ enum ASUITableNodeType {
     case kitten
     case rabbit
     case ninePattern
+    case gifList
 }
 
 // MARK: - ASUIListsSectionModel

@@ -124,6 +124,8 @@ extension ASUIListsController {
             vc = RabbitVideosController()
         case .ninePattern:
             vc = NinePatternsController()
+        case .gifList:
+            vc = GIFListController()
         default:
             break
         }
