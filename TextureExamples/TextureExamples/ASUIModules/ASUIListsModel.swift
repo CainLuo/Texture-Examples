@@ -11,6 +11,7 @@ import ObjectMapper
 enum ASUIListsSectionType {
     case ui
     case table
+    case transition
 }
 
 enum ASUIListsControlType {
@@ -24,6 +25,8 @@ enum ASUIListsControlType {
     case pager
     case video
     case scroll
+    case asTransition
+    case customTransition
 }
 
 enum ASUITableNodeType {

@@ -68,6 +68,8 @@ extension ASUIListsController: ASTableDelegate {
             selectUIControl(item)
         case .table:
             selectTableNode(item)
+        case .transition:
+            selectTransitionNode(item)
         default:
             break
         }
@@ -126,6 +128,21 @@ extension ASUIListsController {
             vc = NinePatternsController()
         case .gifList:
             vc = GIFListController()
+        default:
+            break
+        }
+        vc.title = item?.title
+        navigationController?.pushViewController(vc, animated: true)
+    }
+
+    private func selectTransitionNode(_ item: ASUIListsModel?) {
+        var vc = UIViewController()
+
+        switch item?.type {
+        case .asTransition:
+            vc = TransitionController()
+        case .customTransition:
+            vc = CustomTransitionController()
         default:
             break
         }

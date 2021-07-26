@@ -54,7 +54,8 @@ class ASUIListsViewModel: ASUIListsViewModelInputs, ASUIListsViewModelOutputs, A
 private func filterSections() -> [ASUIListsSectionModel] {
     [
         ASUIListsSectionModel(title: "AS Controls", type: .ui, items: controlsDataSource()),
-        ASUIListsSectionModel(title: "AS Table Node", type: .table, items: tablesDataSource())
+        ASUIListsSectionModel(title: "AS Table Node", type: .table, items: tablesDataSource()),
+        ASUIListsSectionModel(title: "AS Transition", type: .transition, items: transitionDataSource())
     ]
 }
 
@@ -79,5 +80,12 @@ private func tablesDataSource() -> [ASUIListsModel] {
         ASUIListsModel(title: "Rabbit Videos", tableType: .rabbit),
         ASUIListsModel(title: "Nine Pattern Images", tableType: .ninePattern),
         ASUIListsModel(title: "Gif Image List", tableType: .gifList)
+    ]
+}
+
+private func transitionDataSource() -> [ASUIListsModel] {
+    [
+        ASUIListsModel(title: "AS Transition", type: .asTransition),
+        ASUIListsModel(title: "Custom Transition", type: .customTransition)
     ]
 }
