@@ -2,6 +2,8 @@ ${PODS_ROOT}/Target Support Files/Pods-TextureExamples/Pods-TextureExamples-fram
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
 ${BUILT_PRODUCTS_DIR}/EasyPeasy/EasyPeasy.framework
 ${BUILT_PRODUCTS_DIR}/GlossButtonNode/GlossButtonNode.framework
+${BUILT_PRODUCTS_DIR}/IGListDiffKit/IGListDiffKit.framework
+${BUILT_PRODUCTS_DIR}/IGListKit/IGListKit.framework
 ${BUILT_PRODUCTS_DIR}/Localize-Swift/Localize_Swift.framework
 ${BUILT_PRODUCTS_DIR}/LookinServer/LookinServer.framework
 ${BUILT_PRODUCTS_DIR}/Moya/Moya.framework

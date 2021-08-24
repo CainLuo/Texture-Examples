@@ -4,6 +4,9 @@ PODS:
   - GlossButtonNode (3.1.2):
     - Texture/Core (~> 3)
     - TextureSwiftSupport (>= 3.10.0)
+  - IGListDiffKit (4.0.0)
+  - IGListKit (4.0.0):
+    - IGListDiffKit (= 4.0.0)
   - Localize-Swift (3.2.0):
     - Localize-Swift/LocalizeSwiftCore (= 3.2.0)
     - Localize-Swift/UIKit (= 3.2.0)
@@ -106,6 +109,7 @@ PODS:
 DEPENDENCIES:
   - EasyPeasy
   - GlossButtonNode
+  - IGListKit
   - Localize-Swift
   - LookinServer
   - Moya-ObjectMapper/RxSwift
@@ -128,6 +132,8 @@ SPEC REPOS:
     - Alamofire
     - EasyPeasy
     - GlossButtonNode
+    - IGListDiffKit
+    - IGListKit
     - Localize-Swift
     - LookinServer
     - Moya
@@ -155,6 +161,8 @@ SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
   EasyPeasy: b9b1bae024d21a7dfa9bad26d6826d88348cc6f1
   GlossButtonNode: 4ea1197a744f2fb5fb875fe31caf17ded4762e8f
+  IGListDiffKit: 665d6cf43ce726e676013db9c7d6c4294259b6b2
+  IGListKit: fd5a5d21935298f5849fa49d426843cff97b77c7
   Localize-Swift: 6f4475136bdb0d7b2882ea3d4ea919d70142b232
   LookinServer: d6874df8b58096c8d463817b6baaa3abc21d31f7
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
@@ -178,6 +186,6 @@ SPEC CHECKSUMS:
   TypedTextAttributes: 624acbbc3bd067453d76f7408c6d6c5f0964d51b
   XCGLogger: 1943831ef907df55108b0b18657953f868de973b
 
-PODFILE CHECKSUM: b12942554bb2efd11b6cd7a0e95f2287111cc378
+PODFILE CHECKSUM: 7588f4ebbef0a80670da50de7ab64e78b29c24f7
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.10.2

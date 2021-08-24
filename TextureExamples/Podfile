@@ -16,6 +16,8 @@ target 'TextureExamples' do
   pod 'Texture'
   pod 'TextureSwiftSupport'
   pod 'Texture/PINRemoteImage'
+  
+  pod 'IGListKit'
     
   pod "TypedTextAttributes"
   pod "GlossButtonNode"
