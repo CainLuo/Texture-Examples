@@ -32,6 +32,8 @@
 		4D0B20B0266F5A7F005037E1 /* Book.TiledLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0B2090266F5A7F005037E1 /* Book.TiledLayer.swift */; };
 		4D0B20B1266F5A7F005037E1 /* ZStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0B2091266F5A7F005037E1 /* ZStackView.swift */; };
 		4D0B20B2266F5A7F005037E1 /* Book.InteractiveNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0B2092266F5A7F005037E1 /* Book.InteractiveNode.swift */; };
+		4D43C80926D4D08F0005672E /* PhotoIGController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D43C80826D4D08F0005672E /* PhotoIGController.swift */; };
+		4D43C80B26D4EAE00005672E /* NSObject+ListDiffable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D43C80A26D4EAE00005672E /* NSObject+ListDiffable.swift */; };
 		4D5C89D826930E3D007AD78D /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C89D726930E3D007AD78D /* BaseNavigationController.swift */; };
 		4D5C89DB26931551007AD78D /* PhotoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C89DA26931551007AD78D /* PhotoTableViewController.swift */; };
 		4D5C89DD269315D5007AD78D /* PhotoTableNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C89DC269315D5007AD78D /* PhotoTableNodeController.swift */; };
@@ -158,6 +160,8 @@
 		4D0B2090266F5A7F005037E1 /* Book.TiledLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.TiledLayer.swift; sourceTree = "<group>"; };
 		4D0B2091266F5A7F005037E1 /* ZStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZStackView.swift; sourceTree = "<group>"; };
 		4D0B2092266F5A7F005037E1 /* Book.InteractiveNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.InteractiveNode.swift; sourceTree = "<group>"; };
+		4D43C80826D4D08F0005672E /* PhotoIGController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoIGController.swift; sourceTree = "<group>"; };
+		4D43C80A26D4EAE00005672E /* NSObject+ListDiffable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+ListDiffable.swift"; sourceTree = "<group>"; };
 		4D5C89D726930E3D007AD78D /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		4D5C89DA26931551007AD78D /* PhotoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewController.swift; sourceTree = "<group>"; };
 		4D5C89DC269315D5007AD78D /* PhotoTableNodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableNodeController.swift; sourceTree = "<group>"; };
@@ -353,6 +357,7 @@
 				4D0B2077266F5A7F005037E1 /* NumberFormatter.swift */,
 				BFAF3BF1266FC7F3008DFED8 /* Rx+Observable.swift */,
 				4D5C89E926942745007AD78D /* UIViewController+Extensions.swift */,
+				4D43C80A26D4EAE00005672E /* NSObject+ListDiffable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -642,6 +647,7 @@
 			isa = PBXGroup;
 			children = (
 				BFC413272694B82B00385C8D /* PhotoIGCollectionNodeController.swift */,
+				4D43C80826D4D08F0005672E /* PhotoIGController.swift */,
 			);
 			path = IGListKit;
 			sourceTree = "<group>";
@@ -812,6 +818,7 @@
 				BF367F84269204DB009A883A /* SquareNode.swift in Sources */,
 				BF367F9B2693278B009A883A /* ApiProvider.swift in Sources */,
 				4D5C89EA26942745007AD78D /* UIViewController+Extensions.swift in Sources */,
+				4D43C80B26D4EAE00005672E /* NSObject+ListDiffable.swift in Sources */,
 				4D7CCFCF269C3C400097EF65 /* ScrollNodeController.swift in Sources */,
 				4D72685A269819DD00068C8A /* ASUIListsViewModel.swift in Sources */,
 				BFFF2E7B268A09F500005591 /* ExampleListModel.swift in Sources */,
@@ -896,6 +903,7 @@
 				4D7268472696968400068C8A /* AbsoluteLayoutController.swift in Sources */,
 				4DA181FE269D325600F45A78 /* KittensController.swift in Sources */,
 				4D0B20A5266F5A7F005037E1 /* RootContainerViewController.swift in Sources */,
+				4D43C80926D4D08F0005672E /* PhotoIGController.swift in Sources */,
 				BF367FAC26936290009A883A /* ListsCellNode.swift in Sources */,
 				4DCD9C1126959E410067DBF6 /* LayoutsController.swift in Sources */,
 				4D7CCFC7269BE5AD0097EF65 /* EditableTextNodeController.swift in Sources */,

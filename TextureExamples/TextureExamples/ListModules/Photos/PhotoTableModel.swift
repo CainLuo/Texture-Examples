@@ -26,7 +26,7 @@ extension PhotoTableSubmitModel: Mappable {
 }
 
 // MARK: - PhotoTableModel
-struct PhotoTableModel {
+class PhotoTableModel: NSObject, Mappable {
     var altDescription: String?
     var blurHash: String?
     var categories: [AnyObject]?
@@ -45,13 +45,11 @@ struct PhotoTableModel {
     var urls: PhotoTableUrl?
     var user: PhotoTableUser?
     var width: Int = 0
-}
-
-extension PhotoTableModel: Mappable {
-    init?(map: Map) {
-    }
     
-    mutating func mapping(map: Map) {
+    required init?(map: Map) { }
+    private override init() {}
+
+    func mapping(map: Map) {
         altDescription <- map["alt_description"]
         blurHash <- map["blur_hash"]
         categories <- map["categories"]

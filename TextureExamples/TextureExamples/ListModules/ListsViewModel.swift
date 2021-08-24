@@ -67,6 +67,6 @@ private func collectionsItems() -> [ListsItemsModel] {
         ListsItemsModel(title: "AsyncDisplayKit-CustomCollectionNode", type: .asyncDisplayKit, collectionType: .custom),
         ListsItemsModel(title: "AsyncDisplayKit-CollectionNode", type: .asyncDisplayKit, collectionType: .normal),
         ListsItemsModel(title: "AsyncDisplayKit-Photos", type: .asyncDisplayKit, collectionType: .photo),
-        ListsItemsModel(title: "IGListKit-CollectionNode", type: .asyncDisplayKit)
+        ListsItemsModel(title: "IGListKit-CollectionNode", type: .igList)
     ]
 }

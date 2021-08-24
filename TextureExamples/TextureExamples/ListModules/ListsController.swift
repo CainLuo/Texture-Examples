@@ -93,6 +93,10 @@ extension ListsController: ASTableDelegate {
                 default:
                     break
                 }
+            case .igList:
+                let vc = PhotoIGCollectionNodeController()
+                vc.title = item.title
+                navigationController?.pushViewController(vc, animated: true)
             default:
                 break
             }
