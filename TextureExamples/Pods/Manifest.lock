@@ -73,6 +73,10 @@ PODS:
   - Texture/AssetsLibrary (3.0.0):
     - Texture/Core
   - Texture/Core (3.0.0)
+  - Texture/IGListKit (3.0.0):
+    - IGListDiffKit (~> 4.0)
+    - IGListKit (~> 4.0)
+    - Texture/Core
   - Texture/MapKit (3.0.0):
     - Texture/Core
   - Texture/Photos (3.0.0):
@@ -122,6 +126,7 @@ DEPENDENCIES:
   - StorybookKitTextureSupport
   - StorybookUI
   - Texture
+  - Texture/IGListKit
   - Texture/PINRemoteImage
   - TextureSwiftSupport
   - TypedTextAttributes
@@ -186,6 +191,6 @@ SPEC CHECKSUMS:
   TypedTextAttributes: 624acbbc3bd067453d76f7408c6d6c5f0964d51b
   XCGLogger: 1943831ef907df55108b0b18657953f868de973b
 
-PODFILE CHECKSUM: 7588f4ebbef0a80670da50de7ab64e78b29c24f7
+PODFILE CHECKSUM: 0e51325ad76dce44a403503d6cc3b852a3ba3dfa
 
 COCOAPODS: 1.10.2
