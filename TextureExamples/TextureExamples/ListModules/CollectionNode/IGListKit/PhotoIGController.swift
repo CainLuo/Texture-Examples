@@ -15,11 +15,7 @@ class PhotoIGController: ListSectionController, ASSectionController {
     
     func nodeBlockForItem(at index: Int) -> ASCellNodeBlock {
         let item = photoModel!
-        return { PhotoCollectionCellNode(item) }
-    }
-    
-    func nodeForItem(at index: Int) -> ASCellNode {
-        return PhotoCollectionCellNode(photoModel!)
+        return { PhotoTableCellNode(item) }
     }
 }
 
