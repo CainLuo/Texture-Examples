@@ -314,16 +314,16 @@
 		4D0B2052266F59C9005037E1 /* TextureExamples */ = {
 			isa = PBXGroup;
 			children = (
-				4D0B2053266F59C9005037E1 /* AppDelegate.swift */,
 				BF367F8526932751009A883A /* Apis */,
+				4D0B2053266F59C9005037E1 /* AppDelegate.swift */,
 				4D7268562698191C00068C8A /* ASUIModules */,
 				BFFF2E75268A081D00005591 /* Base */,
 				4D0B2075266F5A7F005037E1 /* Extensions */,
 				4D5C89F926958C43007AD78D /* LayoutModules */,
 				BFC371D5268CCDB200A67231 /* ListModules */,
-				BFFF2E70268A063400005591 /* Modules */,
 				4D0B2067266F59FD005037E1 /* Resources */,
-				4D0B2081266F5A7F005037E1 /* TextureSupport */,
+				BFFF2E70268A063400005591 /* StackContentModules */,
+				4D0B2081266F5A7F005037E1 /* SupportModules */,
 				4D0B2068266F5A7E005037E1 /* Utils */,
 			);
 			path = TextureExamples;
@@ -374,7 +374,7 @@
 			path = CollectionNode;
 			sourceTree = "<group>";
 		};
-		4D0B2081266F5A7F005037E1 /* TextureSupport */ = {
+		4D0B2081266F5A7F005037E1 /* SupportModules */ = {
 			isa = PBXGroup;
 			children = (
 				4D0B2082266F5A7F005037E1 /* Book.StyledEdgeNode.swift */,
@@ -388,7 +388,7 @@
 				4D0B2091266F5A7F005037E1 /* ZStackView.swift */,
 				4D0B2092266F5A7F005037E1 /* Book.InteractiveNode.swift */,
 			);
-			path = TextureSupport;
+			path = SupportModules;
 			sourceTree = "<group>";
 		};
 		4D0B2085266F5A7F005037E1 /* Components */ = {
@@ -663,7 +663,7 @@
 			path = Nodes;
 			sourceTree = "<group>";
 		};
-		BFFF2E70268A063400005591 /* Modules */ = {
+		BFFF2E70268A063400005591 /* StackContentModules */ = {
 			isa = PBXGroup;
 			children = (
 				BFC371CB268BF3C000A67231 /* AlignItems */,
@@ -672,7 +672,7 @@
 				BFC371CA268BF3B400A67231 /* JustifyContent */,
 				BFC371D1268BF47B00A67231 /* TabBar */,
 			);
-			path = Modules;
+			path = StackContentModules;
 			sourceTree = "<group>";
 		};
 		BFFF2E75268A081D00005591 /* Base */ = {
