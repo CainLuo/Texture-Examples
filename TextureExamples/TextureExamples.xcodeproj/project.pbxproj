@@ -78,6 +78,7 @@
 		4DA18207269D82EE00F45A78 /* RabbitVideosCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA18206269D82EE00F45A78 /* RabbitVideosCellNode.swift */; };
 		4DA18209269D82F600F45A78 /* RabbitVideosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA18208269D82F600F45A78 /* RabbitVideosViewModel.swift */; };
 		4DA1820B269D832300F45A78 /* RabbitVideosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA1820A269D832300F45A78 /* RabbitVideosModel.swift */; };
+		4DCAADE426D64A0E00EE43B9 /* PhotoIGSectionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCAADE326D64A0E00EE43B9 /* PhotoIGSectionsModel.swift */; };
 		4DCD9C1126959E410067DBF6 /* LayoutsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD9C1026959E410067DBF6 /* LayoutsController.swift */; };
 		4DCD9C1326959E8B0067DBF6 /* LayoutsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD9C1226959E8B0067DBF6 /* LayoutsViewModel.swift */; };
 		4DCD9C1526959EB60067DBF6 /* LayoutsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD9C1426959EB60067DBF6 /* LayoutsModel.swift */; };
@@ -206,6 +207,7 @@
 		4DA18206269D82EE00F45A78 /* RabbitVideosCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RabbitVideosCellNode.swift; sourceTree = "<group>"; };
 		4DA18208269D82F600F45A78 /* RabbitVideosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RabbitVideosViewModel.swift; sourceTree = "<group>"; };
 		4DA1820A269D832300F45A78 /* RabbitVideosModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RabbitVideosModel.swift; sourceTree = "<group>"; };
+		4DCAADE326D64A0E00EE43B9 /* PhotoIGSectionsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoIGSectionsModel.swift; sourceTree = "<group>"; };
 		4DCD9C1026959E410067DBF6 /* LayoutsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutsController.swift; sourceTree = "<group>"; };
 		4DCD9C1226959E8B0067DBF6 /* LayoutsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutsViewModel.swift; sourceTree = "<group>"; };
 		4DCD9C1426959EB60067DBF6 /* LayoutsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutsModel.swift; sourceTree = "<group>"; };
@@ -648,6 +650,7 @@
 			children = (
 				BFC413272694B82B00385C8D /* PhotoIGCollectionNodeController.swift */,
 				4D43C80826D4D08F0005672E /* PhotoIGController.swift */,
+				4DCAADE326D64A0E00EE43B9 /* PhotoIGSectionsModel.swift */,
 			);
 			path = IGListKit;
 			sourceTree = "<group>";
@@ -908,6 +911,7 @@
 				4DCD9C1126959E410067DBF6 /* LayoutsController.swift in Sources */,
 				4D7CCFC7269BE5AD0097EF65 /* EditableTextNodeController.swift in Sources */,
 				4D0B209B266F5A7F005037E1 /* Date.swift in Sources */,
+				4DCAADE426D64A0E00EE43B9 /* PhotoIGSectionsModel.swift in Sources */,
 				BFFF2E72268A065A00005591 /* TabBarController.swift in Sources */,
 				4DCD9C1E2695AC5D0067DBF6 /* Logger.swift in Sources */,
 				4D72684926969A3D00068C8A /* CornerLayoutController.swift in Sources */,
