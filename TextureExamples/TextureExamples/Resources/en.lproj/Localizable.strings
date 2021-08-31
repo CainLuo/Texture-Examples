@@ -41,3 +41,7 @@
 // MARK: - Pager Node
 "PagerNode_Next" = "Next";
 "PagerNode_Previous" = "Previous";
+
+// MARK: - PhotoIG
+"PhotoIG_Header" = "This is header";
+"PhotoIG_Footer" = "This is footer";
