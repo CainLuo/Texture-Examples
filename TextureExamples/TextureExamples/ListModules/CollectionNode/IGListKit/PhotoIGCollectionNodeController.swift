@@ -12,7 +12,9 @@ import AsyncDisplayKit
 
 class PhotoIGCollectionNodeController: ASDKViewController<ASCollectionNode> {
     
-    private let sections = [PhotoIGOtherSectionModel(), PhotoIGPhotoSectionModel()]
+    private let sections = [PhotoIGHeaderSectionModel(),
+                            PhotoIGPhotoSectionModel(),
+                            PhotoIGFooterSectionModel()]
         
     lazy var adapter: ListAdapter = {
         ListAdapter(updater: ListAdapterUpdater(), viewController: self, workingRangeSize: 0)
@@ -45,8 +47,10 @@ extension PhotoIGCollectionNodeController: ListAdapterDataSource {
     }
     
     func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
-        if object is PhotoIGOtherSectionModel {
-            return PhotoIGOtherController()
+        if object is PhotoIGHeaderSectionModel {
+            return PhotoIGHeaderController()
+        } else if object is PhotoIGFooterSectionModel {
+            return PhotoIGFooterController()
         } else {
             return PhotoIGPhotosController()
         }
@@ -64,8 +68,13 @@ extension PhotoIGCollectionNodeController: ASCollectionDelegate {
     }
     
     func collectionNode(_ collectionNode: ASCollectionNode, willBeginBatchFetchWith context: ASBatchContext) {
+        guard let itemSection = sections.filter({ $0 is PhotoIGPhotoSectionModel }).first,
+              let index = sections.firstIndex(of: itemSection) else {
+            return
+        }
+        
         DispatchQueue.main.async { [weak self] in
-            if let photos = self?.sections.last,
+            if let photos = self?.sections[index],
                let section = self?.adapter.sectionController(for: photos) as? PhotoIGPhotosController {
                 section.beginBatchFetch(with: context)
             }
