@@ -12,17 +12,18 @@ import AsyncDisplayKit
 
 class PhotoIGCollectionNodeController: ASDKViewController<ASCollectionNode> {
     
-    private var sections: [PhotoIGSectionsModel] = [PhotoIGSectionsModel(type: .photos)]
-    
+    private let sections = [PhotoIGOtherSectionModel(), PhotoIGPhotoSectionModel()]
+        
     lazy var adapter: ListAdapter = {
-        let listAdapter = ListAdapter(updater: ListAdapterUpdater(), viewController: self, workingRangeSize: 0)
-        return listAdapter
+        ListAdapter(updater: ListAdapterUpdater(), viewController: self, workingRangeSize: 0)
     }()
     
     // Lifecycle
     override init() {
         let flowLayout = UICollectionViewFlowLayout()
         super.init(node: ASCollectionNode(collectionViewLayout: flowLayout))
+        node.leadingScreensForBatching = 1.2
+        node.delegate = self
         adapter.setASDKCollectionNode(node)
         adapter.dataSource = self
     }
@@ -44,10 +45,30 @@ extension PhotoIGCollectionNodeController: ListAdapterDataSource {
     }
     
     func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
-        PhotoIGController()
+        if object is PhotoIGOtherSectionModel {
+            return PhotoIGOtherController()
+        } else {
+            return PhotoIGPhotosController()
+        }
     }
     
     func emptyView(for listAdapter: ListAdapter) -> UIView? {
       return nil
+    }
+}
+
+// MARK: - ASCollectionDelegate
+extension PhotoIGCollectionNodeController: ASCollectionDelegate {
+    func shouldBatchFetch(for collectionNode: ASCollectionNode) -> Bool {
+        true
+    }
+    
+    func collectionNode(_ collectionNode: ASCollectionNode, willBeginBatchFetchWith context: ASBatchContext) {
+        DispatchQueue.main.async { [weak self] in
+            if let photos = self?.sections.last,
+               let section = self?.adapter.sectionController(for: photos) as? PhotoIGPhotosController {
+                section.beginBatchFetch(with: context)
+            }
+        }
     }
 }
