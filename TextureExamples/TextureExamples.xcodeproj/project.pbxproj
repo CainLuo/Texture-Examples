@@ -32,7 +32,7 @@
 		4D0B20B0266F5A7F005037E1 /* Book.TiledLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0B2090266F5A7F005037E1 /* Book.TiledLayer.swift */; };
 		4D0B20B1266F5A7F005037E1 /* ZStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0B2091266F5A7F005037E1 /* ZStackView.swift */; };
 		4D0B20B2266F5A7F005037E1 /* Book.InteractiveNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0B2092266F5A7F005037E1 /* Book.InteractiveNode.swift */; };
-		4D43C80926D4D08F0005672E /* PhotoIGController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D43C80826D4D08F0005672E /* PhotoIGController.swift */; };
+		4D43C80926D4D08F0005672E /* PhotoIGPhotosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D43C80826D4D08F0005672E /* PhotoIGPhotosController.swift */; };
 		4D43C80B26D4EAE00005672E /* NSObject+ListDiffable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D43C80A26D4EAE00005672E /* NSObject+ListDiffable.swift */; };
 		4D5C89D826930E3D007AD78D /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C89D726930E3D007AD78D /* BaseNavigationController.swift */; };
 		4D5C89DB26931551007AD78D /* PhotoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C89DA26931551007AD78D /* PhotoTableViewController.swift */; };
@@ -89,6 +89,7 @@
 		4DCD9C202695AFB30067DBF6 /* StackLayoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD9C1F2695AFB30067DBF6 /* StackLayoutController.swift */; };
 		4DCD9C222695B2250067DBF6 /* InsetLayoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD9C212695B2250067DBF6 /* InsetLayoutController.swift */; };
 		4DCD9C242695B2E70067DBF6 /* OverlayLayoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD9C232695B2E70067DBF6 /* OverlayLayoutController.swift */; };
+		4DD72C5726DCC5BC0027F292 /* PhotoIGOtherController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD72C5626DCC5BC0027F292 /* PhotoIGOtherController.swift */; };
 		BF367F82269204C0009A883A /* RoundNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF367F81269204BF009A883A /* RoundNode.swift */; };
 		BF367F84269204DB009A883A /* SquareNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF367F83269204DB009A883A /* SquareNode.swift */; };
 		BF367F962693278B009A883A /* ApiServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF367F862693278A009A883A /* ApiServiceType.swift */; };
@@ -161,7 +162,7 @@
 		4D0B2090266F5A7F005037E1 /* Book.TiledLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.TiledLayer.swift; sourceTree = "<group>"; };
 		4D0B2091266F5A7F005037E1 /* ZStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZStackView.swift; sourceTree = "<group>"; };
 		4D0B2092266F5A7F005037E1 /* Book.InteractiveNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.InteractiveNode.swift; sourceTree = "<group>"; };
-		4D43C80826D4D08F0005672E /* PhotoIGController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoIGController.swift; sourceTree = "<group>"; };
+		4D43C80826D4D08F0005672E /* PhotoIGPhotosController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoIGPhotosController.swift; sourceTree = "<group>"; };
 		4D43C80A26D4EAE00005672E /* NSObject+ListDiffable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+ListDiffable.swift"; sourceTree = "<group>"; };
 		4D5C89D726930E3D007AD78D /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		4D5C89DA26931551007AD78D /* PhotoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewController.swift; sourceTree = "<group>"; };
@@ -218,6 +219,7 @@
 		4DCD9C1F2695AFB30067DBF6 /* StackLayoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackLayoutController.swift; sourceTree = "<group>"; };
 		4DCD9C212695B2250067DBF6 /* InsetLayoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetLayoutController.swift; sourceTree = "<group>"; };
 		4DCD9C232695B2E70067DBF6 /* OverlayLayoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayLayoutController.swift; sourceTree = "<group>"; };
+		4DD72C5626DCC5BC0027F292 /* PhotoIGOtherController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoIGOtherController.swift; sourceTree = "<group>"; };
 		6CFB62A3112E0806C8A7ED6A /* Pods_TextureExamples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextureExamples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF367F81269204BF009A883A /* RoundNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundNode.swift; sourceTree = "<group>"; };
 		BF367F83269204DB009A883A /* SquareNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareNode.swift; sourceTree = "<group>"; };
@@ -649,7 +651,8 @@
 			isa = PBXGroup;
 			children = (
 				BFC413272694B82B00385C8D /* PhotoIGCollectionNodeController.swift */,
-				4D43C80826D4D08F0005672E /* PhotoIGController.swift */,
+				4DD72C5626DCC5BC0027F292 /* PhotoIGOtherController.swift */,
+				4D43C80826D4D08F0005672E /* PhotoIGPhotosController.swift */,
 				4DCAADE326D64A0E00EE43B9 /* PhotoIGSectionsModel.swift */,
 			);
 			path = IGListKit;
@@ -906,7 +909,8 @@
 				4D7268472696968400068C8A /* AbsoluteLayoutController.swift in Sources */,
 				4DA181FE269D325600F45A78 /* KittensController.swift in Sources */,
 				4D0B20A5266F5A7F005037E1 /* RootContainerViewController.swift in Sources */,
-				4D43C80926D4D08F0005672E /* PhotoIGController.swift in Sources */,
+				4DD72C5726DCC5BC0027F292 /* PhotoIGOtherController.swift in Sources */,
+				4D43C80926D4D08F0005672E /* PhotoIGPhotosController.swift in Sources */,
 				BF367FAC26936290009A883A /* ListsCellNode.swift in Sources */,
 				4DCD9C1126959E410067DBF6 /* LayoutsController.swift in Sources */,
 				4D7CCFC7269BE5AD0097EF65 /* EditableTextNodeController.swift in Sources */,
