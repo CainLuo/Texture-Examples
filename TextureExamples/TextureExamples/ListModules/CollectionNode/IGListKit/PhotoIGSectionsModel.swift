@@ -13,5 +13,8 @@ class PhotoIGPhotoSectionModel: NSObject {
     var photos: [PhotoTableModel] = []
 }
 
-class PhotoIGOtherSectionModel: NSObject {
+class PhotoIGHeaderSectionModel: NSObject {
+}
+
+class PhotoIGFooterSectionModel: NSObject {
 }
