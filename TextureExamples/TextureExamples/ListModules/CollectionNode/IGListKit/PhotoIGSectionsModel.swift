@@ -9,16 +9,9 @@ import Foundation
 import IGListKit
 import ObjectMapper
 
-enum PhotoIGSectionType: Int {
-    case photos
+class PhotoIGPhotoSectionModel: NSObject {
+    var photos: [PhotoTableModel] = []
 }
 
-class PhotoIGSectionsModel: NSObject {
-    
-    var type: PhotoIGSectionType = .photos
-    var photos: [PhotoTableModel] = []
-    
-    init(type: PhotoIGSectionType = .photos) {
-        self.type = type
-    }
+class PhotoIGOtherSectionModel: NSObject {
 }
