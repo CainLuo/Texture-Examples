@@ -16,7 +16,6 @@ class PhotoIGPhotosController: ListSectionController, ASSectionController {
     private var photoSection: PhotoIGPhotoSectionModel!
     private let viewModel: PhotoTableViewModelTypes = PhotoTableViewModel()
     private var batchContext: ASBatchContext?
-    private var isEmpty = true
 
     override init() {
         super.init()
@@ -29,7 +28,6 @@ class PhotoIGPhotosController: ListSectionController, ASSectionController {
     }
     
     private func reloadDataSource(_ items: [PhotoTableModel]) {
-        isEmpty = items.isEmpty
         if !items.isEmpty,
            let context = collectionContext {
             
@@ -54,9 +52,6 @@ class PhotoIGPhotosController: ListSectionController, ASSectionController {
 // MARK: Fetch Photos
 extension PhotoIGPhotosController {
     func beginBatchFetch(with context: ASBatchContext) {
-        guard isEmpty else {
-            return
-        }
         batchContext = context
         viewModel.inputs.fetchList()
     }
