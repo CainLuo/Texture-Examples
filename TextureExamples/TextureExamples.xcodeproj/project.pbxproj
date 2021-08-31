@@ -89,7 +89,9 @@
 		4DCD9C202695AFB30067DBF6 /* StackLayoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD9C1F2695AFB30067DBF6 /* StackLayoutController.swift */; };
 		4DCD9C222695B2250067DBF6 /* InsetLayoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD9C212695B2250067DBF6 /* InsetLayoutController.swift */; };
 		4DCD9C242695B2E70067DBF6 /* OverlayLayoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCD9C232695B2E70067DBF6 /* OverlayLayoutController.swift */; };
-		4DD72C5726DCC5BC0027F292 /* PhotoIGOtherController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD72C5626DCC5BC0027F292 /* PhotoIGOtherController.swift */; };
+		4DD72C5726DCC5BC0027F292 /* PhotoIGHeaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD72C5626DCC5BC0027F292 /* PhotoIGHeaderController.swift */; };
+		4DD72C5926DDF96D0027F292 /* PhotoIGFooterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD72C5826DDF96D0027F292 /* PhotoIGFooterController.swift */; };
+		4DD72C5B26DDF9C70027F292 /* PhotoIGOtherCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD72C5A26DDF9C70027F292 /* PhotoIGOtherCellNode.swift */; };
 		BF367F82269204C0009A883A /* RoundNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF367F81269204BF009A883A /* RoundNode.swift */; };
 		BF367F84269204DB009A883A /* SquareNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF367F83269204DB009A883A /* SquareNode.swift */; };
 		BF367F962693278B009A883A /* ApiServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF367F862693278A009A883A /* ApiServiceType.swift */; };
@@ -219,7 +221,9 @@
 		4DCD9C1F2695AFB30067DBF6 /* StackLayoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackLayoutController.swift; sourceTree = "<group>"; };
 		4DCD9C212695B2250067DBF6 /* InsetLayoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetLayoutController.swift; sourceTree = "<group>"; };
 		4DCD9C232695B2E70067DBF6 /* OverlayLayoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayLayoutController.swift; sourceTree = "<group>"; };
-		4DD72C5626DCC5BC0027F292 /* PhotoIGOtherController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoIGOtherController.swift; sourceTree = "<group>"; };
+		4DD72C5626DCC5BC0027F292 /* PhotoIGHeaderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoIGHeaderController.swift; sourceTree = "<group>"; };
+		4DD72C5826DDF96D0027F292 /* PhotoIGFooterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoIGFooterController.swift; sourceTree = "<group>"; };
+		4DD72C5A26DDF9C70027F292 /* PhotoIGOtherCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoIGOtherCellNode.swift; sourceTree = "<group>"; };
 		6CFB62A3112E0806C8A7ED6A /* Pods_TextureExamples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextureExamples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF367F81269204BF009A883A /* RoundNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundNode.swift; sourceTree = "<group>"; };
 		BF367F83269204DB009A883A /* SquareNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareNode.swift; sourceTree = "<group>"; };
@@ -651,9 +655,11 @@
 			isa = PBXGroup;
 			children = (
 				BFC413272694B82B00385C8D /* PhotoIGCollectionNodeController.swift */,
-				4DD72C5626DCC5BC0027F292 /* PhotoIGOtherController.swift */,
+				4DD72C5626DCC5BC0027F292 /* PhotoIGHeaderController.swift */,
+				4DD72C5A26DDF9C70027F292 /* PhotoIGOtherCellNode.swift */,
 				4D43C80826D4D08F0005672E /* PhotoIGPhotosController.swift */,
 				4DCAADE326D64A0E00EE43B9 /* PhotoIGSectionsModel.swift */,
+				4DD72C5826DDF96D0027F292 /* PhotoIGFooterController.swift */,
 			);
 			path = IGListKit;
 			sourceTree = "<group>";
@@ -826,6 +832,7 @@
 				4D5C89EA26942745007AD78D /* UIViewController+Extensions.swift in Sources */,
 				4D43C80B26D4EAE00005672E /* NSObject+ListDiffable.swift in Sources */,
 				4D7CCFCF269C3C400097EF65 /* ScrollNodeController.swift in Sources */,
+				4DD72C5926DDF96D0027F292 /* PhotoIGFooterController.swift in Sources */,
 				4D72685A269819DD00068C8A /* ASUIListsViewModel.swift in Sources */,
 				BFFF2E7B268A09F500005591 /* ExampleListModel.swift in Sources */,
 				4DA18209269D82F600F45A78 /* RabbitVideosViewModel.swift in Sources */,
@@ -900,6 +907,7 @@
 				4D5C89EE2694386B007AD78D /* PhotoCollectionNodeController.swift in Sources */,
 				BFFF2E81268A299500005591 /* UIColor+Extensions.swift in Sources */,
 				4D5C89D826930E3D007AD78D /* BaseNavigationController.swift in Sources */,
+				4DD72C5B26DDF9C70027F292 /* PhotoIGOtherCellNode.swift in Sources */,
 				BF367F9F2693278B009A883A /* NetworkingTypes.swift in Sources */,
 				4D7268672698286F00068C8A /* ButtonNodeController.swift in Sources */,
 				BF367FA22693278B009A883A /* ActivityIndicator.swift in Sources */,
@@ -909,7 +917,7 @@
 				4D7268472696968400068C8A /* AbsoluteLayoutController.swift in Sources */,
 				4DA181FE269D325600F45A78 /* KittensController.swift in Sources */,
 				4D0B20A5266F5A7F005037E1 /* RootContainerViewController.swift in Sources */,
-				4DD72C5726DCC5BC0027F292 /* PhotoIGOtherController.swift in Sources */,
+				4DD72C5726DCC5BC0027F292 /* PhotoIGHeaderController.swift in Sources */,
 				4D43C80926D4D08F0005672E /* PhotoIGPhotosController.swift in Sources */,
 				BF367FAC26936290009A883A /* ListsCellNode.swift in Sources */,
 				4DCD9C1126959E410067DBF6 /* LayoutsController.swift in Sources */,
