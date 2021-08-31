@@ -41,3 +41,7 @@
 // MARK: - Pager Node
 "PagerNode_Next" = "下一个";
 "PagerNode_Previous" = "上一个";
+
+// MARK: - PhotoIG
+"PhotoIG_Header" = "这是顶部";
+"PhotoIG_Footer" = "这是底部";
