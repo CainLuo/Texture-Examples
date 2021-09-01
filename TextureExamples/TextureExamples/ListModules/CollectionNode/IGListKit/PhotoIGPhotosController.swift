@@ -57,29 +57,6 @@ extension PhotoIGPhotosController {
         batchContext = context
         viewModel.inputs.fetchList()
     }
-    
-    func shouldBatchFetch() -> Bool {
-        true
-    }
-}
-
-// MARK: IGListKit override methods
-extension PhotoIGPhotosController: ASSectionController {
-    override func cellForItem(at index: Int) -> UICollectionViewCell {
-        ASIGListSectionControllerMethods.cellForItem(at: index, sectionController: self)
-    }
-    
-    override func sizeForItem(at index: Int) -> CGSize {
-        ASIGListSectionControllerMethods.sizeForItem(at: index)
-    }
-    
-    override func didUpdate(to object: Any) {
-        photoSection = object as? PhotoIGPhotoSectionModel
-    }
-    
-    override func didSelectItem(at index: Int) {
-        log.debug(index)
-    }
 }
 
 // MARK: - Data Source Method
@@ -91,10 +68,6 @@ extension PhotoIGPhotosController {
     func nodeBlockForItem(at index: Int) -> ASCellNodeBlock {
         let item = photoSection.photos[index]
         return { PhotoTableCellNode(item) }
-    }
-    
-    func nodeForItem(at index: Int) -> ASCellNode {
-        PhotoIGOtherCellNode("PhotoIG_Header".localized())
     }
 }
 
@@ -110,6 +83,25 @@ extension PhotoIGPhotosController: ListSupplementaryViewSource {
     
     func sizeForSupplementaryView(ofKind elementKind: String, at index: Int) -> CGSize {
         ASIGListSupplementaryViewSourceMethods.sizeForSupplementaryView(ofKind:elementKind, at:index)
+    }
+}
+
+// MARK: ASSectionController
+extension PhotoIGPhotosController: ASSectionController {
+    override func cellForItem(at index: Int) -> UICollectionViewCell {
+        ASIGListSectionControllerMethods.cellForItem(at: index, sectionController: self)
+    }
+    
+    override func sizeForItem(at index: Int) -> CGSize {
+        ASIGListSectionControllerMethods.sizeForItem(at: index)
+    }
+    
+    override func didUpdate(to object: Any) {
+        photoSection = object as? PhotoIGPhotoSectionModel
+    }
+    
+    override func didSelectItem(at index: Int) {
+        log.debug(index)
     }
 }
 
