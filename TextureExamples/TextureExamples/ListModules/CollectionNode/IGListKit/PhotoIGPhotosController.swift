@@ -10,7 +10,7 @@ import RxCocoa
 import IGListKit
 import AsyncDisplayKit
 
-class PhotoIGPhotosController: ListSectionController, ASSectionController {
+class PhotoIGPhotosController: ListSectionController {
     
     private let disposeBag = DisposeBag()
     private var photoSection: PhotoIGPhotoSectionModel!
@@ -19,6 +19,8 @@ class PhotoIGPhotosController: ListSectionController, ASSectionController {
 
     override init() {
         super.init()
+        
+        supplementaryViewSource = self
         
         viewModel.outputs.items
             .drive(onNext: { [weak self] items in
@@ -62,15 +64,13 @@ extension PhotoIGPhotosController {
 }
 
 // MARK: IGListKit override methods
-extension PhotoIGPhotosController {
+extension PhotoIGPhotosController: ASSectionController {
     override func cellForItem(at index: Int) -> UICollectionViewCell {
-        let cell = ASIGListSectionControllerMethods.cellForItem(at: index, sectionController: self)
-        return cell
+        ASIGListSectionControllerMethods.cellForItem(at: index, sectionController: self)
     }
     
     override func sizeForItem(at index: Int) -> CGSize {
-        let size = ASIGListSectionControllerMethods.sizeForItem(at: index)
-        return size
+        ASIGListSectionControllerMethods.sizeForItem(at: index)
     }
     
     override func didUpdate(to object: Any) {
@@ -91,5 +91,40 @@ extension PhotoIGPhotosController {
     func nodeBlockForItem(at index: Int) -> ASCellNodeBlock {
         let item = photoSection.photos[index]
         return { PhotoTableCellNode(item) }
+    }
+    
+    func nodeForItem(at index: Int) -> ASCellNode {
+        PhotoIGOtherCellNode("PhotoIG_Header".localized())
+    }
+}
+
+// MARK: - ListSupplementaryViewSource
+extension PhotoIGPhotosController: ListSupplementaryViewSource {
+    func supportedElementKinds() -> [String] {
+        [UICollectionView.elementKindSectionHeader]
+    }
+    
+    func viewForSupplementaryElement(ofKind elementKind: String, at index: Int) -> UICollectionReusableView {
+        ASIGListSupplementaryViewSourceMethods.viewForSupplementaryElement(ofKind: elementKind, at: index, sectionController: self)
+    }
+    
+    func sizeForSupplementaryView(ofKind elementKind: String, at index: Int) -> CGSize {
+        ASIGListSupplementaryViewSourceMethods.sizeForSupplementaryView(ofKind:elementKind, at:index)
+    }
+}
+
+// MARK: - ASSupplementaryNodeSource
+extension PhotoIGPhotosController: ASSupplementaryNodeSource {
+    func nodeBlockForSupplementaryElement(ofKind elementKind: String, at index: Int) -> ASCellNodeBlock {
+        {
+            let cell = PhotoIGOtherCellNode("Section Header")
+            cell.backgroundColor = .brown
+            return cell
+        }
+    }
+    
+    func sizeRangeForSupplementaryElement(ofKind elementKind: String, at index: Int) -> ASSizeRange {
+        ASSizeRange(min: CGSize(width: UIScreen.main.bounds.width, height: 80),
+                    max: CGSize(width: UIScreen.main.bounds.width, height: 80))
     }
 }
