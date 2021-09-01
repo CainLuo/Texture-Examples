@@ -655,11 +655,11 @@
 			isa = PBXGroup;
 			children = (
 				BFC413272694B82B00385C8D /* PhotoIGCollectionNodeController.swift */,
+				4DD72C5826DDF96D0027F292 /* PhotoIGFooterController.swift */,
 				4DD72C5626DCC5BC0027F292 /* PhotoIGHeaderController.swift */,
 				4DD72C5A26DDF9C70027F292 /* PhotoIGOtherCellNode.swift */,
 				4D43C80826D4D08F0005672E /* PhotoIGPhotosController.swift */,
 				4DCAADE326D64A0E00EE43B9 /* PhotoIGSectionsModel.swift */,
-				4DD72C5826DDF96D0027F292 /* PhotoIGFooterController.swift */,
 			);
 			path = IGListKit;
 			sourceTree = "<group>";
