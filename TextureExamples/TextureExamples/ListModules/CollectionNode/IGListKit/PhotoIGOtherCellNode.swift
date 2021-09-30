@@ -10,12 +10,14 @@ import AsyncDisplayKit
 import TextureSwiftSupport
 
 class PhotoIGOtherCellNode: ASCellNode {
-    private var titleNode = ASTextNode()
+    private var titleNode = ASButtonNode()
     
     init(_ title: String) {
         super.init()
         automaticallyManagesSubnodes = true
-        titleNode.attributedText = NSAttributedString.attributed(title, alignment: .center)
+//        titleNode.attributedText = NSAttributedString.attributed(title, alignment: .center)
+        titleNode.setTitle(title, with: UIFont.systemFont(ofSize: 14), with: .black, for: .normal)
+        titleNode.addTarget(self, action: #selector(buttonAction), forControlEvents: .touchUpInside)
         backgroundColor = UIColor(0xF8F8F8)
     }
     
@@ -26,5 +28,11 @@ class PhotoIGOtherCellNode: ASCellNode {
                     .width(constrainedSize.max.width)
             }
         }
+    }
+    
+    @objc func buttonAction() {
+        log.debug("123123")
+        titleNode.style.height = ASDimensionMake(100)
+        setNeedsLayout()
     }
 }

@@ -17,13 +17,11 @@ class PhotoIGHeaderController: ListSectionController, ASSectionController {
 // MARK: IGListKit override methods
 extension PhotoIGHeaderController {
     override func cellForItem(at index: Int) -> UICollectionViewCell {
-        let cell = ASIGListSectionControllerMethods.cellForItem(at: index, sectionController: self)
-        return cell
+        ASIGListSectionControllerMethods.cellForItem(at: index, sectionController: self)
     }
     
     override func sizeForItem(at index: Int) -> CGSize {
-        let size = ASIGListSectionControllerMethods.sizeForItem(at: index)
-        return size
+        ASIGListSectionControllerMethods.sizeForItem(at: index)
     }
     
     override func didUpdate(to object: Any) {

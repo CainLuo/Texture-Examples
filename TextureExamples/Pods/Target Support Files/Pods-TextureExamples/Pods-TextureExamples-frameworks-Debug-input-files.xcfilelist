@@ -25,4 +25,4 @@ ${BUILT_PRODUCTS_DIR}/TextureBridging/TextureBridging.framework
 ${BUILT_PRODUCTS_DIR}/TextureSwiftSupport/TextureSwiftSupport.framework
 ${BUILT_PRODUCTS_DIR}/TypedTextAttributes/TypedTextAttributes.framework
 ${BUILT_PRODUCTS_DIR}/XCGLogger/XCGLogger.framework
-${PODS_XCFRAMEWORKS_BUILD_DIR}/RevealServer/RevealServer.framework/RevealServer
+${PODS_XCFRAMEWORKS_BUILD_DIR}/Reveal-SDK/RevealServer.framework/RevealServer
